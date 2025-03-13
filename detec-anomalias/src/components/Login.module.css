@@ -40,6 +40,18 @@
     flex-direction: column;
     justify-content: center;
 }
+.input_group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 .input_group input {
+    flex-direction: column;
     width: 90%;
+}
+.btn{
+    background: linear-gradient(to right, #50C878, #317949);
+    border: none;
+    padding: 10px;
+    color: white;
 }
