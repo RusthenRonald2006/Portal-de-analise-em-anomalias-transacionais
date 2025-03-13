@@ -16,6 +16,10 @@ function Login (){
                 <div className={styles.container_form}>
                     <form className={styles.form}>
                         <div>
+                            <h1>Welcome to</h1>
+                            <h1>Suspicious transactions</h1>
+                        </div>
+                        <div>
                             <input type='email' placeholder='Digite seu e-mail'></input>
                         </div>
                         <div>
