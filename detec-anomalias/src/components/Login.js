@@ -1,8 +1,13 @@
 import styles from './Login.module.css'
 function Login (){
-    return(
-        <div>
-            <h1>Login</h1>
+    return(//container
+        <div className={styles.login_container}>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
         </div>
     )
 } export default Login
