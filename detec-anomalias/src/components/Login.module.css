@@ -1,0 +1,10 @@
+.login_container{
+    display: flex;
+    height: 500px;
+    width: 700px;
+    border: 1px solid black;
+}
+.login_esquerdo{
+    width: 50%;
+    background: linear-gradient(to right, #0f9d58, #0d7742);
+}
