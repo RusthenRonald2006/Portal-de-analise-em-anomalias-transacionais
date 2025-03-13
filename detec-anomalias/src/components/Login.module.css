@@ -1,0 +1,13 @@
+.login_container{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+.login_esquerdo{
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(135deg, #319452, #0F2E19);
+}
+.login_direito{
+    width: 50%;
+}
