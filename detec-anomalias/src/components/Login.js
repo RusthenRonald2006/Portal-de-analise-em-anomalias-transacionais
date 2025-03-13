@@ -1,10 +1,10 @@
 import styles from './Login.module.css'
-import Logobanese from '../components/img/logo_banese_sem_fundo.png'
+import Logobanese from '../components/img/logobanese.png'
 function Login (){
     return(//container
         <div className={styles.login_container}>
             <div className={styles.login_esquerdo}>
-                <img></img>
+                <img src={Logobanese} className={styles.logo}></img>
             </div>
             <div className={styles.login_direito}>
 

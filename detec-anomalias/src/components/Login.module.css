@@ -2,9 +2,16 @@
     display: flex;
     height: 500px;
     width: 700px;
-    border: 1px solid black;
+    border: 1px solid #0d7742;
+    border-radius: 10px;
 }
 .login_esquerdo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     background: linear-gradient(to right, #0f9d58, #0d7742);
+}
+.logo{
+    width: 250px;
 }
