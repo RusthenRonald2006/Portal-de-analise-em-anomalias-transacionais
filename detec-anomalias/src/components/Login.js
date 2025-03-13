@@ -15,7 +15,15 @@ function Login (){
            <div className={styles.login_direito}>
                 <div className={styles.container_form}>
                     <form className={styles.form}>
-                        <input type='text'></input>
+                        <div>
+                            <input type='email' placeholder='Digite seu e-mail'></input>
+                        </div>
+                        <div>
+                            <input type='password'></input>
+                        </div>
+                        <div>
+                            <input type='submit' value='login' className={styles.btn}></input>
+                        </div>
                     </form>
                 </div>
            </div>
