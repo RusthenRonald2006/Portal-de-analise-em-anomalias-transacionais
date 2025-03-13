@@ -13,8 +13,10 @@ function Login (){
                </div>
            </div>
            <div className={styles.login_direito}>
-                <div>
-                    
+                <div className={styles.container_form}>
+                    <form className={styles.form}>
+                        <input type='text'></input>
+                    </form>
                 </div>
            </div>
         </div>
