@@ -12,6 +12,17 @@
     width: 50%;
     background: linear-gradient(to right, #0f9d58, #0d7742);
 }
+.login_direito{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .logo{
     width: 100px;
+}
+.titlebanese{
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 5px 5px #000000;
 }

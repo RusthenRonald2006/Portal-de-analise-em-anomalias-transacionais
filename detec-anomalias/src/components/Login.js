@@ -4,7 +4,8 @@ function Login (){
     return(//container
         <div className={styles.login_container}>
             <div className={styles.login_esquerdo}>
-                <img src={Logobanese} className={styles.logo}></img>
+                <div><img src={Logobanese} className={styles.logo}></img></div>
+                <div><h1 className={styles.titlebanese}>Banese</h1></div>
             </div>
             <div className={styles.login_direito}>
             <div className="login-box">
