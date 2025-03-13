@@ -13,7 +13,9 @@ function Login (){
                </div>
            </div>
            <div className={styles.login_direito}>
-
+                <div>
+                    
+                </div>
            </div>
         </div>
     )
