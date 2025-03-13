@@ -15,7 +15,7 @@ function Login (){
            <div className={styles.login_direito}>
                 <div className={styles.container_form}>
                     <form className={styles.form}>
-                        <div>
+                        <div >
                             <h1>Welcome to</h1>
                             <h1>Suspicious transactions</h1>
                         </div>
@@ -27,7 +27,7 @@ function Login (){
                             <label htmlFor="password">Senha</label>
                             <input type='password' name="password" placeholder="Digite sua senha"></input>
                         </div>
-                        <div className={styles.input_group}>
+                        <div>
                             <input type='submit' value='Login' className={styles.btn}></input>
                         </div>
                     </form>

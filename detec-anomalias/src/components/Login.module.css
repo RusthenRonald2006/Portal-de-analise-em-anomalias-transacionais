@@ -27,8 +27,8 @@
     text-shadow: 5px 6px 10px rgba(0, 0, 0, 0.603);
 }
 .container_form{
-    height: 700px;
-    width: 700px;
+    height: 650px;
+    width: 650px;
     border: 1px solid #50C878;
     border-radius: 20px;
 }
@@ -43,17 +43,27 @@
 .input_group{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+}
+.input_group label{
+    margin-top: 5px;
 }
 .input_group input {
     flex-direction: column;
-    width: 90%;
+    width: 88%;
+    padding: 10px;
 }
 .btn{
+    width: 92%;
+    margin-top: 20px;
     background: linear-gradient(to right, #50C878, #317949);
     border: none;
     padding: 10px;
     color: white;
     font-weight: bolder;
     font-size: 1em;
+    border-radius: 5px;
+}
+form h1{
+    font-size: 2.5em;
 }
