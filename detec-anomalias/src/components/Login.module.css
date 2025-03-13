@@ -40,3 +40,6 @@
     flex-direction: column;
     justify-content: center;
 }
+.input_group input {
+    width: 90%;
+}

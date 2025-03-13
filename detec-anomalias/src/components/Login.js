@@ -19,13 +19,15 @@ function Login (){
                             <h1>Welcome to</h1>
                             <h1>Suspicious transactions</h1>
                         </div>
-                        <div>
-                            <input type='email' placeholder='Digite seu e-mail'></input>
+                        <div className={styles.input_group}>
+                            <label htmlFor=""></label>
+                            <input type='email' name="email" placeholder='Digite seu e-mail'></input>
                         </div>
-                        <div>
-                            <input type='password'></input>
+                        <div className={styles.input_group}>
+                            <label htmlFor=""></label>
+                            <input type='password' name="Senha" placeholder="Digite sua senha"></input>
                         </div>
-                        <div>
+                        <div className={styles.input_group}>
                             <input type='submit' value='login' className={styles.btn}></input>
                         </div>
                     </form>
