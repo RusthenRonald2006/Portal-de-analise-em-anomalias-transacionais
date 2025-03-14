@@ -6,7 +6,6 @@
 }   
 .login_esquerdo{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -30,7 +29,10 @@
     padding: 2rem;
 }
 .form_container{
+    border-radius: 10px;
+    border: 1px solid #50C878;
     width: 100%;
+    padding: 30px 60px;
     max-width: 520px;
 }
 .form_container h1 {
