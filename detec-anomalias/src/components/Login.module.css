@@ -6,6 +6,7 @@
 }   
 .login_esquerdo{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -29,7 +30,7 @@
 }
 .container_form{
     height: 650px;
-    width: 650px;
+    width: 600px;
     border: 1px solid #50C878;
     border-radius: 20px;
 }
@@ -53,6 +54,9 @@
     flex-direction: column;
     width: 88%;
     padding: 10px;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 5px;
 }
 .btn{
     width: 92%;
@@ -67,4 +71,12 @@
 }
 form h1{
     font-size: 2.5em;
+}
+.logo_google{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo_google img{
+    width: 70px;
 }

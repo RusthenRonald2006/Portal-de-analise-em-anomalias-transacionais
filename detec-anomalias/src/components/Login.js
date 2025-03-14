@@ -1,5 +1,7 @@
 import styles from './Login.module.css'
+import { FaGoogle } from 'react-icons/fa';
 import logobanesefundo from '../components/img/logobaneseofc.png'
+import logogoogle from '../components/img/logogoogle.png'
 import logobanese from '../components/img/logo banese.png'
 function Login (){
     return(//container
@@ -29,6 +31,9 @@ function Login (){
                         </div>
                         <div>
                             <input type='submit' value='Login' className={styles.btn}></input>
+                        </div>
+                        <div className={styles.logo_google}>
+                            <img src={logogoogle} ></img>
                         </div>
                     </form>
                 </div>
