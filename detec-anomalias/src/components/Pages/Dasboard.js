@@ -5,6 +5,7 @@ function Dashboard(){
     return(
         <div className={styles.container_dasboard}>
             <div className={styles.sidebar}>
+                <img src={logobanese} className={styles.logo_banese}></img>
                 <Navbar/>
             </div>
             <div className={styles.metrics}>
