@@ -15,7 +15,14 @@ function Login (){
                </div>
            </div>
            <div className={styles.login_direito}>
-                <div className={styles.container_form}>
+               
+           </div>
+            
+        </div>
+    )
+} export default Login
+
+/* <div className={styles.container_form}>
                     <form className={styles.form}>
                         <div >
                             <h1>Welcome to</h1>
@@ -36,11 +43,57 @@ function Login (){
                             <img src={logogoogle} ></img>
                         </div>
                     </form>
-                </div>
-           </div>
-            
-        </div>
-    )
-} export default Login
-
-//
+                </div>       css .container_form{
+    height: 650px;
+    width: 600px;
+    border: 1px solid #50C878;
+    border-radius: 20px;
+}
+.form{
+    margin-left: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input_group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_group label{
+    margin-top: 5px;
+}
+.input_group input, .btn {
+    width: 100%;
+}
+.input_group input {
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 5px;
+}
+.btn{
+    margin-top: 20px;
+    background: linear-gradient(to right, #50C878, #317949);
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1em;
+    border-radius: 5px;
+}
+form h1{
+    font-size: 2.5em;
+}
+.logo_google{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo_google img{
+    width: 70px;
+}
+*/
