@@ -9,7 +9,9 @@ function Dashboard(){
                 <Navbar/>
             </div>
             <div className={styles.metrics}>
-
+                <div>
+                    <h1>Visão Geral das Transações</h1>
+                </div>
             </div>
         </div>
         )
