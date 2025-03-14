@@ -79,15 +79,32 @@
     font-size: 1.1em;
     border-radius: 5px;
     transition: background-color 0.2s;
-    margin-bottom: 20px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.075);
 }
 .btn:hover {
     background-color: #1b7a37;
 }
+.forgot_password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .google_login{
     width: 100%;
-    height: 100px;
+    height: 90px;
     display: flex;
     justify-content: center;
+}
+.google_login img{
+    cursor: pointer;
+}
+.google_register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+span{
+    color: #50C878;
+    font-weight: bolder;
+    cursor: pointer;
 }
