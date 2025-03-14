@@ -30,8 +30,8 @@ function Login (){
                         <button type='button' className={styles.btn}>
                             Login
                         </button>
-                        <div className="google-login">
-                            <button type="button" className="google-button">
+                        <div className={styles.google_login}>
+                            <button type="button" className="google_button">
                                 <img src="https://raw.githubusercontent.com/your-username/your-repo/main/google-icon.png" alt="Google" />
                                 Sign in with Google
                             </button>
