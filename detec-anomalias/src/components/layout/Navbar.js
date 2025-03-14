@@ -8,7 +8,7 @@ function Navbar(){
                 <li><a>Gestão de Transações</a></li>
                 <li><a>Gestão de Contas</a></li>
                 <li><a>Tela de Notificações</a></li>
-                <li><Link to="/">Logout</Link></li>
+                <li><Link to="/" className={styles.link}>Logout</Link></li>
             </ul>
         </nav>
 )} export default Navbar
