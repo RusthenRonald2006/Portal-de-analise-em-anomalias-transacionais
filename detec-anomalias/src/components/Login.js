@@ -3,7 +3,7 @@ import { FaGoogle } from 'react-icons/fa';
 import logobanesefundo from '../components/img/logobaneseofc.png'
 import logogoogle from '../components/img/logogoogleofc.png'
 import logobanese from '../components/img/logo banese.png'
-import Mediastyles from "./Loginmedia.module.css"
+import mediastyles from "./Loginmedia.module.css"
 function Login (){
     return(//container
         <div className={styles.login_container}>
@@ -16,7 +16,7 @@ function Login (){
                </div>
            </div>
            <div className={styles.form_section}>
-                <div className={styles.form_container}>
+                <div className={`${styles.form_container} ${mediastyles.responsive}`}>
                     <div>
                         <h1>Welcome to</h1>
                         <h2>Suspicious transactions</h2>
