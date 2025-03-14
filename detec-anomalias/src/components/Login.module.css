@@ -13,12 +13,6 @@
     width: 50%;
     background: linear-gradient(to bottom, #50C878, #28643C, #307748);
 }
-.login_direito{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .logo_banese{
     width: 150px;
     border-radius: 10px;
@@ -27,4 +21,11 @@
     font-size: 4.8em;
     color: white;
     text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.603);
+}
+.form_section{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }

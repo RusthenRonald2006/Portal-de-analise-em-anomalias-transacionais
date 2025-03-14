@@ -16,7 +16,8 @@ function Login (){
            </div>
            <div className={styles.form_section}>
                 <div className={styles.form_container}>
-                    
+                    <h1>Welcome to</h1>
+                    <h2>Suspicious transactions</h2>
                 </div>
            </div>
             
