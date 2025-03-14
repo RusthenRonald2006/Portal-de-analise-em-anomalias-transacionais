@@ -64,7 +64,7 @@
 }
 .btn{
     font-weight: bolder;
-    width: 92%;
+    width: 96%;
     background-color: #2B9348;
     border: none;
     color: white;
@@ -80,6 +80,7 @@
 }
 .google_login{
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: center;
 }

@@ -1,7 +1,7 @@
 import styles from './Login.module.css'
 import { FaGoogle } from 'react-icons/fa';
 import logobanesefundo from '../components/img/logobaneseofc.png'
-import logogoogle from '../components/img/logogoogle.png'
+import logogoogle from '../components/img/logogoogleofc.png'
 import logobanese from '../components/img/logo banese.png'
 function Login (){
     return(//container
@@ -31,10 +31,7 @@ function Login (){
                             Login
                         </button>
                         <div className={styles.google_login}>
-                            <button type="button" className="google_button">
-                                <img src="https://raw.githubusercontent.com/your-username/your-repo/main/google-icon.png" alt="Google" />
-                                Sign in with Google
-                            </button>
+                            <img src={logogoogle}></img>
                         </div>
                     </form>
                 </div>
