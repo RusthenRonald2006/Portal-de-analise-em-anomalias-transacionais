@@ -27,9 +27,11 @@ function Login (){
                             <label htmlFor="password">Senha</label>
                             <input type='password' name="password" placeholder="Digite sua senha"></input>
                         </div>
-                        <button type='button' className={styles.btn}>
-                            Login
-                        </button>
+                        <div className={styles.container_btn}>
+                            <button type='button' className={styles.btn}>
+                                Login
+                            </button>
+                        </div>
                         <div className={styles.google_login}>
                             <img src={logogoogle}></img>
                         </div>
