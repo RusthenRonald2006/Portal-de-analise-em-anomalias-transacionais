@@ -1,0 +1,15 @@
+.container_dasboard{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.sidebar{
+    height: 100%;
+    width: 15%;
+    background-color: #50C878;
+}
+.metrics{
+    width: 85%;
+    height: 100%;
+}
