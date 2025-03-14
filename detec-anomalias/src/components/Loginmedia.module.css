@@ -1,0 +1,25 @@
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+    
+}
+
+/* Celulares médios e grandes */
+@media screen and (max-width: 600px) {
+
+}
+
+/* Tablets pequenos */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Tablets e notebooks pequenos */
+@media screen and (max-width: 900px) {
+
+}
+
+/* Notebooks médios e desktops */
+@media screen and (max-width: 1200px) {
+
+}
+

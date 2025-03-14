@@ -3,6 +3,7 @@ import { FaGoogle } from 'react-icons/fa';
 import logobanesefundo from '../components/img/logobaneseofc.png'
 import logogoogle from '../components/img/logogoogleofc.png'
 import logobanese from '../components/img/logo banese.png'
+import Mediastyles from "./Loginmedia.module.css"
 function Login (){
     return(//container
         <div className={styles.login_container}>
