@@ -7,8 +7,9 @@
 .sidebar{
     height: 100%;
     width: 15%;
-    background-color: #50C878;
+    background: linear-gradient(to bottom, #50C878, #307748);
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 .metrics{

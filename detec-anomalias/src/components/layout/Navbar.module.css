@@ -1,5 +1,12 @@
-.container_list{
-    height: 100%;
+.container_list ul{
+    list-style: none;
+    color: #FFFFFF;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-right: 40px;
+}
+.container_list li{
+    font-size: 1.9em;
+    text-align: center;
 }
