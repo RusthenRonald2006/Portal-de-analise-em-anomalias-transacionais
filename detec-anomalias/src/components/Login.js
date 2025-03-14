@@ -14,8 +14,10 @@ function Login (){
                     <h1 className={styles.title_banese}>Banese</h1>
                </div>
            </div>
-           <div className={styles.login_direito}>
-               
+           <div className={styles.form_section}>
+                <div className={styles.form_container}>
+                    
+                </div>
            </div>
             
         </div>
