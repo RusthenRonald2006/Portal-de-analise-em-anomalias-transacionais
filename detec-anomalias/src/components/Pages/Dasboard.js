@@ -1,5 +1,6 @@
 import styles from "./Dasboard.module.css"
 import Navbar from "../layout/Navbar"
+import logobanese from '../../components/img/logo banese.png'
 function Dashboard(){
     return(
         <div className={styles.container_dasboard}>
