@@ -14,14 +14,28 @@
 }
 
 /* Tablets e notebooks pequenos */
-@media screen and (min-width: 769px) and (max-width: 900px) {
-
+@media screen and (min-width: 769px) and (max-width: 1049px) {
+    .loginesquerdo{
+        flex-direction: column;
+    }
 }
 
 /* Notebooks médios e desktops */
-@media screen and (min-width: 901px) and (max-width: 1300px) {
+@media screen and (min-width: 1050px) and (max-width: 1300px) {
     .responsive{
         padding: 10px 60px;
+    }
+    .responsive h1{
+        font-size: 2.7rem;
+    }
+    .responsive h2{
+        font-size: 1.9rem;
+    }
+    .titlebanese{
+        font-size: 4rem;
+    }
+    .logobanese{
+        width: 120px;
     }
 }
 

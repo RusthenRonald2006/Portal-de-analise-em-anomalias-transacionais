@@ -7,12 +7,12 @@ import mediastyles from "./Loginmedia.module.css"
 function Login (){
     return(//container
         <div className={styles.login_container}>
-           <div className={styles.login_esquerdo}>
+           <div className={`${styles.login_esquerdo} ${mediastyles.loginesquerdo}`}>
                <div>
-                    <img src={logobanese} className={styles.logo_banese}></img>
+                    <img src={logobanese} className={`${styles.logo_banese} ${mediastyles.logobanese}`}></img>
                </div>
                <div>
-                    <h1 className={styles.title_banese}>Banese</h1>
+                    <h1 className={`${styles.title_banese} ${mediastyles.titlebanese}`}>Banese</h1>
                </div>
            </div>
            <div className={styles.form_section}>
