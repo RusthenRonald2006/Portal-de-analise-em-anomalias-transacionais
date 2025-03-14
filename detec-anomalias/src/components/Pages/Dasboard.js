@@ -1,5 +1,12 @@
 function Dashboard(){
-    return(<div>
-        <h1>Bem vindo ao Dashboard</h1>
-    </div>)
+    return(
+        <div className={styles.container_dasboard}>
+            <div className={styles.sidebar}>
+
+            </div>
+            <div className={styles.metrics}>
+                
+            </div>
+        </div>
+        )
 } export default Dashboard
