@@ -18,6 +18,25 @@ function Login (){
                 <div className={styles.form_container}>
                     <h1>Welcome to</h1>
                     <h2>Suspicious transactions</h2>
+                    <form>
+                        <div className={styles.form_group}>
+                            <label htmlFor="e-mail">Email</label>
+                            <input type='email' name="e-mail" placeholder='Digite seu e-mail'></input>
+                        </div>
+                        <div className={styles.form_group}>
+                            <label htmlFor="password">Senha</label>
+                            <input type='password' name="password" placeholder="Digite sua senha"></input>
+                        </div>
+                        <button type='button' className={styles.btn}>
+                            Login
+                        </button>
+                        <div className="google-login">
+                            <button type="button" className="google-button">
+                                <img src="https://raw.githubusercontent.com/your-username/your-repo/main/google-icon.png" alt="Google" />
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </form>
                 </div>
            </div>
             
