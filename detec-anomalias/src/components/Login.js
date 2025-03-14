@@ -4,7 +4,6 @@ import logobanese from '../components/img/logo banese.png'
 function Login (){
     return(//container
         <div className={styles.login_container}>
-<<<<<<< Updated upstream
            <div className={styles.login_esquerdo}>
                <div>
                     <img src={logobanese} className={styles.logo_banese}></img>
@@ -34,9 +33,7 @@ function Login (){
                     </form>
                 </div>
            </div>
-=======
             
->>>>>>> Stashed changes
         </div>
     )
 } export default Login
