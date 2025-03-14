@@ -1,3 +1,4 @@
+import styles from "./Dasboard.module.css"
 function Dashboard(){
     return(
         <div className={styles.container_dasboard}>
@@ -5,7 +6,7 @@ function Dashboard(){
 
             </div>
             <div className={styles.metrics}>
-                
+
             </div>
         </div>
         )
