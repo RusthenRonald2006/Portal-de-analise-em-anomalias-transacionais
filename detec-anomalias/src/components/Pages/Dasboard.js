@@ -4,7 +4,7 @@ function Dashboard(){
     return(
         <div className={styles.container_dasboard}>
             <div className={styles.sidebar}>
-
+                <Navbar/>
             </div>
             <div className={styles.metrics}>
 
