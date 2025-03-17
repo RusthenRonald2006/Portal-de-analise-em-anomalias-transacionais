@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100%;
 }   
-.login_esquerdo{
+.login_left{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@
     color: white;
     text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.603);
 }
-.form_section{
+.login_rigth{
     width: 50%;
     display: flex;
     align-items: center;
