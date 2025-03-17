@@ -40,7 +40,10 @@ function Login (){
                             </Link>
                         </div>
                         <div className={styles.forgot_password}>
-                            <p>Remeber me</p>
+                            <div className={styles.checkbox}>
+                                <input type='checkbox'></input>
+                                <p>Remeber me</p>
+                            </div>
                             <span>Forgot password</span>
                         </div>
                         <div className={styles.google_login}>
