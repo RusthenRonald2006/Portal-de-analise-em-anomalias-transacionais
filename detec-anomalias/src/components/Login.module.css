@@ -32,7 +32,8 @@
     border-radius: 10px;
     border: 1px solid #50C878;
     width: 100%;
-    padding: 30px 60px;
+    height: auto;
+    padding: 50px;
     max-width: 520px;
 }
 .form_container h1 {
@@ -112,93 +113,31 @@ span{
 }
 /* Celulares pequenos */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    .login_container{
-        flex-direction: column;
-        align-items: center;
-    }
-    .login_left,.login_rigth{
-        width: 100%;
-    }
-    .login_rigth{
-        background: linear-gradient(to top, #50C878, #28643C, #307748);
-    }
-    .form_container{
-        background-color: white;
-        width: 260px;
-    }
-    .logo_banese{
-        width: 80px;
-        border-radius: 10px;
-    }
-    .title_banese{
-        font-size: 3.0em;
-    }
+    
 }
 
 /* Celulares médios e grandes */
 @media screen and (min-width: 481px) and (max-width: 600px) {
-    .login_container{
-        flex-direction: column;
-        align-items: center;
-    }
-    .login_left,.login_rigth{
-        width: 100%;
-    }
-    .login_rigth{
-        background: linear-gradient(to top, #50C878, #28643C, #307748);
-    }
-    .form_container{
-        background-color: white;
-        width: 400px;
-    }
-    .logo_banese{
-        width: 120px;
-        border-radius: 10px;
-    }
-    .title_banese{
-        font-size: 4.0em;
-    }
+    
 }
 
 /* Tablets pequenos */
-@media screen and (min-width: 601px) and (max-width: 768px) {
-    .logo_banese{
-        width: 130px;
-        border-radius: 10px;
+@media screen and (min-width: 601px) and (max-width: 930px) {
+    
+}
+/* Tablets e notebooks pequenos */
+@media screen and (min-width: 930px) and (max-width: 1149px) {
+   .form_container h1{
+        font-size: 2.5em;
+   }
+   .form_container h2{
+        font-size: 2.0em;
     }
-    .login_container{
+    .login_left{
         flex-direction: column;
-        align-items: center;
-    }
-    .login_left,.login_rigth{
-        width: 100%;
-    }
-    .login_rigth{
-        background: linear-gradient(to top, #50C878, #28643C, #307748);
-    }
-    .form_container{
-        background-color: white;
-        width: 450px;
+        gap: 0;
     }
     .title_banese{
-        font-size: 4.3em;
-    }
-}
-
-/* Tablets e notebooks pequenos */
-@media screen and (min-width: 769px) and (max-width: 1049px) {
-    .login_container{
-        flex-direction: column;
-        align-items: center;
-    }
-    .login_left,.login_rigth{
-        width: 100%;
-    }
-    .login_rigth{
-        background: linear-gradient(to top, #50C878, #28643C, #307748);
-    }
-    .form_container{
-        background-color: white;
-        width: 500px;
+        font-size: 4.2em;
     }
 }
