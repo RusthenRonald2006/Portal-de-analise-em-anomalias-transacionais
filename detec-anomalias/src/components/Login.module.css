@@ -70,7 +70,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #666;
 }
 .btn{
     font-weight: bolder;
@@ -87,6 +86,9 @@
 }
 .btn:hover {
     background-color: #1b7a37;
+}
+.login_link{
+    width: 100%;
 }
 .forgot_password{
     display: flex;
