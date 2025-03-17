@@ -131,6 +131,7 @@ span{
         background: linear-gradient(to bottom, #50C878, #28643C, #307748);
     }
     .login_rigth{
+        padding: 0;
         width: 100%;
     }
     .form_container{
