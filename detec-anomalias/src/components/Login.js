@@ -9,16 +9,16 @@ import { FaLock } from "react-icons/fa";
 function Login (){
     return(//container
         <div className={styles.login_container}>
-           <div className={`${styles.login_esquerdo} ${mediastyles.loginesquerdo}`}>
+           <div className={`${styles.login_esquerdo} `}>
                <div>
-                    <img src={logobanese} className={`${styles.logo_banese} ${mediastyles.logobanese}`}></img>
+                    <img src={logobanese} className={`${styles.logo_banese}`}></img>
                </div>
                <div>
-                    <h1 className={`${styles.title_banese} ${mediastyles.titlebanese}`}>Banese</h1>
+                    <h1 className={`${styles.title_banese}`}>Banese</h1>
                </div>
            </div>
-           <div className={`${styles.form_section} ${mediastyles.logindireito}`} >
-                <div className={`${styles.form_container} ${mediastyles.responsive} ${mediastyles.form_section}`}>
+           <div className={`${styles.form_section}`} >
+                <div className={`${styles.form_container} `}>
                     <div>
                         <h1>Welcome to</h1>
                         <h2>Suspicious transactions</h2>
