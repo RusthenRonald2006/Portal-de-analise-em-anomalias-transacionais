@@ -23,9 +23,6 @@
     .logindireito{
         display: none;
     }
-    .login_small_screen{
-        
-    }
 }
 
 /* Notebooks médios e desktops */
@@ -44,9 +41,6 @@
     }
     .logobanese{
         width: 120px;
-    }
-    .login_small_screen{
-        display: none;
     }
 }
 
