@@ -5,7 +5,7 @@ import logogoogle from '../components/img/logogoogleofc.png'
 import logobanese from '../components/img/logo banese.png'
 import { FaEnvelope } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
-import logobaneseback from '../components/img/fundo_banese.png'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function Login (){
     return(//container
         <div className={styles.login_container}>
