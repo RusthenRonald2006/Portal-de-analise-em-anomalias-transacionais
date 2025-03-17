@@ -127,5 +127,10 @@ span{
 
 /* Tablets e notebooks pequenos */
 @media screen and (min-width: 769px) and (max-width: 1049px) {
-    
+    .login_container{
+        flex-direction: column;
+    }
+    .login_left,.login_rigth{
+        width: 100%;
+    }
 }
