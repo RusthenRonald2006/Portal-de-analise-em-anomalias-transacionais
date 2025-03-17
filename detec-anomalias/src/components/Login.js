@@ -5,6 +5,7 @@ import logogoogle from '../components/img/logogoogleofc.png'
 import logobanese from '../components/img/logo banese.png'
 import { FaEnvelope } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 function Login (){
     return(//container
         <div className={styles.login_container}>
@@ -32,9 +33,11 @@ function Login (){
                             <input type='password' name="password" placeholder="Digite sua senha"></input>
                         </div>
                         <div className={styles.container_btn}>
-                            <button type='button' className={styles.btn}>
-                                Login
-                            </button>
+                            <Link to='/dasboard'>
+                                <button type='button' className={styles.btn}>
+                                    Login
+                                </button>
+                            </Link>
                         </div>
                         <div className={styles.forgot_password}>
                             <p>Remeber me</p>
