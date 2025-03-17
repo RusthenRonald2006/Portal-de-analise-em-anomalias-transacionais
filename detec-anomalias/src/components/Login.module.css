@@ -133,4 +133,10 @@ span{
     .login_left,.login_rigth{
         width: 100%;
     }
+    .login_rigth{
+        background: linear-gradient(to top, #50C878, #28643C, #307748);
+    }
+    .form_container{
+        background-color: white;
+    }
 }
