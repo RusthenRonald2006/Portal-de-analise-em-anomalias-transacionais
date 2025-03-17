@@ -18,6 +18,9 @@
     .loginesquerdo{
         flex-direction: column;
     }
+    .form_section {
+        display: none; 
+    }
 }
 
 /* Notebooks médios e desktops */

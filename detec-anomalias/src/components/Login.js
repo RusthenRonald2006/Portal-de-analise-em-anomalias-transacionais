@@ -18,7 +18,7 @@ function Login (){
                </div>
            </div>
            <div className={styles.form_section}>
-                <div className={`${styles.form_container} ${mediastyles.responsive}`}>
+                <div className={`${styles.form_container} ${mediastyles.responsive} ${mediastyles.form_section}`}>
                     <div>
                         <h1>Welcome to</h1>
                         <h2>Suspicious transactions</h2>
