@@ -3,7 +3,6 @@ import { FaGoogle } from 'react-icons/fa';
 import logobanesefundo from '../components/img/logobaneseofc.png'
 import logogoogle from '../components/img/logogoogleofc.png'
 import logobanese from '../components/img/logo banese.png'
-import mediastyles from "./Loginmedia.module.css"
 import { FaEnvelope } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 function Login (){
