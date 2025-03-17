@@ -30,7 +30,7 @@
 }
 .form_container{
     border-radius: 10px;
-    border: 1px solid #50C878;
+    border: 1.5px solid #50C878;
     width: 100%;
     height: auto;
     padding: 50px;
@@ -168,7 +168,7 @@ span{
     }
     .form_container{
         background-color: white;
-        width: 500px;
+        width: 480px;
     }
     .login_left{
         display: none;
