@@ -122,13 +122,27 @@ span{
 
 /* Tablets pequenos */
 @media screen and (min-width: 601px) and (max-width: 768px) {
-
+    .login_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .login_left,.login_rigth{
+        width: 100%;
+    }
+    .login_rigth{
+        background: linear-gradient(to top, #50C878, #28643C, #307748);
+    }
+    .form_container{
+        background-color: white;
+        width: 450px;
+    }
 }
 
 /* Tablets e notebooks pequenos */
 @media screen and (min-width: 769px) and (max-width: 1049px) {
     .login_container{
         flex-direction: column;
+        align-items: center;
     }
     .login_left,.login_rigth{
         width: 100%;
