@@ -113,17 +113,29 @@ span{
 }
 /* Celulares pequenos */
 @media screen and (min-width: 320px) and (max-width: 480px) {
+    .form_container h1{
+        font-size: 1.8em;
+   }
+   .form_container h2{
+        font-size: 1.4em;
+    }
     .login_container{
         justify-content: center;
         align-items: center;
         background: linear-gradient(to bottom, #50C878, #28643C, #307748);
     }
+    .login_rigth{
+        width: 100%;
+    }
     .form_container{
+        padding: 30px;
+        width: 300px;
         background-color: white;
     }
     .login_left{
         display: none;
     }
+
 }
 
 /* Celulares médios e grandes */
@@ -132,6 +144,9 @@ span{
         justify-content: center;
         align-items: center;
         background: linear-gradient(to bottom, #50C878, #28643C, #307748);
+    }
+    .login_rigth{
+        width: 100%;
     }
     .form_container{
         background-color: white;
@@ -148,8 +163,12 @@ span{
         align-items: center;
         background: linear-gradient(to bottom, #50C878, #28643C, #307748);
     }
+    .login_rigth{
+        width: 100%;
+    }
     .form_container{
         background-color: white;
+        width: 500px;
     }
     .login_left{
         display: none;
