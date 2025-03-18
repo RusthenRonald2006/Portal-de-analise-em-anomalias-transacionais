@@ -11,9 +11,9 @@
     gap: 30px;
     width: 50%;
     background: linear-gradient(to bottom, #50C878, #28643C, #307748), url('img/banensefundoofc.png');
-    background-repeat: round;
+    /*background-repeat: round;
     background-size: auto;
-    background-position:center; /* Para centralizar a imagem */
+    background-position:center; /* Para centralizar a imagem 
     background-blend-mode: overlay;  /* Ou outros modos como 'multiply', 'screen', 'darken', etc. */
 }
 .logo_banese{
