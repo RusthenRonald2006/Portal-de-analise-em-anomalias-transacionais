@@ -2,7 +2,7 @@ import styles from "./Dasboard.module.css"
 import Navbar from "../layout/Navbar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCoins, faEye, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
 
 function Dashboard(){
     return(
@@ -17,29 +17,30 @@ function Dashboard(){
                 </div>
                 <div className={styles.container_cards}>
                     <div className={styles.group_cards}>
+                        <FontAwesomeIcon icon={faChartSimple} className={styles.icon} />
                         <h3>5.320 transações </h3>
                         <p>Total  de Transações
                         (Este mês)</p>
                     </div>
                     <div className={styles.group_cards}>
-                        <h3>5.320 transações </h3>
-                        <p>Total  de Transações
-                        (Este mês)</p>
+                        <FontAwesomeIcon icon={faEye} className={styles.icon} />
+                        <h3>( 320 casos identificados) </h3>
+                        <p>Transações suspeitas</p>
                     </div>
                     <div className={styles.group_cards}>
-                        <h3>5.320 transações </h3>
-                        <p>Total  de Transações
-                        (Este mês)</p>
+                        <FontAwesomeIcon icon={faUser} className={styles.icon} />
+                        <h3>38 contas suspeitas em análise </h3>
+                        <p>Total de Contas Investigadas</p>
                     </div>
                     <div className={styles.group_cards}>
-                        <h3>5.320 transações </h3>
-                        <p>Total  de Transações
-                        (Este mês)</p>
+                        <FontAwesomeIcon icon={faCircleXmark} className={styles.icon} />
+                        <h3>12 Fraudes Confirmadas neste período</h3>
+                        <p>Fraudes Confirmadas</p>
                     </div>
                     <div className={styles.group_cards}>
-                        <h3>5.320 transações </h3>
-                        <p>Total  de Transações
-                        (Este mês)</p>
+                        <FontAwesomeIcon icon={faCoins} className={styles.icon} />
+                        <h3>R$ 2.350.000,00 </h3>
+                        <p>Valor Total Movimentado</p>
                     </div>
                 </div>
             </div>
