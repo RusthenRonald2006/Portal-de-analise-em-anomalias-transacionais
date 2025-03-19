@@ -10,6 +10,9 @@ function App() {
       <Routes>
           <Route path="/" element={<Login/>}></Route>
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/gestaocontas" element={<GestaoContas/>}/>
+          <Route path="/gestaotransacoes" element={<GestaoTransacoes/>}/>
+          <Route path="/notificacoes" element={<Notificacoes/>}/>
       </Routes>
     </Router>
   );
