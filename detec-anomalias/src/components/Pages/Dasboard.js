@@ -1,6 +1,9 @@
 import styles from "./Dasboard.module.css"
 import Navbar from "../layout/Navbar"
 import logobanese from '../../components/img/logo banese.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faCoins, faEye, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+
 function Dashboard(){
     return(
         <div className={styles.container_dasboard}>
