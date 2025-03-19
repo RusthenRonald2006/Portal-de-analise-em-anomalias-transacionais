@@ -4,10 +4,10 @@ function Navbar(){
     return(
         <nav className={styles.container_list}>
             <ul>
-                <li><a>Contas Suspeitas</a></li>
-                <li><a>Gestão de Transações</a></li>
-                <li><a>Gestão de Contas</a></li>
-                <li><a>Tela de Notificações</a></li>
+                <li><Link to="" className={styles.link}>Contas Suspeitas</Link></li>
+                <li><Link to="" className={styles.link}>Gestão de Transações</Link></li>
+                <li><Link to="" className={styles.link}>Gestão de Contas</Link></li>
+                <li><Link to="" className={styles.link}>Tela de Notificações</Link></li>
                 <li><Link to="/" className={styles.link}>Logout</Link></li>
             </ul>
         </nav>
