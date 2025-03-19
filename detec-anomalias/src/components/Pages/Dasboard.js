@@ -3,7 +3,7 @@ import Navbar from "../layout/Navbar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
-
+import {Link} from "react-router-dom"
 function Dashboard(){
     return(
         <div className={styles.container_dasboard}>
@@ -42,6 +42,9 @@ function Dashboard(){
                         <h3>R$ 2.350.000,00 </h3>
                         <p>Valor Total Movimentado</p>
                     </div>
+                </div>
+                <div>
+                    
                 </div>
             </div>
         </div>
