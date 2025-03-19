@@ -12,10 +12,32 @@ function Dashboard(){
                 <div>
                     <h1>Visão Geral das Transações</h1>
                 </div>
-                <div className={group_cards}>
-                    <h3>5.320 transações </h3>
-                    <p>Total  de Transações
-                    (Este mês)</p>
+                <div className={styles.container_cards}>
+                    <div className={styles.group_cards}>
+                        <h3>5.320 transações </h3>
+                        <p>Total  de Transações
+                        (Este mês)</p>
+                    </div>
+                    <div className={styles.group_cards}>
+                        <h3>5.320 transações </h3>
+                        <p>Total  de Transações
+                        (Este mês)</p>
+                    </div>
+                    <div className={styles.group_cards}>
+                        <h3>5.320 transações </h3>
+                        <p>Total  de Transações
+                        (Este mês)</p>
+                    </div>
+                    <div className={styles.group_cards}>
+                        <h3>5.320 transações </h3>
+                        <p>Total  de Transações
+                        (Este mês)</p>
+                    </div>
+                    <div className={styles.group_cards}>
+                        <h3>5.320 transações </h3>
+                        <p>Total  de Transações
+                        (Este mês)</p>
+                    </div>
                 </div>
             </div>
         </div>

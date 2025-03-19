@@ -18,6 +18,15 @@
     height: 100%;
     padding: 2em;
 }
+.container_cards{
+    
+}
+.group_cards{
+    border: 2px solid #50C878;
+    width: 200px;
+    height: 120px;
+    border-radius: 20px;
+}
 .logo_banese{
     width: 100px;
     border-radius: 10px;
