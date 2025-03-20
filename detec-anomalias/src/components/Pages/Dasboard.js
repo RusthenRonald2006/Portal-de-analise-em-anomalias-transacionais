@@ -3,12 +3,24 @@ import Navbar from "../layout/Navbar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
+import { Users, DollarSign, ShoppingCart, TrendingUp } from 'lucide-react';
 function Dashboard(){
+    const cards = [
+        { title: "Total Usuários", value: "1,482", icon: faUser, colorClass: styles.iconBlue },
+        { title: "Receita", value: "R$ 42,850", icon: faCoins, colorClass: styles.iconGreen },
+        { title: "Pedidos", value: "326", icon: faChartSimple, colorClass: styles.iconPurple },
+        { title: "Cancelamentos", value: "+24%", icon: faCircleXmark, colorClass: styles.iconRed },
+      ];
+      
     return(
         <div>
            <h1>Dasboard</h1>
 
-           <div className={styles.cards_grid}></div>
+           <div className={styles.cards_grid}>
+
+
+
+           </div>
         </div>
         )
 } export default Dashboard
