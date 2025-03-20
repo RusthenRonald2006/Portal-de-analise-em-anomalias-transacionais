@@ -5,11 +5,43 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
 function Dashboard(){
     return(
-        <div className={styles.container_dasboard}>
+        <div>
            <h1>Dasboard</h1>
+
+           <div className={styles.cards_grid}></div>
         </div>
         )
 } export default Dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* <div className={styles.sidebar}>
