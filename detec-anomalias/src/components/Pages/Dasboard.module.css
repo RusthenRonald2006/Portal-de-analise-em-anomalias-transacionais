@@ -79,7 +79,9 @@
 
 /* Telas grandes */
 @media (min-width: 1200px) and (max-width: 1599px) {
-    
+    .logo_banese{
+        width: 100px;
+    }
 }
 
 
