@@ -6,10 +6,10 @@ import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortaweso
 import { Users, DollarSign, ShoppingCart, TrendingUp } from 'lucide-react';
 function Dashboard(){
     const cards = [
-        { title: "Total Usuários", value: "1,482", icon: faUser, colorClass: styles.iconBlue },
-        { title: "Receita", value: "R$ 42,850", icon: faCoins, colorClass: styles.iconGreen },
-        { title: "Pedidos", value: "326", icon: faChartSimple, colorClass: styles.iconPurple },
-        { title: "Cancelamentos", value: "+24%", icon: faCircleXmark, colorClass: styles.iconRed },
+        { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
+        { title: "Transações suspeitas", value: "320 ", icon: faCoins, colorClass: styles.iconGreen },
+        { title: "Total de Contas Investigadas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
+        { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
       ];
       
     return(
@@ -17,7 +17,9 @@ function Dashboard(){
            <h1>Dasboard</h1>
 
            <div className={styles.cards_grid}>
-
+            {cards.map((cards,index)=>(
+                
+            ))}
 
 
            </div>
