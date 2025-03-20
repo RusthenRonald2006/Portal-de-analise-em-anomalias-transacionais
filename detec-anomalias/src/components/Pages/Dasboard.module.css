@@ -21,14 +21,15 @@
 }
 
 .logo_banese{
-    width: 100px;
+    width: 120px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .container_cards {
+    width: 1400px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cria colunas responsivas */
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 50px; /* Espaçamento entre os cards */
     margin-top: 20px;
 }
 
@@ -62,20 +63,26 @@
 }
 
 /* Celulares pequenos */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 599px) {
     
 }
 
-/* Celulares médios e grandes */
-@media screen and (min-width: 481px) and (max-width: 600px) {
+/* Tablets */
+@media (min-width: 600px) and (max-width: 899px) {
     
 }
 
-/* Tablets pequenos */
-@media screen and (min-width: 601px) and (max-width: 930px) {
+/* Telas médias */
+@media (min-width: 900px) and (max-width: 1199px) {
     
 }
-/* Tablets e notebooks pequenos */
-@media screen and (min-width: 930px) and (max-width: 1149px) {
-   
+
+/* Telas grandes */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    
+}
+
+/* Telas muito grandes */
+@media (min-width: 1600px) {
+    
 }
