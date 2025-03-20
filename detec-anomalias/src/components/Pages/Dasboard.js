@@ -6,7 +6,7 @@ import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortaweso
 function Dashboard(){
     return(
         <div className={styles.container_dasboard}>
-           
+           <h1>Dasboard</h1>
         </div>
         )
 } export default Dashboard
