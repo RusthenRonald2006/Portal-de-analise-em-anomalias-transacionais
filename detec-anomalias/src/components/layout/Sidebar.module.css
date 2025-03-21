@@ -20,3 +20,15 @@
     transition: background-color 0.2s, color 0.2s;
 }
   
+.nav_item:hover {
+    background-color: #f3f4f6;
+    color: #319452;
+}
+.nav_item svg {
+    width: 1.55rem;
+    height: 1.55rem;
+}
+.nav_item span {
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+  }
