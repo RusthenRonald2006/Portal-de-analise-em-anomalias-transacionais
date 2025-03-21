@@ -24,8 +24,8 @@ function Dashboard(){
                                 <p>{card.title}</p>
                                 <p>{card.value}</p>
                             </div>
-                            <div>
-                                <FontAwesomeIcon icon={card.icon} className={card.colorClass} />
+                            <div className={`${styles.card_icon} ${card.colorClass}`}>
+                                <FontAwesomeIcon icon={card.icon} />
                             </div>
                         </div>
                     </div>

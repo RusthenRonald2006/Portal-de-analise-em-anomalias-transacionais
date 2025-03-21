@@ -33,8 +33,13 @@
     font-weight: 600;
     margin-top: 0.5rem;
   }
-
-
+.card_icon{
+    padding: 0.75rem;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
