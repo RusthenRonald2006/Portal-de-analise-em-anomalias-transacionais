@@ -52,30 +52,17 @@
 
 
 
-/* Celulares pequenos */
-@media (max-width: 599px) {
+
+@media (max-width: 1024px) {
+    .cards_grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     
+      .bottom-grid {
+        grid-template-columns: 1fr;
+      }
 }
 
-/* Tablets */
-@media (min-width: 600px) and (max-width: 899px) {
-    
-}
-
-/* Telas médias */
-@media (min-width: 900px) and (max-width: 1199px) {
-    
-}
-
-/* Telas grandes */
-@media (min-width: 1200px) and (max-width: 1599px) {
-    
-}
-
-/* Telas muito grandes */
-@media (min-width: 1600px) {
-    
-}
 
 
 /*.container_dasboard{
