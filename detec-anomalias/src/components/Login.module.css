@@ -87,6 +87,7 @@
     border-radius: 5px;
     transition: background-color 0.2s;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.075);
+    margin-bottom: 10px;
 }
 .btn:hover {
     background-color: #1b7a37;
