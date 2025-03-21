@@ -7,4 +7,6 @@
 .main_content{
     flex: 1;
     margin-left: 288px;
+    padding: 1.5rem;
+    overflow-x: hidden;
 }
