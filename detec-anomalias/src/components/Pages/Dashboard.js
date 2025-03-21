@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Dashboard.module.css"
 import Navbar from "../layout/Navbar"
 import logobanese from '../../components/img/logo banese.png'
@@ -23,8 +24,8 @@ function Dashboard(){
                                 <p>{card.title}</p>
                                 <p>{card.value}</p>
                             </div>
-                            <div className={`card_icon ${card.colorClass}`}>
-                                
+                            <div>
+                                <FontAwesomeIcon icon={card.icon} className={card.colorClass} />
                             </div>
                         </div>
                     </div>
