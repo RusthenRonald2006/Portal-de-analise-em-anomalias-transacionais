@@ -5,6 +5,7 @@ import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { Users, DollarSign, ShoppingCart, TrendingUp } from 'lucide-react';
+import banesefundo from '../../components/img/banensefundoofc.png'
 function Dashboard(){
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
@@ -15,7 +16,7 @@ function Dashboard(){
       
     return(
         <div>
-           <h1 className={styles.dashboard_title}>Dasboard</h1>
+           <h1 className={styles.dashboard_title}>Dashboard</h1>
            <div className={styles.cards_grid}>
                 {cards.map((card,index)=>(
                     <div key={index} className={styles.card}>
