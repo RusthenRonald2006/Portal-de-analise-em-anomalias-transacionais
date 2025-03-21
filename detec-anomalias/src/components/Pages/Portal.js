@@ -5,7 +5,7 @@ import Sidebar from "../layout/Sidebar"
 function Portal(){
     return(
         <div className={StyleSheet.app_container}>
-            <button>
+            <button className={styles.mobile_menu_button}>
 
             </button>
             <div></div>
