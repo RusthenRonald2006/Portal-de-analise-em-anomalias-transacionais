@@ -1,6 +1,6 @@
 import Login from "./components/Login";
 import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
-import Dashboard from "./components/Pages/Dasboard";
+import Dashboard from "./components/Pages/Dashboard";
 import GestaoContas from "./components/Pages/GestaoContas";
 import GestaoTransacoes from "./components/Pages/GestaoTransacoes"; 
 import Notificacoes from "./components/Pages/Notificacoes";

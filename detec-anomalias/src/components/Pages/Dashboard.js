@@ -24,7 +24,7 @@ function Dashboard(){
                                 <p>{card.value}</p>
                             </div>
                             <div className={`card_icon ${card.colorClass}`}>
-                                <card.icon/>
+                                
                             </div>
                         </div>
                     </div>
