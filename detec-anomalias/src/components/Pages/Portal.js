@@ -1,3 +1,4 @@
+import Dashboard from "./Dashboard"
 function Portal(){
     return(
         <div className={StyleSheet.app_container}>
@@ -8,7 +9,7 @@ function Portal(){
             <div>
                 <p>sidebar</p>
             </div>
-            <div><p>Dasboard</p></div>
+            <div><Dashboard/></div>
         </div>
     )
 } export default Portal
