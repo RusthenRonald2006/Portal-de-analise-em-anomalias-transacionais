@@ -10,7 +10,9 @@ function Portal(){
             <div>
                 <p>sidebar</p>
             </div>
-            <div><Dashboard/></div>
+            <div className={styles.main_content}>
+                <Dashboard/>
+            </div>
         </div>
     )
 } export default Portal
