@@ -1,7 +1,14 @@
 function Portal(){
     return(
         <div className={StyleSheet.app_container}>
-            <h1>Portal</h1>
+            <button>
+
+            </button>
+            <div></div>
+            <div>
+                <p>sidebar</p>
+            </div>
+            <div><p>Dasboard</p></div>
         </div>
     )
 } export default Portal
