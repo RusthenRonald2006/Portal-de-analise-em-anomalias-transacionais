@@ -25,8 +25,14 @@
     align-items: center;
 }  
 .card_info p:first-child{
-     font-size: 1.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
 }
+.card_info p:last-child {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
 
 
 
