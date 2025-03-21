@@ -15,6 +15,7 @@
     padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+    border: 1px solid #10b981;
 }
 .card:hover {
     transform: scale(1.05);
@@ -45,10 +46,10 @@
     height: 1.5rem;
     color: white;
 }
-.iconBlue { background-color: #3b82f6; }
+.iconBlue { background-color: #10b981; }
 .iconGreen { background-color: #10b981; }
-.iconPurple { background-color: #8b5cf6; }
-.iconRed { background-color: #ef4444; }
+.iconPurple { background-color: #10b981; }
+.iconRed { background-color: #10b981; }
 
 
 
