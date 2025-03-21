@@ -16,8 +16,11 @@ function Navbar(){
                 <h2 className={styles.navbar_title}>Portal</h2>
             </div>
             <nav className={styles.sidebar_nav}>
-                {menuItems.map(()=>(
-                    
+                {menuItems.map((item,index)=>(
+                    <a key={index} href="#" className={styles.nav_item}>
+                        <item.icon />
+                        <span>{item.text}</span>
+                    </a>
                 ))}
             </nav>
         </>
