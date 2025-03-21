@@ -1,4 +1,4 @@
-import styles from "./Dasboard.module.css"
+import styles from "./Dashboard.module.css"
 import Navbar from "../layout/Navbar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,14 +14,14 @@ function Dashboard(){
       
     return(
         <div>
-           <h1>Dasboard</h1>
+           <h1 className={styles.dashboard_title}>Dasboard</h1>
            <div className={styles.cards_grid}>
                 {cards.map((card,index)=>(
                     <div key={index} className={styles.card}>
                         <div className={styles.card_content}>
                             <div className={styles.card_info}>
                                 <p>{card.title}</p>
-                                <p>{card_info}</p>
+                                <p>{card.value}</p>
                             </div>
                             <div className={`card_icon ${card.colorClass}`}>
                                 <card.icon/>

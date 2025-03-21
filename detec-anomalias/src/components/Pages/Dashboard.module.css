@@ -1,4 +1,6 @@
-
+.dashboard_title{
+    font-size: 5.5em;
+}
 /* Celulares pequenos */
 @media (max-width: 599px) {
     
