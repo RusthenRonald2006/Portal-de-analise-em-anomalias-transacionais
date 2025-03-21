@@ -4,12 +4,13 @@ import Dashboard from "./components/Pages/Dashboard";
 import GestaoContas from "./components/Pages/GestaoContas";
 import GestaoTransacoes from "./components/Pages/GestaoTransacoes"; 
 import Notificacoes from "./components/Pages/Notificacoes";
+import Portal from "./components/Pages/Portal";
 function App() {
   return (
     <Router>
       <Routes>
           <Route path="/" element={<Login/>}></Route>
-          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/portal" element={<Portal/>}/>
           <Route path="/gestaocontas" element={<GestaoContas/>}/>
           <Route path="/gestaotransacoes" element={<GestaoTransacoes/>}/>
           <Route path="/notificacoes" element={<Notificacoes/>}/>

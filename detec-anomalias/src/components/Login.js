@@ -34,7 +34,7 @@ function Login (){
                             <input type='password' name="password" placeholder="Digite sua senha"></input>
                         </div>
                         <div className={styles.container_btn}>
-                            <Link to='/dashboard' className={styles.login_link}>
+                            <Link to='/portal' className={styles.login_link}>
                                 <button type='button' className={styles.btn}>
                                     Login
                                 </button>
