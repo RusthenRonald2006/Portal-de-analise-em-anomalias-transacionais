@@ -33,3 +33,16 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+.mobile_menu_button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #4b5563;
+  }
+
+ @media (max-width:1024px){
+
+ }
+ 
+ @media (max-width:640px){
+
+ }
