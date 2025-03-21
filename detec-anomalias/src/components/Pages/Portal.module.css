@@ -8,7 +8,12 @@
     flex: 1;
     margin-left: 288px;
     padding: 1.5rem;
+    height: 100vh;
     overflow-x: hidden;
+    background-image: url('../../components/img/banensefundoofc.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .sidebar{
     background-color: white;

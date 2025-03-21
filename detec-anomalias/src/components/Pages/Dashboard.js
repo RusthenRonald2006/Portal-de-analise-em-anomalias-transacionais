@@ -4,8 +4,7 @@ import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
-import { Users, DollarSign, ShoppingCart, TrendingUp } from 'lucide-react';
-import banesefundo from '../../components/img/banensefundoofc.png'
+import { Users, DollarSign, ShoppingCart, TrendingUp } from 'lucide-react'
 function Dashboard(){
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },

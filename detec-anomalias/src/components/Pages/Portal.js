@@ -3,6 +3,8 @@ import Dashboard from "./Dashboard"
 import styles from "./Portal.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
+import banesefundo from '../../components/img/banensefundoofc.png'
+
 function Portal(){
     return(
         <div className={StyleSheet.app_container}>
