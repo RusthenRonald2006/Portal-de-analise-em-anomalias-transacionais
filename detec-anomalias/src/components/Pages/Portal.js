@@ -8,7 +8,7 @@ function Portal(){
 
             </button>
             <div></div>
-            <div>
+            <div className={`${styles.sidebar} ${styles.sidebarOpen ? 'open' : ''}`}>
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>

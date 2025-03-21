@@ -10,3 +10,7 @@
     padding: 1.5rem;
     overflow-x: hidden;
 }
+.sidebar{
+    background-color: white;
+    width: 280px;
+}
