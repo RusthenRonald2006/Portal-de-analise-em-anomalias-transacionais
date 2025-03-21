@@ -19,8 +19,14 @@
 .card:hover {
     transform: scale(1.05);
   }
-  
-
+.card_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}  
+.card_info p:first-child{
+     font-size: 1.5rem;
+}
 
 
 
