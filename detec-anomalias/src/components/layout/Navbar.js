@@ -12,11 +12,13 @@ function Navbar(){
       ];
     return(
         <>
-            <div className={styles.navbar_header}>
+            <div className={styles.sidebar_header}>
                 <h2 className={styles.navbar_title}>Portal</h2>
             </div>
-            <nav>
-
+            <nav className={styles.sidebar_nav}>
+                {menuItems.map(()=>(
+                    
+                ))}
             </nav>
         </>
 )} export default Navbar
