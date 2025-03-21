@@ -15,13 +15,20 @@ function Dashboard(){
     return(
         <div>
            <h1>Dasboard</h1>
-
            <div className={styles.cards_grid}>
-            {cards.map((cards,index)=>(
-                
-            ))}
-
-
+                {cards.map((card,index)=>(
+                    <div key={index} className={styles.card}>
+                        <div className={styles.card_content}>
+                            <div className={styles.card_info}>
+                                <p>{card.title}</p>
+                                <p>{card_info}</p>
+                            </div>
+                            <div className={`card_icon ${card.colorClass}`}>
+                                <card.icon/>
+                            </div>
+                        </div>
+                    </div>
+                ))}
            </div>
         </div>
         )
