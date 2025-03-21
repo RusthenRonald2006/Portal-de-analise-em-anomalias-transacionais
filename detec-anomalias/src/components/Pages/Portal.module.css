@@ -21,3 +21,6 @@
     z-index: 20;
     transition: transform 0.2s ease-in-out;
 }
+.mobile_menu_button{
+    display: none;
+}
