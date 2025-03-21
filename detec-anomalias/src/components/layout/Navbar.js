@@ -11,7 +11,7 @@ function Navbar(){
         { icon: Settings, text : 'Logout'}
       ];
     return(
-        <div>
-
-        </div>
+        <>
+            
+        </>
 )} export default Navbar
