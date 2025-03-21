@@ -12,6 +12,11 @@ function Navbar(){
       ];
     return(
         <>
-            
+            <div className={styles.navbar_header}>
+                <h2 className={styles.navbar_title}>Portal</h2>
+            </div>
+            <nav>
+
+            </nav>
         </>
 )} export default Navbar
