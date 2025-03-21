@@ -1,6 +1,6 @@
 import Dashboard from "./Dashboard"
 import styles from "./Portal.module.css"
-import Navbar from "../layout/Sidebar"
+import Sidebar from "../layout/Sidebar"
 function Portal(){
     return(
         <div className={StyleSheet.app_container}>
@@ -9,7 +9,7 @@ function Portal(){
             </button>
             <div></div>
             <div>
-                <Navbar/>
+                <Sidebar/>
             </div>
             <div className={styles.main_content}>
                 <Dashboard/>
