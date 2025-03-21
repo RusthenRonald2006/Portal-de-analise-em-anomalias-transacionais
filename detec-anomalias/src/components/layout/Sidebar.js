@@ -13,7 +13,7 @@ function Navbar(){
     return(
         <>
             <div className={styles.sidebar_header}>
-                <h2 className={styles.navbar_title}>Portal</h2>
+                <h2 className={styles.sidebar_title}>Portal</h2>
             </div>
             <nav className={styles.sidebar_nav}>
                 {menuItems.map((item,index)=>(
