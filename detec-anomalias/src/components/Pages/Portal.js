@@ -9,7 +9,7 @@ function Portal(){
             </button>
             <div></div>
             <div>
-                <p>sidebar</p>
+                <Navbar/>
             </div>
             <div className={styles.main_content}>
                 <Dashboard/>
