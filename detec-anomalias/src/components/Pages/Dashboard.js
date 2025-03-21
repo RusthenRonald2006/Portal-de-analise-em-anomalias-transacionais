@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Dashboard.module.css"
-import Navbar from "../layout/Navbar"
+import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
