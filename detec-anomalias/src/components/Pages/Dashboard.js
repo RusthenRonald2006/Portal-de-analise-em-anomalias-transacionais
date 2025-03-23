@@ -49,6 +49,9 @@ function Dashboard(){
                         ))}
                     </div>
                 </div>
+                <div>
+                    <h3>Gráfico de Volume de Transações(Linha ou Barra)</h3>
+                </div>
            </div>
         </div>
         )
