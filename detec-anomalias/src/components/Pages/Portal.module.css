@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
 }
 .sidebar{
-    background: linear-gradient(to bottom,  #50C878, #28643C, #307748);
+    background: linear-gradient(180deg, #2E8B57 0%, #1a5e3a 100%);
     width: 280px;
     min-height: 100vh;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
@@ -55,7 +55,7 @@
     .mobile_menu_button{
         display: block;
     }
-    /*em telas menores */
+    /*em telas*/
   .sidebar {
     transform: translateX(-100%);
   }

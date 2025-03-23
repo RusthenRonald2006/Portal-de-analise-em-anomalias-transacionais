@@ -21,8 +21,7 @@
 }
   
 .nav_item:hover {
-    background-color: #f3f4f6;
-    color: #319452;
+    background-color: rgba(255, 255, 255, 0.1); /* leve sobreposição branca */
 }
 .nav_item svg {
     width: 1.55rem;
