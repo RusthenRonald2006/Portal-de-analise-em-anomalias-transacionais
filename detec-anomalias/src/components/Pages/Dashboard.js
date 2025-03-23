@@ -41,6 +41,10 @@ function Dashboard(){
                                 <div className={styles.activity_icon}>
                                     <Users/>
                                 </div>
+                                <div className={styles.activity_info}>
+                                    <p>Novo usuário registrado</p>
+                                    <p>Há {index + 1} horas</p>
+                                </div>
                             </div>
                         ))}
                     </div>
