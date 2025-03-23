@@ -94,6 +94,16 @@
     height: 1.25rem;
     color: #2E8B57;
 }
+.activity_info p:first-child{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #111827;
+}
+.activity_info p:last-child{
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
   
 @media (max-width: 1024px) {
     .cards_grid {
