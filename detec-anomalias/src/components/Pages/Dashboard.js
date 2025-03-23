@@ -34,7 +34,7 @@ function Dashboard(){
 
            <div className={styles.grid_notifications}>
                 <div className={styles.card_notifications}>
-                    <h2>Atividades Recentes</h2>
+                    <h2 className={styles.card_notifications_title}> Atividades Recentes</h2>
                     <div className={styles.activity_list}>
                         {[1,2,3].map((_,index)=>( //1 parâmetro ( 1, 2, 3) não é usado
                             <div key={index} className={styles.activity_item}>

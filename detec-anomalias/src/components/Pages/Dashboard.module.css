@@ -62,7 +62,12 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
-
+.card_notifications_title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #111827;
+}
 
 @media (max-width: 1024px) {
     .cards_grid {
