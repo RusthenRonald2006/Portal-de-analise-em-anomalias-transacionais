@@ -55,6 +55,7 @@
     .mobile_menu_button{
         display: block;
     }
+    /*em telas menores */
   .sidebar {
     transform: translateX(-100%);
   }
