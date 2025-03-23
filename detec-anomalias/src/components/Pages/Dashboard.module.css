@@ -30,7 +30,7 @@
     color: #6b7280;
 }
 .card_info p:last-child {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     margin-top: 0.5rem;
   }
@@ -42,16 +42,14 @@
     align-items: center;
 }
 .card_icon svg {
-    width: 1.5rem;
-    height: 1.5rem;
+     width: 1.75rem;  
+    height: 1.75rem;  
     color: white;
 }
 .iconBlue { background-color: #10b981; }
 .iconGreen { background-color: #10b981; }
 .iconPurple { background-color: #10b981; }
 .iconRed { background-color: #10b981; }
-
-
 
 
 @media (max-width: 1024px) {
