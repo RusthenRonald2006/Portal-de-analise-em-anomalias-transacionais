@@ -83,7 +83,17 @@
 }
 .activity_item:hover {
     background-color: #f9fafb;
-  }
+}
+.activity_icon{
+    background-color: rgba(46, 139, 87, 0.1);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+}
+.activity_icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #2E8B57;
+}
   
 @media (max-width: 1024px) {
     .cards_grid {
