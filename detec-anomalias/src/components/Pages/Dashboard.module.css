@@ -50,6 +50,14 @@
 .iconPurple { background-color: #2E8B57; }
 .iconRed { background-color: #2E8B57; }
 
+.grid_notifications{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    background-color: #6b7280;
+    gap: 2rem;
+}
+
+
 @media (max-width: 1024px) {
     .cards_grid {
         grid-template-columns: repeat(2, 1fr);

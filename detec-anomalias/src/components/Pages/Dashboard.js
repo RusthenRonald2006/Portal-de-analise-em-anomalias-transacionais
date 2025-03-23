@@ -32,7 +32,7 @@ function Dashboard(){
                 ))}
            </div>
 
-           <div className={styles.container_notifications}>
+           <div className={styles.grid_notifications}>
                 <div className={styles.card_notifications}>
                     <h2>Atividades Recentes</h2>
                     <div className={styles.activity_list}>
