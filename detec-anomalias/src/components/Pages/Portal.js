@@ -6,6 +6,9 @@ import { Menu } from 'lucide-react';
 import banesefundo from '../../components/img/banensefundoofc.png'
 
 function Portal(){
+
+    const[sidebarOpen,setSidebarOpen]=useState(false)
+
     return(
         <div className={StyleSheet.app_container}>
             <button className={styles.mobile_menu_button}>
