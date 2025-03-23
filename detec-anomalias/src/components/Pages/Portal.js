@@ -16,7 +16,7 @@ function Portal(){
                 <Menu/>
             </button>
             <div className={`${styles.overlay} ${sidebarOpen ? styles.open : ''}`} onClick={() => setSidebarOpen(false)} />
-            <div className={`${styles.sidebar} ${styles.sidebarOpen ? styles.open : ''}`}>
+            <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>
