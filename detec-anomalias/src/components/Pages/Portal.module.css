@@ -44,12 +44,20 @@
     height: 1.5rem;
     color: #4b5563;
   }
-
+  .overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
  @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
     }
-
+    .overlay.open{
+      display: block;
+    }
   .sidebar {
     transform: translateX(-100%);
   }
