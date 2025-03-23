@@ -53,8 +53,14 @@
 .grid_notifications{
     display: grid;
     grid-template-columns:repeat(2,1fr);
-    background-color: #6b7280;
     gap: 2rem;
+}
+.card_notifications{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 
