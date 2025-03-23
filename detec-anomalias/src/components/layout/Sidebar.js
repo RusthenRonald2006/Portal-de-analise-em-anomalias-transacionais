@@ -7,7 +7,7 @@ function Navbar(){
         { icon: FileText, text: 'Gestão de Transações',path:'/gestaotransacoes' },
         { icon: BarChart2, text: 'Gestão de Contas' ,path:'/gestaocontas'},
         { icon: Settings, text: 'Tela de Notificações' ,path:'/notificacoes'},
-        { icon: Settings, text : 'Logout',path:'/login'}
+        { icon: Settings, text : 'Logout',path:'/'}
       ];
     return(
         <>
