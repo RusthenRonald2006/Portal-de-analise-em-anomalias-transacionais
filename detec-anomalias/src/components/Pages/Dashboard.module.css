@@ -68,6 +68,20 @@
     margin-bottom: 1.5rem;
     color: #111827;
 }
+.activity_list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.activity_item{
+    background-color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
 
 @media (max-width: 1024px) {
     .cards_grid {
