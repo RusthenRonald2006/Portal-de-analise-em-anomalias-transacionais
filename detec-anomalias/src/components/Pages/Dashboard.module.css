@@ -113,6 +113,9 @@
       .bottom-grid {
         grid-template-columns: 1fr;
       }
+      .grid_notifications{
+        grid-template-columns: 1fr;
+      }
 }
 @media (max-width: 640px) {
     .cards_grid {
