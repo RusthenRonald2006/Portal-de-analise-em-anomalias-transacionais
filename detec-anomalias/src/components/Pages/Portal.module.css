@@ -10,10 +10,11 @@
     padding: 1.5rem;
     height: 100vh;
     overflow-x: hidden;
+    /*
     background-image: url('../../components/img/banensefundoofc.png');
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
 .sidebar{
     background: linear-gradient(180deg, #2E8B57 0%, #1a5e3a 100%);
