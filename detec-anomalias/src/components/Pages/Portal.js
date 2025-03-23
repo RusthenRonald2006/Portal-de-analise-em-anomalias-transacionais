@@ -15,8 +15,8 @@ function Portal(){
             <button className={styles.mobile_menu_button} onClick={()=>setSidebarOpen(!sidebarOpen)}>
                 <Menu/>
             </button>
-            <div className={`${styles.overlay} ${sidebarOpen ? 'open' : ''}`} onClick={() => setSidebarOpen(false)} />
-            <div className={`${styles.sidebar} ${styles.sidebarOpen ? 'open' : ''}`}>
+            <div className={`${styles.overlay} ${sidebarOpen ? styles.open : ''}`} onClick={() => setSidebarOpen(false)} />
+            <div className={`${styles.sidebar} ${styles.sidebarOpen ? styles.open : ''}`}>
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>

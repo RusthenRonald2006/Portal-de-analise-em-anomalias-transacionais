@@ -55,9 +55,6 @@
     .mobile_menu_button{
         display: block;
     }
-    .overlay.open{
-      display: block;
-    }
   .sidebar {
     transform: translateX(-100%);
   }
