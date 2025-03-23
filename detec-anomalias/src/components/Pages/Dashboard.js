@@ -37,8 +37,10 @@ function Dashboard(){
                     <h2>Atividades Recentes</h2>
                     <div className={styles.activity_list}>
                         {[1,2,3].map((_,index)=>( //1 parâmetro ( 1, 2, 3) não é usado
-                            <div key={index}>
-                                
+                            <div key={index} className={styles.activity_item}>
+                                <div className={styles.activity_icon}>
+                                    <Users/>
+                                </div>
                             </div>
                         ))}
                     </div>
