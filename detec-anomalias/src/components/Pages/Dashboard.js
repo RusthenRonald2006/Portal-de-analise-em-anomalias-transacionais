@@ -31,6 +31,10 @@ function Dashboard(){
                     </div>
                 ))}
            </div>
+
+           <div className={styles.container_notifications}>
+
+           </div>
         </div>
         )
 } export default Dashboard
