@@ -1,10 +1,10 @@
 
 .sidebar_header {
     padding: 1rem;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);  /* Antes era uma borda branca sólida */
 }
 .sidebar_title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
     color: #ffffff;
 }
@@ -32,3 +32,13 @@
     font-size: 0.875rem;
     color: white;
 }
+
+@media (max-width:1024px){
+    .sidebar_title{
+        padding-left: 55px;
+    }
+ }
+ 
+ @media (max-width:640px){
+    
+ }
