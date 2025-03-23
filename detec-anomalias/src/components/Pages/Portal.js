@@ -8,10 +8,11 @@ import banesefundo from '../../components/img/banensefundoofc.png'
 function Portal(){
 
     const[sidebarOpen,setSidebarOpen]=useState(false)
-
+    //Se sidebarOpen for true, !sidebarOpen será false.
+    //Se sidebarOpen for false, !sidebarOpen será true.
     return(
         <div className={StyleSheet.app_container}>
-            <button className={styles.mobile_menu_button}>
+            <button className={styles.mobile_menu_button} onClick={()=>setSidebarOpen(!sidebarOpen)}>
                 <Menu/>
             </button>
             <div></div>
