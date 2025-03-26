@@ -19,8 +19,8 @@ function Login (){
            <div className={`${styles.login_rigth}`} >
                 <div className={`${styles.form_container} `}>
                     <div>
-                        <h1>Welcome to</h1>
-                        <h2>Suspicious transactions</h2>
+                        <h1>Bem-vindo ao</h1>
+                        <h2>Portal de Anomalias</h2>
                     </div>
                     <form>
                         <div className={styles.form_group}>
