@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+import uvicorn
 
 app = FastAPI()
 #Adiciona o middleware CORS para permitir requisições entre frontend (React) e backend (FastAPI).
@@ -23,3 +23,6 @@ def get_transacoes():
 #Cria uma função que retorna uma lista de dicionários (simulando transações bancárias).
 
 #Essa lista seria normalmente extraída de um banco de dados, mas aqui é apenas um exemplo.
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8000)
