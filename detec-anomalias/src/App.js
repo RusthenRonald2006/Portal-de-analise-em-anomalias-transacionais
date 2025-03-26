@@ -8,6 +8,7 @@ import Portal from "./components/Pages/Portal";
 function App() {
   return (
     <Router>
+      
       <Routes>
           <Route path="/" element={<Login/>}></Route>
           <Route path="/portal" element={<Portal/>}/>
