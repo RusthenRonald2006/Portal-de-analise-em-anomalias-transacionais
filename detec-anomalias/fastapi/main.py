@@ -13,3 +13,13 @@ app.add_middleware(
 )
 
 @app.get('/transacoes') #define uma rota get
+
+def get_transacoes():
+    return[
+        {"id": 1, "conta": "12345", "valor": 1000, "tipo": "saque"},
+        {"id": 2, "conta": "54321", "valor": 5000, "tipo": "transferência"},
+    ]
+
+#Cria uma função que retorna uma lista de dicionários (simulando transações bancárias).
+
+#Essa lista seria normalmente extraída de um banco de dados, mas aqui é apenas um exemplo.
