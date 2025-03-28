@@ -35,8 +35,12 @@
 }
  
 @media (max-width:1024px){
-    
+    .mobile_menu_button{
+        display: block;
+    }
  }
 @media (max-width:640px){
-    
+    .mobile_menu_button{
+        display: block;
+    }
  }
