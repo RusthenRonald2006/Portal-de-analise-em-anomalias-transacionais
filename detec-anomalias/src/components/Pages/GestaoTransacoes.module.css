@@ -14,5 +14,9 @@
     transition: transform 0.2s ease-in-out;
 }
 .main_content{
-
+    flex: 1;
+    margin-left: 288px;
+    padding: 1.5rem;
+    height: 100vh;
+    overflow-x: hidden;
 }
