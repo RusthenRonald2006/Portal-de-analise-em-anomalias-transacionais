@@ -1,4 +1,5 @@
 import styles from "./GestaoTransacoes.module.css"
+import Sidebar from "../layout/Sidebar"
 function GestaoTransacoes(){
     return(
         <div className={styles.app_container}>
