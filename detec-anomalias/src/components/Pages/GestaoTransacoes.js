@@ -1,3 +1,4 @@
+import {useState} from "react"
 import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
@@ -7,7 +8,7 @@ function GestaoTransacoes(){
             <button className={styles.mobile_menu_button}>
                 <Menu/>
             </button>
-            <div></div>
+            <div/>
             <div className={styles.sidebar}>
                 <Sidebar/>
             </div>
