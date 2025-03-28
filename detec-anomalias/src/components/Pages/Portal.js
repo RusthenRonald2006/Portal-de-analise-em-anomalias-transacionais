@@ -11,7 +11,7 @@ function Portal(){
     //Se sidebarOpen for true, !sidebarOpen será false.
     //Se sidebarOpen for false, !sidebarOpen será true.
     return(
-        <div className={StyleSheet.app_container}>
+        <div className={styles.app_container}>
             <button className={styles.mobile_menu_button} onClick={()=>setSidebarOpen(!sidebarOpen)}>
                 <Menu/>
             </button>

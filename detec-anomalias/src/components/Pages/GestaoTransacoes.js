@@ -1,7 +1,7 @@
 import styles from "./GestaoTransacoes.module.css"
 function GestaoTransacoes(){
     return(
-        <div className={StyleSheet.app_container}>
+        <div className={styles.app_container}>
             <button></button>
             <div className={StyleSheet.sidebar}>
                 <h2>Sidebar</h2>
