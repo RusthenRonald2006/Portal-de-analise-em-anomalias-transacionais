@@ -16,7 +16,7 @@ function GestaoContas(){
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>
-                <h1>Gestão Transações</h1>
+                <h1>Gestão Contas</h1>
             </div>
         </div>
     )
