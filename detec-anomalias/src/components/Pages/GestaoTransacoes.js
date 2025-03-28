@@ -3,9 +3,12 @@ import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
 function GestaoTransacoes(){
+
+    const [sidebarOpen,setSidebarOpen] = useState(false)
+
     return(
         <div className={styles.app_container}>
-            <button className={styles.mobile_menu_button}>
+            <button className={styles.mobile_menu_button} onClick={()=> setSidebarOpen(!sidebarOpen)}>
                 <Menu/>
             </button>
             <div/>
