@@ -12,7 +12,7 @@ function GestaoTransacoes(){
                 <Menu/>
             </button>
             <div/>
-            <div className={styles.sidebar}>
+            <div className={`${styles.sidebar} ${sidebarOpen ?styles.open : ''}`}>
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>
