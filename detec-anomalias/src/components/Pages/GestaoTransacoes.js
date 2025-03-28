@@ -1,3 +1,4 @@
+import styles from "./GestaoTransacoes.module.css"
 function GestaoTransacoes(){
     return(
         <div className={StyleSheet.app_container}>
