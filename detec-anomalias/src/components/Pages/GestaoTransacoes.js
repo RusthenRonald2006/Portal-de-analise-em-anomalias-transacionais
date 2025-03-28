@@ -11,7 +11,7 @@ function GestaoTransacoes(){
             <button className={styles.mobile_menu_button} onClick={()=> setSidebarOpen(!sidebarOpen)}>
                 <Menu/>
             </button>
-            <div/>
+            <div className={`${styles.overlay} ${sidebarOpen ? styles.open : ''}`}  onClick={() => setSidebarOpen(false)}/>
             <div className={`${styles.sidebar} ${sidebarOpen ?styles.open : ''}`}>
                 <Sidebar/>
             </div>
