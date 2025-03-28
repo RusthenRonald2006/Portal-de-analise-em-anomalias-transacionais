@@ -5,7 +5,9 @@ function GestaoTransacoes(){
             <div className={StyleSheet.sidebar}>
                 <h2>Sidebar</h2>
             </div>
-            <h1>Gestão Transações</h1>
+            <div className={StyleSheet.main_content}>
+                <h1>Gestão Transações</h1>
+            </div>
         </div>
     )
 } export default GestaoTransacoes
