@@ -1,9 +1,13 @@
 import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
+import { Menu } from 'lucide-react';
 function GestaoTransacoes(){
     return(
         <div className={styles.app_container}>
-            <button></button>
+            <button className={styles.mobile_menu_button}>
+                <Menu/>
+            </button>
+            <div></div>
             <div className={styles.sidebar}>
                 <Sidebar/>
             </div>
