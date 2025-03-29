@@ -4,22 +4,13 @@ import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 
-interface Transaction {
-    id: string;
-    account: string;
-    amount: number;
-    status: "normal" | "suspicious" | "analyzing";
-    date: string;
-  }
-
 function GestaoTransacoes(){
     
-      // Correção: nome da variável de estado no plural
       const [transactions, setTransactions] = useState([]);
     
       // Simulando dados com useEffect, mas no futuro os dados virão da API
       useEffect(() => {
-        const mockData: Transaction[] = [
+        const mockData = [
           { id: "1", account: "1234-5", amount: 1500.0, status: "normal", date: "2024-03-10" },
           { id: "2", account: "1234-6", amount: 50000.0, status: "suspicious", date: "2024-03-11" },
           { id: "3", account: "1234-7", amount: 750.0, status: "analyzing", date: "2024-03-12" },
@@ -95,7 +86,10 @@ function GestaoTransacoes(){
                         </thead>
                         <tbody>
                             <tr>
-
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
