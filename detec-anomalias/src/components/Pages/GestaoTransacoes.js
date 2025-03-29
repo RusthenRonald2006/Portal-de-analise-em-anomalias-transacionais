@@ -6,7 +6,11 @@ import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react'
 function GestaoTransacoes(){
 
     //simulando dados com useefct , porém os dados irão vir da API
-    
+    useEffect(()=>{
+        const mockData : Transaction[] = [
+            
+        ]
+    })
 
 
 
