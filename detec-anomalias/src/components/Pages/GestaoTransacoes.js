@@ -16,6 +16,8 @@ function GestaoTransacoes(){
         status: ''
       }
       )
+
+      const handleFilterChange =()
     
       // Simulando dados com useEffect, mas no futuro os dados virão da API
       useEffect(() => {
