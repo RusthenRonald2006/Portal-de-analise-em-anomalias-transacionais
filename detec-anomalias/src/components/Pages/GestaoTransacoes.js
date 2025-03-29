@@ -4,7 +4,16 @@ import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 function GestaoTransacoes(){
+    interface Transaction {
+        id: string;
+        account: string;
+        amount: number;
+        status: 'normal' | 'suspicious' | 'analyzing';
+        date: string;
+      }
 
+
+    const [transaction,setTransactions]=useState<Transaction[]>([])
     //simulando dados com useefct , porém os dados irão vir da API
     useEffect(()=>{
         const mockData : Transaction[] = [
@@ -12,11 +21,11 @@ function GestaoTransacoes(){
             { id: '2', account: '1234-6', amount: 50000.00, status: 'suspicious', date: '2024-03-11' },
             { id: '3', account: '1234-7', amount: 750.00, status: 'analyzing', date: '2024-03-12' },
         ];
+        setTransactions(mockData)
     },[])
 
 
-
-    const [Transaction,setTransaction]=useState()
+    
     const [showfilter,setShowFilter]=useState(false)
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
