@@ -15,7 +15,7 @@ interface Transaction {
 function GestaoTransacoes(){
     
       // Correção: nome da variável de estado no plural
-      const [transactions, setTransactions] = useState<Transaction[]>([]);
+      const [transactions, setTransactions] = useState([]);
     
       // Simulando dados com useEffect, mas no futuro os dados virão da API
       useEffect(() => {
