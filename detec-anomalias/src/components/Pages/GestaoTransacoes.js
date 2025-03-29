@@ -3,27 +3,29 @@ import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
+
+interface Transaction {
+    id: string;
+    account: string;
+    amount: number;
+    status: "normal" | "suspicious" | "analyzing";
+    date: string;
+  }
+  
 function GestaoTransacoes(){
-    interface Transaction {
-        id: string;
-        account: string;
-        amount: number;
-        status: 'normal' | 'suspicious' | 'analyzing';
-        date: string;
-      }
-
-
-    const [transaction,setTransactions]=useState<Transaction[]>([])
-    //simulando dados com useefct , porém os dados irão vir da API
-    useEffect(()=>{
-        const mockData : Transaction[] = [
-            { id: '1', account: '1234-5', amount: 1500.00, status: 'normal', date: '2024-03-10' },
-            { id: '2', account: '1234-6', amount: 50000.00, status: 'suspicious', date: '2024-03-11' },
-            { id: '3', account: '1234-7', amount: 750.00, status: 'analyzing', date: '2024-03-12' },
+    
+      // Correção: nome da variável de estado no plural
+      const [transactions, setTransactions] = useState<Transaction[]>([]);
+    
+      // Simulando dados com useEffect, mas no futuro os dados virão da API
+      useEffect(() => {
+        const mockData: Transaction[] = [
+          { id: "1", account: "1234-5", amount: 1500.0, status: "normal", date: "2024-03-10" },
+          { id: "2", account: "1234-6", amount: 50000.0, status: "suspicious", date: "2024-03-11" },
+          { id: "3", account: "1234-7", amount: 750.0, status: "analyzing", date: "2024-03-12" },
         ];
-        setTransactions(mockData)
-    },[])
-
+        setTransactions(mockData);
+      }, []);
 
     
     const [showfilter,setShowFilter]=useState(false)
