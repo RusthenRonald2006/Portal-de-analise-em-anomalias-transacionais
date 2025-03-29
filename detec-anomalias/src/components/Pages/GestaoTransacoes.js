@@ -11,7 +11,7 @@ interface Transaction {
     status: "normal" | "suspicious" | "analyzing";
     date: string;
   }
-  
+
 function GestaoTransacoes(){
     
       // Correção: nome da variável de estado no plural
