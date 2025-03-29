@@ -7,7 +7,7 @@ import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react'
 function GestaoTransacoes(){
 
       const [transactions, setTransactions] = useState([]);
-      const [filters,setFiltera] = useState({
+      const [filters,setFilters] = useState({
         account: '',
         startDate: '',
         endDate: '',
@@ -17,7 +17,11 @@ function GestaoTransacoes(){
       }
       )
 
-      const handleFilterChange =()
+      const handleFilterChange =(key,value) = {
+        setFilters(prev => ({
+            ...prev,  //copia estado anterior
+        }))
+      }
     
       // Simulando dados com useEffect, mas no futuro os dados virão da API
       useEffect(() => {
