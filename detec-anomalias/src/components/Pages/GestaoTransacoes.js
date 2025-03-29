@@ -1,9 +1,15 @@
-import {useState} from "react"
+import {useState,useEffect} from "react"
 import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 function GestaoTransacoes(){
+
+    //simulando dados com useefct , porém os dados irão vir da API
+    
+
+
+
 
     const [showfilter,setShowFilter]=useState(false)
     const [sidebarOpen,setSidebarOpen] = useState(false)
