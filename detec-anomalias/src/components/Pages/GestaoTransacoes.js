@@ -8,9 +8,11 @@ function GestaoTransacoes(){
     //simulando dados com useefct , porém os dados irão vir da API
     useEffect(()=>{
         const mockData : Transaction[] = [
-            
+            { id: '1', account: '1234-5', amount: 1500.00, status: 'normal', date: '2024-03-10' },
+            { id: '2', account: '1234-6', amount: 50000.00, status: 'suspicious', date: '2024-03-11' },
+            { id: '3', account: '1234-7', amount: 750.00, status: 'analyzing', date: '2024-03-12' },
         ]
-    })
+    },[])
 
 
 
