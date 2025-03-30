@@ -20,6 +20,7 @@ function GestaoTransacoes(){
       const handleFilterChange =(key,value) = {
         setFilters(prev => ({
             ...prev,  //copia estado anterior
+            [key]:value // // Atualiza a chave específica com o novo valor
         }))
       }
     
@@ -58,6 +59,8 @@ function GestaoTransacoes(){
                         <input
                             type="text"
                             placeholder="Conta"
+                            valor={filters.account}
+                            onChange={(e)=> handleFilterChange('account',e.target.value)}
                             />
                             <input
                             type="date"
@@ -113,3 +116,16 @@ function GestaoTransacoes(){
         </div>
     )
 } export default GestaoTransacoes
+
+
+/*Como isso funciona na prática?
+handleFilterChange('account', e.target.value): Quando o usuário digita no campo de Conta, a função é chamada. O parâmetro key recebe a string 'account', e o value é o que o usuário digitou no campo.
+
+O setFilters então atualiza o estado filters com a chave account e o valor digitado, sem alterar os outros filtros.
+
+Resumo dos parâmetros:
+key é o nome da chave dentro do estado filters (ex: 'account', 'startDate', 'status' etc.).
+
+value é o valor que o usuário inseriu em cada campo (ex: o número da conta, uma data, um valor numérico, etc.).
+
+Esses dois parâmetros permitem que você atualize dinamicamente o estado dos filtros à medida que o usuário interage com os inputs. A função handleFilterChange é reutilizável para todos os campos, fazendo a atualização do estado de forma eficiente.*/
