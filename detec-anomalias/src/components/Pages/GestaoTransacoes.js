@@ -87,7 +87,8 @@ function GestaoTransacoes(){
                             onChange={(e)=>handleFilterChange('maxAmount',e.target.value)}
                         />
                         <select
-                            
+                            value={filters.status}
+                            onChange={(e)=>handleFilterChange('status',e.target.value)}
                         >
                             <option value="">Todos os Status</option>
                             <option value="normal">Normal</option>
