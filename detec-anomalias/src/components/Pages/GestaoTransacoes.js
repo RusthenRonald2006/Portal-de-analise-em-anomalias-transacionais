@@ -64,19 +64,27 @@ function GestaoTransacoes(){
                             />
                             <input
                             type="date"
+                            value={filters.startDate}
+                            onChange={(e)=> handleFilterChange('startDate',e.target.value)}
                             />
                             <input
                             type="date"
+                            value={filters.endDate}
+                            onChange={(e)=>handleFilterChange('endDate',e.target.value)}
                             />
                         </div>
                         <div className={styles.filter_group}>
                         <input
                             type="number"
                             placeholder="Valor Mínimo"
+                            value={filters.minAmount}
+                            onChange={(e)=>handleFilterChange('minAmount',e.target.value)}
                         />
                         <input
                             type="number"
                             placeholder="Valor Máximo"
+                            value={filters.maxAmount}
+                            onChange={(e)=>handleFilterChange('maxAmount',e.target.value)}
                         />
                         <select
                             
