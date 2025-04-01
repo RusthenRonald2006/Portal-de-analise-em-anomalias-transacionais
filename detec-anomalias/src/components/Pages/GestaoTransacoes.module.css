@@ -113,3 +113,14 @@ z-index: 10;
         display: block;
     }
  }
+
+/* Responsividade dos filtros */
+@media (max-width: 768px) {
+    .filter_group {
+      flex-direction: column;
+    }
+    
+    th, td {
+      padding: 0.75rem;
+    }
+  }
