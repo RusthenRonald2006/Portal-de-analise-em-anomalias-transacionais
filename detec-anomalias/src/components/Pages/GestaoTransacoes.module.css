@@ -46,7 +46,12 @@ h1 {
   border-radius: 0.25rem;
   font-size: 0.9rem;
 }
-
+.table_container{
+    overflow-x: auto; /*só pra se o conteudo for maior que a div*/
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .sidebar{
     background: linear-gradient(180deg, #2E8B57 0%, #1a5e3a 100%);
     width: 280px;
