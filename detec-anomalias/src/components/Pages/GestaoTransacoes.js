@@ -20,7 +20,7 @@ function GestaoTransacoes(){
                 <h1>Gestão Transações</h1>
                 <div className={styles.filter_section}>
                     <button>
-
+                        <Filter /> Filtros Avançados
                     </button>
                 </div>
             </div>
