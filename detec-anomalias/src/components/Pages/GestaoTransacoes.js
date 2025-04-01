@@ -37,7 +37,22 @@ function GestaoTransacoes(){
                             />
                         </div>
                         <div className={styles.filter_group}>
-
+                        <input
+                            type="number"
+                            placeholder="Valor Mínimo"
+                        />
+                        <input
+                            type="number"
+                            placeholder="Valor Máximo"
+                        />
+                        <select
+                            
+                        >
+                            <option value="">Todos os Status</option>
+                            <option value="normal">Normal</option>
+                            <option value="suspicious">Suspeita</option>
+                            <option value="analyzing">Em Análise</option>
+                        </select>
                         </div>
                     </div>
                 </div>
