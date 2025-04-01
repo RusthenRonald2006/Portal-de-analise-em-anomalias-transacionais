@@ -22,6 +22,24 @@ function GestaoTransacoes(){
                     <button>
                         <Filter /> Filtros Avançados
                     </button>
+
+                    <div className={styles.filter_container}>
+                        <div className={styles.filter_group}>
+                        <input
+                            type="text"
+                            placeholder="Conta"
+                            />
+                            <input
+                            type="date"
+                            />
+                            <input
+                            type="date"
+                            />
+                        </div>
+                        <div className={styles.filter_group}>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
