@@ -23,7 +23,7 @@ function GestaoTransacoes(){
                     <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
                         <Filter /> Filtros Avançados
                     </button>
-
+                    {showfilter &&(
                     <div className={styles.filter_container}>
                         <div className={styles.filter_group}>
                         <input
@@ -56,8 +56,9 @@ function GestaoTransacoes(){
                         </select>
                         </div>
                     </div>
+                    )}
                 </div>
-
+                    
                 <div className={styles.table_container}>
                     <table>
                         <thead>
