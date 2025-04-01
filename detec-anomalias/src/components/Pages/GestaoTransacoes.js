@@ -60,10 +60,16 @@ function GestaoTransacoes(){
                 <div className={styles.table_container}>
                     <table>
                         <thead>
-
+                            <tr>
+                                <th>Id</th>
+                                <th>Conta</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                                <th>Data</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            
+
                         </tbody>
                     </table>
                 </div>
