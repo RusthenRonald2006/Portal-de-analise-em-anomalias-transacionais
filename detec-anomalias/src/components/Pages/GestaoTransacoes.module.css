@@ -61,6 +61,12 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #eee;
   }
+  th {
+    background: #f8f8f8;
+    font-weight: 600;
+    color: #666;
+  }
+  
 .sidebar{
     background: linear-gradient(180deg, #2E8B57 0%, #1a5e3a 100%);
     width: 280px;
