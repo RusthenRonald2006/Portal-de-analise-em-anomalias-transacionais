@@ -5,6 +5,7 @@ import { Menu } from 'lucide-react';
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 function GestaoTransacoes(){
 
+    const [showfilter,setShowFilter]=useState(false)
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
     return(
@@ -70,7 +71,7 @@ function GestaoTransacoes(){
                         </thead>
                         <tbody>
                             <tr>
-                                
+
                             </tr>
                         </tbody>
                     </table>
