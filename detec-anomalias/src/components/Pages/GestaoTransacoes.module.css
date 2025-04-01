@@ -6,6 +6,21 @@ h1 {
     color: #1a1a1a;
     margin-bottom: 2rem;
     font-size: 2rem;
+}
+.filter_section {
+    margin-bottom: 2rem;
+}
+.filter_container {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.filter_group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
 .sidebar{
     background: linear-gradient(180deg, #2E8B57 0%, #1a5e3a 100%);
