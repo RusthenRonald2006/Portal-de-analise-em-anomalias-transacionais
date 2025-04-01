@@ -52,6 +52,15 @@ h1 {
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
 .sidebar{
     background: linear-gradient(180deg, #2E8B57 0%, #1a5e3a 100%);
     width: 280px;
