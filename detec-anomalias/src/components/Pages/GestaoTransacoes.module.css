@@ -21,7 +21,15 @@ h1 {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-  }
+}
+.filter_group input,
+.filter_group select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
 .sidebar{
     background: linear-gradient(180deg, #2E8B57 0%, #1a5e3a 100%);
     width: 280px;
