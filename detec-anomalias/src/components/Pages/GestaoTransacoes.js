@@ -2,6 +2,7 @@ import {useState} from "react"
 import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
+import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 function GestaoTransacoes(){
 
     const [sidebarOpen,setSidebarOpen] = useState(false)
@@ -17,6 +18,11 @@ function GestaoTransacoes(){
             </div>
             <div className={styles.main_content}>
                 <h1>Gestão Transações</h1>
+                <div className={styles.filter_section}>
+                    <button>
+
+                    </button>
+                </div>
             </div>
         </div>
     )
