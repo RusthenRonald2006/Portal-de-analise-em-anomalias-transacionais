@@ -58,7 +58,14 @@ function GestaoTransacoes(){
                 </div>
 
                 <div className={styles.table_container}>
+                    <table>
+                        <thead>
 
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
