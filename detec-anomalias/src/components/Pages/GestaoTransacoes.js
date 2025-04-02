@@ -118,7 +118,12 @@ function GestaoTransacoes(){
                         <tbody>
                             {filteredTransactions.length >0 ?(
                                 filteredTransactions.map(transaction =>(
-                                    <tr></tr>
+                                    <tr key={transaction.id}>
+                                        <td>{transaction.account}</td>
+                                        <td>R$ {transaction.amount.toFixed(2)}</td>
+                                        <td>{transaction.status}</td>
+                                        <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
+                                    </tr>
                                 ))
                             ):()}
                             <tr>
