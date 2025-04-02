@@ -31,8 +31,8 @@ function GestaoTransacoes(){
       useEffect(() => {
         const mockData = [
           { id: "1", account: "1234-5", amount: 1500.0, status: "normal", date: "2024-03-10" },
-          { id: "2", account: "1234-6", amount: 50000.0, status: "suspicious", date: "2024-03-11" },
-          { id: "3", account: "1234-7", amount: 750.0, status: "analyzing", date: "2024-03-12" },
+          { id: "2", account: "1234-6", amount: 50000.0, status: "suspeita", date: "2024-03-11" },
+          { id: "3", account: "1234-7", amount: 750.0, status: "análise", date: "2024-03-12" },
         ];
         setTransactions(mockData);
       }, []);
@@ -109,8 +109,8 @@ function GestaoTransacoes(){
                         >
                             <option value="">Todos os Status</option>
                             <option value="normal">Normal</option>
-                            <option value="suspicious">Suspeita</option>
-                            <option value="analyzing">Em Análise</option>
+                            <option value="suspeita">Suspeita</option>
+                            <option value="análise">Em Análise</option>
                         </select>
                         </div>
                     </div>
