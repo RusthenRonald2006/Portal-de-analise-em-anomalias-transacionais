@@ -37,7 +37,20 @@ function GestaoTransacoes(){
         setTransactions(mockData);
       }, []);
 
-    
+      //Aplicando filtros dos dados
+      const filteredTransactions = transactions.filter(transaction => {
+        return (
+          (!filters.account || transaction.account.includes(filters.account)) &&
+          (!filters.startDate || transaction.date >= filters.startDate) &&
+          (!filters.endDate || transaction.date <= filters.endDate) &&
+          (!filters.minAmount || transaction.amount >= Number(filters.minAmount)) &&
+          (!filters.maxAmount || transaction.amount <= Number(filters.maxAmount)) &&
+          (!filters.status || transaction.status === filters.status)
+        );
+      });
+      
+
+
     const [showfilter,setShowFilter]=useState(false)
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
@@ -119,6 +132,7 @@ function GestaoTransacoes(){
                             {filteredTransactions.length >0 ?(
                                 filteredTransactions.map(transaction =>(
                                     <tr key={transaction.id}>
+                                        <td>{transaction.id}</td>
                                         <td>{transaction.account}</td>
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
                                         <td>{transaction.status}</td>
@@ -130,12 +144,6 @@ function GestaoTransacoes(){
                                     <td colSpan={5} style={{ textAlign: "center" }}>Nenhuma transação encontrada</td>
                                 </tr>
                             )}
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
