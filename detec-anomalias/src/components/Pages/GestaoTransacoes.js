@@ -125,7 +125,11 @@ function GestaoTransacoes(){
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
                                     </tr>
                                 ))
-                            ):()}
+                            ):(
+                                <tr>
+                                    <td colSpan={5} style={{ textAlign: "center" }}>Nenhuma transação encontrada</td>
+                                </tr>
+                            )}
                             <tr>
                                 <td></td>
                                 <td></td>
