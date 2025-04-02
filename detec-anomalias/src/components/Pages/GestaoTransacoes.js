@@ -117,7 +117,9 @@ function GestaoTransacoes(){
                         </thead>
                         <tbody>
                             {filteredTransactions.length >0 ?(
-
+                                filteredTransactions.map(transaction =>(
+                                    <tr></tr>
+                                ))
                             ):()}
                             <tr>
                                 <td></td>
