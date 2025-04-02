@@ -20,7 +20,7 @@ function GestaoTransacoes(){
       const handleFilterChange =(key,value) => {
         setFilters(prev => ({
             ...prev,  //copia estado anterior
-            [key]:value // // Atualiza a chave específica com o novo valor
+            [key]:value //  Atualiza a chave específica com o novo valor
         }))
       }
       useEffect(() => {
@@ -116,6 +116,9 @@ function GestaoTransacoes(){
                             </tr>
                         </thead>
                         <tbody>
+                            {filteredTransactions.length >0 ?(
+
+                            ):()}
                             <tr>
                                 <td></td>
                                 <td></td>
