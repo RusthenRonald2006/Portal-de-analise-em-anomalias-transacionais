@@ -19,7 +19,7 @@ function GestaoTransacoes(){
 
       const handleFilterChange =(key,value) => {
         setFilters(prev => ({
-             //copia estado anterior
+            ...prev,  //copia estado anterior
             [key]:value // // Atualiza a chave específica com o novo valor
         }))
       }
