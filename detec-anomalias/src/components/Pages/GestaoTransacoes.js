@@ -38,6 +38,7 @@ function GestaoTransacoes(){
       }, []);
 
       //Aplicando filtros dos dados
+      //Os filtros são aplicados usando o método .filter() do JavaScript, que percorre o array transactions e retorna apenas os itens que atendem aos critérios especificados.
       const filteredTransactions = transactions.filter(transaction => {
         return (
           (!filters.account || transaction.account.includes(filters.account)) &&
@@ -114,7 +115,6 @@ function GestaoTransacoes(){
                         </div>
                     </div>
                     )}
-                    
                 </div>
                     
                 <div className={styles.table_container}>
