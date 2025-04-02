@@ -17,13 +17,16 @@ function GestaoTransacoes(){
       }
       )
 
-      const handleFilterChange =(key,value) = {
+      const handleFilterChange =(key,value) => {
         setFilters(prev => ({
-            ...prev,  //copia estado anterior
+             //copia estado anterior
             [key]:value // // Atualiza a chave específica com o novo valor
         }))
       }
-    
+      useEffect(() => {
+        console.log("Estado atual dos filtros:", filters);
+      }, [filters]);
+      
       // Simulando dados com useEffect, mas no futuro os dados virão da API
       useEffect(() => {
         const mockData = [
@@ -59,7 +62,7 @@ function GestaoTransacoes(){
                         <input
                             type="text"
                             placeholder="Conta"
-                            valor={filters.account}
+                            value={filters.account}
                             onChange={(e)=> handleFilterChange('account',e.target.value)}
                             />
                             <input
@@ -98,6 +101,7 @@ function GestaoTransacoes(){
                         </div>
                     </div>
                     )}
+                    
                 </div>
                     
                 <div className={styles.table_container}>
