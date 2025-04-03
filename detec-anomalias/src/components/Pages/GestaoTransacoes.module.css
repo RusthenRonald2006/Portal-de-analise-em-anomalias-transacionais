@@ -112,8 +112,19 @@ z-index: 10;
 }
 
 .suspicious_button{
-  
+  background-color: #fee2e2;
+  color: #ef4444;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
 }
+.suspicious_button:hover {
+  background: #fecaca;
+}
+
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
