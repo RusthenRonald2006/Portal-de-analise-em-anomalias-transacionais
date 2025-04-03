@@ -65,7 +65,7 @@ function GestaoTransacoes(){
       }
 
 
-      //fnção que vai 
+      //fnção que vai atualizar o status da transação
       const handleMarkSuspicious =(id)=>{
             setTransactions((prevTransactions)=>
                 prevTransactions.map((transaction)=>
@@ -158,7 +158,7 @@ function GestaoTransacoes(){
                                         <td> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
                                         <td>
-                                            <button className={styles.suspicious_button}>
+                                            <button className={styles.suspicious_button} onClick={handleMarkSuspicious(transaction.id)}>
                                                 Marcar como Suspeita
                                             </button>
                                         </td>
