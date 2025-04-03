@@ -124,6 +124,10 @@ z-index: 10;
 .suspicious_button:hover {
   background: #fecaca;
 }
+.icons{
+  display:flex ;
+  gap: 10px;
+}
 
 @media (max-width:1024px){
     .mobile_menu_button{

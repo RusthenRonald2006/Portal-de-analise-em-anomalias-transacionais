@@ -56,11 +56,11 @@ function GestaoTransacoes(){
        const gestStatusicons = (status) =>{
         switch (status){
             case 'normal':
-                return <CheckCircle color="green"/>;
+                return <CheckCircle className={styles.status_icon} color="green" />;
             case 'suspeita':
-                return <AlertTriangle color="red"/>
+                return <AlertTriangle className={styles.status_icon}  color="red"/>
             case 'análise':
-                return <Clock color="orange"/>
+                return <Clock className={styles.status_icon}  color="orange"/>
         }
       }
 
@@ -155,7 +155,7 @@ function GestaoTransacoes(){
                                         <td>{transaction.id}</td>
                                         <td>{transaction.account}</td>
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
-                                        <td> {gestStatusicons(transaction.status)}    {transaction.status}</td>
+                                        <td className={styles.icons}> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
                                         <td>
                                             {transaction.status != "suspeita" &&
