@@ -64,6 +64,8 @@ function GestaoTransacoes(){
         }
       }
 
+
+      //fnção que vai 
       const handleMarkSuspicious =(id)=>{
             setTransactions((prevTransactions)=>
                 prevTransactions.map((transaction)=>
@@ -155,6 +157,7 @@ function GestaoTransacoes(){
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
                                         <td> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
+                                        <td></td>
                                     </tr>
                                 ))
                             ):(
