@@ -64,7 +64,9 @@ function GestaoTransacoes(){
         }
       }
 
-      
+      const handleMarkSuspicious =(id)=>{
+        
+      }
 
     return(
         <div className={styles.app_container}>
