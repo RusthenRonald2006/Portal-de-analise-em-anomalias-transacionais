@@ -65,7 +65,11 @@ function GestaoTransacoes(){
       }
 
       const handleMarkSuspicious =(id)=>{
-        
+            setTransactions((prevTransactions)=>
+                prevTransactions.map((transaction)=>
+                    transaction.id === id? {...transaction, status:"suspeita"} : transaction
+                )
+            ) //comparamos pra encontrar a transação correta
       }
 
     return(
