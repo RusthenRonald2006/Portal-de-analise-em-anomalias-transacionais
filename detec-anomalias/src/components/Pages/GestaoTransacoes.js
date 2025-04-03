@@ -37,6 +37,9 @@ function GestaoTransacoes(){
         setTransactions(mockData);
       }, []);
 
+
+      //Função pra retornar os icones de acordo com status da transação 
+
       //Aplicando filtros dos dados
       //Os filtros são aplicados usando o método .filter() do JavaScript, que percorre o array transactions e retorna apenas os itens que atendem aos critérios especificados.
       const filteredTransactions = transactions.filter(transaction => {
