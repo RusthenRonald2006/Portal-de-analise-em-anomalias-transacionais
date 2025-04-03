@@ -158,9 +158,11 @@ function GestaoTransacoes(){
                                         <td> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
                                         <td>
-                                            <button className={styles.suspicious_button} onClick={handleMarkSuspicious(transaction.id)}>
+                                            {transaction.status != "suspeita" &&
+                                            (<button className={styles.suspicious_button} onClick={()=>handleMarkSuspicious(transaction.id)}>
                                                 Marcar como Suspeita
-                                            </button>
+                                            </button>)
+                                            }
                                         </td>
                                     </tr>
                                 ))
