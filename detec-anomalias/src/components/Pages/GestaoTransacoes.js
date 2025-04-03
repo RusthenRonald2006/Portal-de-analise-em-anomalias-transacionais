@@ -40,6 +40,13 @@ function GestaoTransacoes(){
 
       //Função pra retornar os icones de acordo com status da transação 
 
+      const gestStatusicons = (status) =>{
+        switch (status){
+            case 'normal':
+                return <CheckCircle color="green"/>
+        }
+      }
+
       //Aplicando filtros dos dados
       //Os filtros são aplicados usando o método .filter() do JavaScript, que percorre o array transactions e retorna apenas os itens que atendem aos critérios especificados.
       const filteredTransactions = transactions.filter(transaction => {
