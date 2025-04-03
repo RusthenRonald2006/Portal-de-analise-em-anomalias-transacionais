@@ -110,6 +110,10 @@ inset: 0;
 background-color: rgba(0, 0, 0, 0.5);
 z-index: 10;
 }
+
+.suspicious_button{
+  
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

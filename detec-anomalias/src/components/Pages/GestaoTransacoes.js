@@ -157,7 +157,11 @@ function GestaoTransacoes(){
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
                                         <td> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
-                                        <td></td>
+                                        <td>
+                                            <button className={styles.suspicious_button}>
+                                                Marcar como Suspeita
+                                            </button>
+                                        </td>
                                     </tr>
                                 ))
                             ):(
