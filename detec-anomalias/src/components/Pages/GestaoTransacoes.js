@@ -43,7 +43,9 @@ function GestaoTransacoes(){
       const gestStatusicons = (status) =>{
         switch (status){
             case 'normal':
-                return <CheckCircle color="green"/>
+                return <CheckCircle color="green"/>;
+            case 'suspeita':
+                return <AlertTriangle color="red"/>
         }
       }
 
