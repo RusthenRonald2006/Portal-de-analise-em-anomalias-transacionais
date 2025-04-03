@@ -5,9 +5,10 @@ import { Menu } from 'lucide-react';
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 
 function GestaoTransacoes(){
-
-      const [transactions, setTransactions] = useState([]);
-      const [filters,setFilters] = useState({
+        const [showfilter,setShowFilter]=useState(false)
+        const [sidebarOpen,setSidebarOpen] = useState(false)
+        const [transactions, setTransactions] = useState([]);
+        const [filters,setFilters] = useState({
         account: '',
         startDate: '',
         endDate: '',
@@ -37,18 +38,6 @@ function GestaoTransacoes(){
         setTransactions(mockData);
       }, []);
 
-
-      //Função pra retornar os icones de acordo com status da transação 
-
-      const gestStatusicons = (status) =>{
-        switch (status){
-            case 'normal':
-                return <CheckCircle color="green"/>;
-            case 'suspeita':
-                return <AlertTriangle color="red"/>
-        }
-      }
-
       //Aplicando filtros dos dados
       //Os filtros são aplicados usando o método .filter() do JavaScript, que percorre o array transactions e retorna apenas os itens que atendem aos critérios especificados.
       const filteredTransactions = transactions.filter(transaction => {
@@ -62,10 +51,20 @@ function GestaoTransacoes(){
         );
       });
       
+       //Função pra retornar os icones de acordo com status da transação 
 
+       const gestStatusicons = (status) =>{
+        switch (status){
+            case 'normal':
+                return <CheckCircle color="green"/>;
+            case 'suspeita':
+                return <AlertTriangle color="red"/>
+            case 'análise':
+                return <Clock color="orange"/>
+        }
+      }
 
-    const [showfilter,setShowFilter]=useState(false)
-    const [sidebarOpen,setSidebarOpen] = useState(false)
+      
 
     return(
         <div className={styles.app_container}>
@@ -148,7 +147,7 @@ function GestaoTransacoes(){
                                         <td>{transaction.id}</td>
                                         <td>{transaction.account}</td>
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
-                                        <td>{transaction.status}</td>
+                                        <td> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
                                     </tr>
                                 ))
