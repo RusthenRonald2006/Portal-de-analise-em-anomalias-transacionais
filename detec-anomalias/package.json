@@ -50,5 +50,7 @@
     "@babel/preset-typescript": "^7.27.0",
     "gh-pages": "^6.3.0",
     "typescript": "^5.8.2"
-  }
+  },
+  "homepage": "https://github.com/Projetos-LABES-04/Portal-de-analise-em-anomalias-transacionais"
+
 }
