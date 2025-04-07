@@ -54,7 +54,7 @@ function GestaoContas(){
                         <div className={styles.header}>
                             <div className={styles.header_title}>
                                 <Shield className={styles.title_icon} />
-                                <h1>Gestão Contas</h1>
+                                <h1 className={styles.title}>Gestão Contas</h1>
                             </div>
                             <div className={styles.header_search}>
                                 <input type="text"
