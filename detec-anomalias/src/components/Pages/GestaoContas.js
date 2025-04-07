@@ -53,7 +53,7 @@ function GestaoContas(){
                     <div className={styles.wrapper}>
                         <div className={styles.header}>
                             <div className={styles.header_title}>
-                                <Shield className="title-icon" />
+                                <Shield className={styles.title_icon} />
                                 <h1>Gestão Contas</h1>
                             </div>
                             <div className={styles.header_search}>
@@ -63,12 +63,14 @@ function GestaoContas(){
                                 >
 
                                 </input>
-                                <Search className="search_icon" />
+                                <Search className={styles.search_icon} />
                             </div>
                         </div>
 
                         <div className={styles.accounts_list}>
-
+                            <div className={styles.account_item}>
+                                <h1>Contas</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
