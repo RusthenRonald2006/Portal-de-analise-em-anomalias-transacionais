@@ -91,9 +91,11 @@
 }
 
 .account_item{
-    background-color: #1a5e3a;
     padding: 1.5rem;
     border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.2s;
 }
 @media (max-width:1024px){
     .mobile_menu_button{
