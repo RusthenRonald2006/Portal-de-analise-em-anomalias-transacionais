@@ -100,6 +100,15 @@
 .account_item:hover{
     border-color: #2E8B57;
 }
+.account_header{
+    background-color: #1a5e3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.account_info{
+
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

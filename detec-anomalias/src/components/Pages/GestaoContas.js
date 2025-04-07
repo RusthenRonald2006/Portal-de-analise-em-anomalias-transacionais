@@ -69,7 +69,17 @@ function GestaoContas(){
 
                         <div className={styles.accounts_list}>
                             <div className={styles.account_item}>
-                                <h1>Contas</h1>
+                                <div className={styles.account_header}>
+                                    <div className={styles.account_info}>
+                                        <h1>jose</h1>
+                                        <p>2342</p>
+                                    </div>
+
+                                    <div className={styles.status_button}>
+                                            <button>Em análise</button>
+                                            <button>Segura</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
