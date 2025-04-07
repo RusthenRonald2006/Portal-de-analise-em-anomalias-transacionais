@@ -6,7 +6,10 @@ function GestaoContas(){
     const [contas,setContas]=useState(
         [{
             "id":1,
-            "numero"
+            "numero": "1234-5",
+            "Titular":"Rusthe Ronald",
+            "Transações Suspeitas": 3 ,
+            "Status":"suspeita"
         },{
 
         },{
