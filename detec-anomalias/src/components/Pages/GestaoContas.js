@@ -9,6 +9,10 @@ function GestaoContas(){
             numero: "1234-5",
             Titular:"Rusthe Ronald,",
             TransaçõesSuspeitas : 3 ,
+            ultimaAtividade:{
+                data:"2024-03-15",
+                valor: 15000.00
+            }
             Status:"suspeita"
         },{
             id: '2',
