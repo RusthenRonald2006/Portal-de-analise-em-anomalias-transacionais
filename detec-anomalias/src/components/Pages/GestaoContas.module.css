@@ -75,6 +75,9 @@
     font-size: 0.875rem;
     border: 1px solid #e5e7eb;
 }
+.search_icon{
+    
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

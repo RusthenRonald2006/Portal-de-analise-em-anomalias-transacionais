@@ -63,8 +63,12 @@ function GestaoContas(){
                                 >
 
                                 </input>
-                                <Search className="search-icon" />
+                                <Search className="search_icon" />
                             </div>
+                        </div>
+
+                        <div className={styles.accounts_list}>
+
                         </div>
                     </div>
                 </div>
