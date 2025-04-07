@@ -55,6 +55,12 @@
     margin: 0 auto;
     padding: 2rem 1rem;
 }
+.header{
+
+}
+.header_title{
+    
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

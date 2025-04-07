@@ -2,6 +2,7 @@ import {useState} from "react"
 import styles from "./GestaoContas.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
+import { Shield, AlertTriangle, Clock, CheckCircle, Search } from 'lucide-react';
 function GestaoContas(){
     const [contas,setContas]=useState(
         [{
@@ -50,7 +51,14 @@ function GestaoContas(){
             <div className={styles.main_content}>
                 <div className={styles.container}>
                     <div className={styles.wrapper}>
-                        <h1>Gestão Contas</h1>
+                        <div className={styles.header}>
+                            <div className={styles.header_title}>
+                                <h1>Gestão Contas</h1>
+                            </div>
+                            <div className={styles.header_search}>
+                                <Search className="search-icon" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
