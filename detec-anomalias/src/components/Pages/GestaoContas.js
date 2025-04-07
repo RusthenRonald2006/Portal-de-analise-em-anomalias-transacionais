@@ -3,7 +3,16 @@ import styles from "./GestaoContas.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
 function GestaoContas(){
+    const [contas,setContas]=useState(
+        [{
+            "id":1,
+            "numero"
+        },{
 
+        },{
+
+        }]
+    )
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
     return(
