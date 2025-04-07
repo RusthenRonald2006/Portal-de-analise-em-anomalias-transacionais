@@ -101,13 +101,27 @@
     border-color: #2E8B57;
 }
 .account_header{
-    background-color: #1a5e3a;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
+/*nome do titular e numero da conta*/
 .account_info{
-
+    
+}
+.status_button {
+    display: flex;
+    gap: 0.5rem;
+}
+button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 @media (max-width:1024px){
     .mobile_menu_button{

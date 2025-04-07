@@ -76,8 +76,8 @@ function GestaoContas(){
                                     </div>
 
                                     <div className={styles.status_button}>
-                                            <button>Em análise</button>
-                                            <button>Segura</button>
+                                        <button>Em análise</button>
+                                        <button>Segura</button>
                                     </div>
                                 </div>
                             </div>
