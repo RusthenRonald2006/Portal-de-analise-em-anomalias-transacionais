@@ -48,7 +48,9 @@ function GestaoContas(){
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>
-                <h1>Gestão Contas</h1>
+                <div className={styles.container}>
+                    <h1>Gestão Contas</h1>
+                </div>
             </div>
         </div>
     )
