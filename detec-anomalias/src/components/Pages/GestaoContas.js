@@ -8,7 +8,7 @@ function GestaoContas(){
             id:"1",
             numero: "1234-5",
             Titular:"Rusthen Ronald,",
-            TransaçõesSuspeitas : 3 ,
+            TransacoesSuspeitas : 3 ,
             ultimaAtividade:{
                 data:"2024-03-15",
                 valor: 15000.00
@@ -28,6 +28,7 @@ function GestaoContas(){
             id:"3",
             numero:'9012-3',
             titular:"Allan Maia ",
+            transacoesSuspeitas: 2,
             ultimaAtividade: {
                 data: '2024-03-13',
                 valor: 8000.00
