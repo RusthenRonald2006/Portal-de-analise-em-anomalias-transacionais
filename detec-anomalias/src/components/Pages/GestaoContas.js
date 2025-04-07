@@ -53,6 +53,7 @@ function GestaoContas(){
                     <div className={styles.wrapper}>
                         <div className={styles.header}>
                             <div className={styles.header_title}>
+                                <Shield className="title-icon" />
                                 <h1>Gestão Contas</h1>
                             </div>
                             <div className={styles.header_search}>
