@@ -5,15 +5,22 @@ import { Menu } from 'lucide-react';
 function GestaoContas(){
     const [contas,setContas]=useState(
         [{
-            "id":1,
-            "numero": "1234-5",
-            "Titular":"Rusthe Ronald",
-            "Transações Suspeitas": 3 ,
-            "Status":"suspeita"
+            id:1,
+            numero: "1234-5",
+            Titular:"Rusthe Ronald,",
+            TransaçõesSuspeitas : 3 ,
+            Status:"suspeita"
         },{
-
+            id: '2',
+            numero: '5678-9',
+            titular: 'Maria Santos',
+            transacoesSuspeitas: 5,
+            status:"análise"
         },{
-
+            id:"3",
+            numero:'9012-3',
+            titular:"Allan Maia ",
+            status: "normal"
         }]
     )
     const [sidebarOpen,setSidebarOpen] = useState(false)
