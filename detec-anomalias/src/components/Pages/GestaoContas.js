@@ -57,6 +57,12 @@ function GestaoContas(){
                                 <h1>Gestão Contas</h1>
                             </div>
                             <div className={styles.header_search}>
+                                <input type="text"
+                                placeholder="Buscar por titular ou número..."
+                                className={styles.search_input}
+                                >
+
+                                </input>
                                 <Search className="search-icon" />
                             </div>
                         </div>
