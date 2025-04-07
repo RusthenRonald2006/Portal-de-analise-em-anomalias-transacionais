@@ -71,8 +71,11 @@ function GestaoContas(){
                             <div className={styles.account_item}>
                                 <div className={styles.account_header}>
                                     <div className={styles.account_info}>
-                                        <h1>jose</h1>
-                                        <p>2342</p>
+                                        //icone
+                                        <div>
+                                            <h1>jose</h1>
+                                            <p>2342</p>
+                                        </div>
                                     </div>
 
                                     <div className={styles.status_button}>

@@ -118,7 +118,9 @@
 }
 /*nome do titular e numero da conta*/
 .account_info{
-    
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 .status_button {
     display: flex;
