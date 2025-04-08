@@ -90,7 +90,7 @@ function GestaoContas(){
                                     <div className={styles.account_info}>
                                         {getstatusIcon(contas.status)}
                                         <div>
-                                            <h1>{contas.titular}</h1>
+                                            <h2>{contas.titular}</h2>
                                             <p>{contas.numero}</p>
                                         </div>
                                     </div>
