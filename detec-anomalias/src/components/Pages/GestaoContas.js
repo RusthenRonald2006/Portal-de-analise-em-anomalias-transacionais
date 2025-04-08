@@ -8,7 +8,7 @@ function GestaoContas(){
         [{
             id:"1",
             numero: "1234-5",
-            Titular:"Rusthen Ronald,",
+            titular:"Rusthen Ronald",
             TransacoesSuspeitas : 3 ,
             ultimaAtividade:{
                 data:"2024-03-15",
@@ -68,14 +68,14 @@ function GestaoContas(){
                         </div>
 
                         <div className={styles.accounts_list}>
-                            {contas.map(()=>(
-                            <div className={styles.account_item}>
+                            {contas.map((contas)=>(
+                                <div className={styles.account_item} key={contas.id}>
                                 <div className={styles.account_header}>
                                     <div className={styles.account_info}>
                                         //icone
                                         <div>
-                                            <h1>jose</h1>
-                                            <p>2342</p>
+                                            <h1>{contas.titular}</h1>
+                                            <p>{contas.numero}</p>
                                         </div>
                                     </div>
 
