@@ -39,7 +39,16 @@ function GestaoContas(){
     )
 
     const getstatusIcon = (status) => {
-
+        switch (status){
+            case "suspeita":
+                return <AlertTriangle size={24} color="red" />;
+            case "análise":
+                return <Clock size={24} color="orange" />;
+            case "normal":
+                return <CheckCircle size={24} color="green" />;
+            default :
+                return null
+        }
     }
 
 
