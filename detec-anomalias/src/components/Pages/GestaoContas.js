@@ -37,6 +37,13 @@ function GestaoContas(){
             status: "normal"
         }]
     )
+
+    const getstatusIcon = (status) => {
+
+    }
+
+
+
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
     return(
