@@ -14,7 +14,7 @@ function GestaoContas(){
                 data:"2024-03-15",
                 valor: 15000.00
             },
-            Status:"suspeita"
+            status:"suspeita"
         },{
             id: '2',
             numero: '5678-9',
@@ -88,7 +88,7 @@ function GestaoContas(){
                                 <div className={styles.account_item} key={contas.id}>
                                 <div className={styles.account_header}>
                                     <div className={styles.account_info}>
-                                        //icone
+                                        {getstatusIcon(contas.status)}
                                         <div>
                                             <h1>{contas.titular}</h1>
                                             <p>{contas.numero}</p>
