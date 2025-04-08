@@ -107,7 +107,7 @@ function GestaoContas(){
                                     </div>
                                     <div className={styles.details_box}>
                                         <p>Ultimas Atividades:
-                                            {contas.ultimaAtividade.data}
+                                            {new Date(contas.ultimaAtividade.data).toLocaleDateString("pt-br")}
                                         </p>
                                     </div>
                                 </div>
