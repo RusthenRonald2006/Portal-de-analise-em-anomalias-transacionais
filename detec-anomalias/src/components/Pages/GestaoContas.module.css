@@ -132,6 +132,11 @@
     gap: 1rem;
     margin-top: 1rem;
 }
+.details_box{
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
 button{
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
