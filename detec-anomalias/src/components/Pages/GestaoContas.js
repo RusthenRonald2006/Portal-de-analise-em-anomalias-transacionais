@@ -85,8 +85,13 @@ function GestaoContas(){
                                     </div>
                                 </div>
                                 
-                                <div>
-                                    
+                                <div className={styles.accounts_details}>
+                                    <div className={styles.details_box}>
+                                        <p>Transações suspeitas</p>
+                                    </div>
+                                    <div className={styles.details_box}>
+                                        <p>Ultimas Atividades</p>
+                                    </div>
                                 </div>
                             </div>
                             ))}
