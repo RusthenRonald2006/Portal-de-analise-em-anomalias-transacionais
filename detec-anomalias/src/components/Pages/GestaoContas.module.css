@@ -137,6 +137,14 @@
     padding: 1rem;
     border-radius: 0.5rem;
 }
+.details_title{
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+}
+.details_value{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
 button{
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
