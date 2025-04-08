@@ -9,7 +9,7 @@ function GestaoContas(){
             id:"1",
             numero: "1234-5",
             titular:"Rusthen Ronald",
-            TransacoesSuspeitas : 3 ,
+            transacoesSuspeitas : 3 ,
             ultimaAtividade:{
                 data:"2024-03-15",
                 valor: 15000.00
@@ -38,7 +38,7 @@ function GestaoContas(){
         }]
     )
 
-    const getstatusIcon = (status) => {
+    const getStatusIcon = (status) => {
         switch (status){
             case "suspeita":
                 return <AlertTriangle size={24} color="red" />;
@@ -88,7 +88,7 @@ function GestaoContas(){
                                 <div className={styles.account_item} key={contas.id}>
                                 <div className={styles.account_header}>
                                     <div className={styles.account_info}>
-                                        {getstatusIcon(contas.status)}
+                                        {getStatusIcon(contas.status)}
                                         <div>
                                             <h2>{contas.titular}</h2>
                                             <p>{contas.numero}</p>
@@ -103,10 +103,12 @@ function GestaoContas(){
                                 
                                 <div className={styles.accounts_details}>
                                     <div className={styles.details_box}>
-                                        <p>Transações suspeitas</p>
+                                        <p>Transações suspeitas : {contas.transacoesSuspeitas}</p>
                                     </div>
                                     <div className={styles.details_box}>
-                                        <p>Ultimas Atividades</p>
+                                        <p>Ultimas Atividades:
+                                            {contas.ultimaAtividade.data}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
