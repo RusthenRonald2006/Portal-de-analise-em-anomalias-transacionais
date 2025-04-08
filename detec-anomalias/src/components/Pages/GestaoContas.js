@@ -103,13 +103,13 @@ function GestaoContas(){
                                 
                                 <div className={styles.accounts_details}>
                                     <div className={styles.details_box}>
-                                        <p>Transações suspeitas</p>
-                                        <p>{contas.transacoesSuspeitas}</p>
+                                        <p className={styles.details_title}>Transações suspeitas</p>
+                                        <p className={styles.details_value}>{contas.transacoesSuspeitas}</p>
                                     </div>
                                     <div className={styles.details_box}>
                                         <p className={styles.details_title}>Ultimas Atividades</p>
                                         <p className={styles.details_value}>R${contas.ultimaAtividade.valor.toFixed(2)}</p>
-                                        <p>{new Date(contas.ultimaAtividade.data).toLocaleDateString("pt-br")}</p>
+                                        <p className={styles.details_date}>{new Date(contas.ultimaAtividade.data).toLocaleDateString("pt-br")}</p>
                                     </div>
                                 </div>
                             </div>

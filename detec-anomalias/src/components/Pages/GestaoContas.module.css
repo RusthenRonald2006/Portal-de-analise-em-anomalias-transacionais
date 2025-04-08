@@ -144,6 +144,10 @@
 .details_value{
     font-size: 1.125rem;
     font-weight: 600;
+    margin: 0;
+}
+.details_date{
+    font-size: 0.875rem;
 }
 button{
     padding: 0.5rem 1rem;
