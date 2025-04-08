@@ -68,6 +68,7 @@ function GestaoContas(){
                         </div>
 
                         <div className={styles.accounts_list}>
+                            {contas.map(()=>(
                             <div className={styles.account_item}>
                                 <div className={styles.account_header}>
                                     <div className={styles.account_info}>
@@ -84,6 +85,8 @@ function GestaoContas(){
                                     </div>
                                 </div>
                             </div>
+                            ))}
+                            
                         </div>
                     </div>
                 </div>
