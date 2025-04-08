@@ -84,6 +84,10 @@ function GestaoContas(){
                                         <button>Segura</button>
                                     </div>
                                 </div>
+                                
+                                <div>
+                                    
+                                </div>
                             </div>
                             ))}
                             
