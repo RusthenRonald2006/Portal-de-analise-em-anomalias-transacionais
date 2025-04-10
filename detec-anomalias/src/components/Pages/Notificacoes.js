@@ -64,7 +64,20 @@ function Notificacoes(){
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>
-                <h1>Notificações</h1>
+                
+                <div className={styles.container}>
+                    {/*header*/}
+                    <div className={styles.header_section}>
+                        <div className={styles.header_content}>
+
+                        </div>
+                    </div>
+
+                     {/*alerts list*/}
+                    <div>
+
+                    </div>
+                </div>
             </div>
         </div>
     )
