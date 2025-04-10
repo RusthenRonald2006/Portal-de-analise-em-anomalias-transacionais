@@ -92,7 +92,10 @@ function Notificacoes(){
                     <div className={styles.alert_list}>
                         <div className={styles.alerts_box}>
                             {mockData.map((alert)=>(
-                                <div></div>
+                                <div
+                                key={alert.id} className={styles.alert_item}>
+                                    <div></div>
+                                </div>
                             ))}
                         </div>
                     </div>
