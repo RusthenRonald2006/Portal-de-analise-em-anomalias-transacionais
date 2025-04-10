@@ -64,6 +64,12 @@ z-index: 10;
     justify-content: space-between;
     align-items: center;
 }
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+  }
+  
 .container_filter {
     display: flex;
     gap: 0.5rem;
@@ -91,6 +97,12 @@ z-index: 10;
     border-radius: 0.375rem;
     padding: 0.5rem;
     background-color: white;
+}
+.search_input{
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
 }
 @media (max-width:1024px){
     .mobile_menu_button{

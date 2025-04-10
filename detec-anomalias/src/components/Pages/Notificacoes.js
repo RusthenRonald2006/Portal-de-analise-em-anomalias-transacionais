@@ -69,7 +69,7 @@ function Notificacoes(){
                     {/*header*/}
                     <div className={styles.header_section}>
                         <div className={styles.header_content}>
-                            <h1>Central de Alertas</h1>
+                            <h1 className={styles.title}>Central de Alertas</h1>
                             <div className={styles.container_filter}>
                                 <button className={styles.filter_button}>
                                     <Filter className={styles.filter_icon} />
@@ -89,8 +89,12 @@ function Notificacoes(){
                     </div>
 
                      {/*alerts list*/}
-                    <div>
-
+                    <div className={styles.alert_list}>
+                        <div className={styles.alerts_box}>
+                            {mockData.map((alert)=>(
+                                <div></div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
