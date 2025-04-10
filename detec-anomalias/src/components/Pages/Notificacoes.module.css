@@ -69,6 +69,11 @@ z-index: 10;
     gap: 0.5rem;
     align-items: center;
   }
+.filter_button{
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

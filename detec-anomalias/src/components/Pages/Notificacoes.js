@@ -71,15 +71,17 @@ function Notificacoes(){
                         <div className={styles.header_content}>
                             <h1>Central de Alertas</h1>
                             <div className={styles.container_filter}>
-                                <button>
-                                    <Filter className="filter-icon" />
+                                <button className={styles.filter_button}>
+                                    <Filter className={styles.filter_icon} />
+                                    Filtros
+                                    <ChevronDown className={styles.dropdown_icon} />
                                 </button>
-                                <div className="search_bar">
-                                    <Search className="search_icon" />
+                                <div className={styles.search_bar}>
+                                    <Search className={styles.search_icon} />
                                     <input
                                         type="text"
                                         placeholder="Procurar Alertas..."
-                                        className="search_input"
+                                        className={styles.search_input}
                                     />
                                 </div>
                             </div>
