@@ -72,7 +72,7 @@ function Notificacoes(){
                             <h1>Central de Alertas</h1>
                             <div className={styles.container_filter}>
                                 <button>
-
+                                    <Filter className="filter-icon" />
                                 </button>
                                 <div className="search_bar">
                                     <Search className="search_icon" />
