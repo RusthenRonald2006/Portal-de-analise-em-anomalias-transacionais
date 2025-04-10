@@ -1,6 +1,19 @@
 import {useState} from "react"
 import styles from "./Notificacoes.module.css"
 import Sidebar from "../layout/Sidebar"
+import {
+    Bell,
+    AlertTriangle,
+    RefreshCw,
+    Rocket,
+    Filter,
+    Search,
+    ChevronDown,
+    CheckCircle2,
+    Clock,
+    XCircle,
+    Eye
+  } from 'lucide-react';
 import { Menu } from 'lucide-react';
 function Notificacoes(){
 
