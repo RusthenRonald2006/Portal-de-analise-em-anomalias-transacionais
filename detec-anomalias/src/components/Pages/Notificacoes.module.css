@@ -46,8 +46,24 @@ background-color: rgba(0, 0, 0, 0.5);
 z-index: 10;
 }
 
-
-
+.container{
+    background-color:  #f9fafb;
+    min-height: auto;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.header_section{
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+.header_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

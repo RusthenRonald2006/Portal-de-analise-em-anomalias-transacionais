@@ -69,7 +69,20 @@ function Notificacoes(){
                     {/*header*/}
                     <div className={styles.header_section}>
                         <div className={styles.header_content}>
+                            <h1>Central de Alertas</h1>
+                            <div className={styles.container_filter}>
+                                <button>
 
+                                </button>
+                                <div className="search_bar">
+                                    <Search className="search_icon" />
+                                    <input
+                                        type="text"
+                                        placeholder="Procurar Alertas..."
+                                        className="search_input"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
