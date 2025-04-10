@@ -94,7 +94,17 @@ function Notificacoes(){
                             {mockData.map((alert)=>(
                                 <div
                                 key={alert.id} className={styles.alert_item}>
-                                    <h1>{alert.title}</h1>
+                                    <div className={styles.alert_row}>
+                                        <div className={styles.alert_info}>
+                                            <div>
+                                                {/*icone*/}
+                                            </div>
+                                            <div className={styles.alert_text}>
+                                                <h1>{alert.title}</h1>
+                                                <p>{alert.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
