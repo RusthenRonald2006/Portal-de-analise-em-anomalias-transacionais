@@ -73,6 +73,24 @@ z-index: 10;
     display: flex;
     align-items: center;
     background-color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    gap: 0.5rem;
+    transition: background 0.2s ease;
+}
+.filter_button:hover {
+    background-color: #f3f4f6;
+  }
+.search_bar{
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    background-color: white;
 }
 @media (max-width:1024px){
     .mobile_menu_button{
