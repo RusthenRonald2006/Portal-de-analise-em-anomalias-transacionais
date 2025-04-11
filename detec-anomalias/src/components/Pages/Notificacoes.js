@@ -20,6 +20,7 @@ function Notificacoes(){
     const mockData = [
         {
             id:"1",
+            type:'suspicious', //Significado: Algo suspeito foi detectado.
             title: 'Transação de alto valor detectada',
             description: 'Transferência acima do padrão',
             time:'2024-03-15T14:30:00',
@@ -28,6 +29,7 @@ function Notificacoes(){
         },
         {
             id: '2',
+            type:'pattern', //Significado: Um padrão incomum foi identificado.
             title: 'Múltiplas transações pequenas',
             description: 'Padrão de fragmentação detectado nas últimas 2 horas',
             timestamp: '2024-03-15T13:45:00',
@@ -36,6 +38,7 @@ function Notificacoes(){
         },
         {
             id: '3',
+            type:'account', //Significado: Algo relacionado à conta do usuário foi detectado.
             title: 'Nova conta com movimentação suspeita',
             description: 'Alto volume de transações em conta recém-criada',
             timestamp: '2024-03-15T12:15:00',
@@ -44,6 +47,7 @@ function Notificacoes(){
         },
         {
             id: '4',
+            type:'suspicious', //Significado: Algo suspeito foi detectado.
             title: 'Tentativa de acesso bloqueada',
             description: 'Múltiplas tentativas de login de IP suspeito',
             timestamp: '2024-03-15T11:30:00',
