@@ -144,6 +144,12 @@ z-index: 10;
     justify-content: center;
     align-items: center;
 }
+.alert_meta{
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    color: #718096;
+}
 .alert_data{
     
 }

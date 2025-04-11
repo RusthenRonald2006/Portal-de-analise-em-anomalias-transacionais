@@ -33,7 +33,7 @@ function Notificacoes(){
             title: 'Múltiplas transações pequenas',
             description: 'Padrão de fragmentação detectado nas últimas 2 horas',
             timestamp: '2024-03-15T13:45:00',
-            severity: 'medium',
+            severity: 'medio',
             status: 'análise'
         },
         {
@@ -120,9 +120,12 @@ function Notificacoes(){
                                             <div className={styles.alert_text}>
                                                 <h1 className={styles.alert_title}>{alert.title}</h1>
                                                 <p className={styles.alert_description}>{alert.description}</p>
-                                                <div className={styles.alert_data}>
-                                                    <span>
+                                                <div className={styles.alert_meta}>
+                                                    <span className={styles.alert_data}>
                                                         {alert.timestamp}
+                                                    </span>
+                                                    <span>
+                                                        {alert.severity === 'baixo' ? 'Baixo': alert.severity === 'medio'?'Medio':'Alto'}
                                                     </span>
                                                 </div>
                                             </div>
