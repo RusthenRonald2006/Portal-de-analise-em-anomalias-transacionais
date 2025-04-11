@@ -83,7 +83,7 @@ function GestaoTransacoes(){
             <div className={`${styles.sidebar} ${sidebarOpen ?styles.open : ''}`}>
                 <Sidebar/>
             </div>
-            <div className={styles.main_content}>
+            <  div className={styles.main_content}>
                 <h1>Gestão Transações</h1>
                 <div className={styles.filter_section}>
                     <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
