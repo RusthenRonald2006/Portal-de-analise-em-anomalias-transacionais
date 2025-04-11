@@ -114,12 +114,12 @@ function Notificacoes(){
                                 key={alert.id} className={styles.alert_item}>
                                     <div className={styles.alert_row}>
                                         <div className={styles.alert_info}>
-                                            <div>
+                                            <div className={styles.type_icon}>
                                                 {getTypeIcon(alert.type)}
                                             </div>
                                             <div className={styles.alert_text}>
-                                                <h1>{alert.title}</h1>
-                                                <p>{alert.description}</p>
+                                                <h1 className={styles.alert_title}>{alert.title}</h1>
+                                                <p className={styles.alert_description}>{alert.description}</p>
                                             </div>
                                         </div>
                                         <div className={styles.alert_actions}>

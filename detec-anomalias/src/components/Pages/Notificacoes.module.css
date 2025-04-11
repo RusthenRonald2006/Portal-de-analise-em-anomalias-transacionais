@@ -130,6 +130,20 @@ z-index: 10;
     display: flex;
     gap: 16px;
 }
+.alert_title{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+.alert_description{
+    margin: 4px 0;
+    color: #4a5568;
+}
+.type_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
