@@ -64,6 +64,8 @@ function Notificacoes(){
                 return <RefreshCw className="icon_pattern" />;
             case 'account':
                 return <Rocket className="icon-account" />;
+            default :
+                return null
         }
     }
 
@@ -113,7 +115,7 @@ function Notificacoes(){
                                     <div className={styles.alert_row}>
                                         <div className={styles.alert_info}>
                                             <div>
-                                                {/*icone*/}
+                                                {getTypeIcon(alert.type)}
                                             </div>
                                             <div className={styles.alert_text}>
                                                 <h1>{alert.title}</h1>
