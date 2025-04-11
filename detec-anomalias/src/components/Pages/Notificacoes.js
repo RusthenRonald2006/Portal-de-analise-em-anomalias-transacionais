@@ -57,7 +57,14 @@ function Notificacoes(){
     ]
 
     const getTypeIcon = (type)=>{
-
+        switch (type){
+            case 'suspicious':
+                return <AlertTriangle className="icon_alert" />;
+            case 'pattern':
+                return <RefreshCw className="icon_pattern" />;
+            case 'account':
+                return <Rocket className="icon-account" />;
+        }
     }
 
 
