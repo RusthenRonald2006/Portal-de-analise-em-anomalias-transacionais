@@ -52,6 +52,11 @@ function Notificacoes(){
         }
     ]
 
+    const getTypeIcon = (type)=>{
+
+    }
+
+
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
     return(
@@ -103,6 +108,9 @@ function Notificacoes(){
                                                 <h1>{alert.title}</h1>
                                                 <p>{alert.description}</p>
                                             </div>
+                                        </div>
+                                        <div className={styles.alert_actions}>
+                                            <h3>actions</h3>
                                         </div>
                                     </div>
                                 </div>

@@ -123,6 +123,11 @@ z-index: 10;
   }
 .alert_row{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.alert_info{
+    
 }
 @media (max-width:1024px){
     .mobile_menu_button{
