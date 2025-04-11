@@ -23,7 +23,7 @@ function Notificacoes(){
             type:'suspicious', //Significado: Algo suspeito foi detectado.
             title: 'Transação de alto valor detectada',
             description: 'Transferência acima do padrão',
-            time:'2024-03-15T14:30:00',
+            timestamp:'2024-03-15T14:30:00',
             severity: "alto",
             status:"novo"
         },
@@ -120,6 +120,11 @@ function Notificacoes(){
                                             <div className={styles.alert_text}>
                                                 <h1 className={styles.alert_title}>{alert.title}</h1>
                                                 <p className={styles.alert_description}>{alert.description}</p>
+                                                <div className={styles.alert_data}>
+                                                    <span>
+                                                        {alert.timestamp}
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className={styles.alert_actions}>
