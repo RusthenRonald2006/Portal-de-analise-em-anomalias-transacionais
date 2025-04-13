@@ -93,6 +93,7 @@ function Notificacoes(){
             </div>
             <div className={styles.main_content}>
                <div className={styles.container_not}>
+                {/*header*/ }
                 <header className={styles.header}>
                     <div className={styles.header_content}>
                         <h1 className={styles.header_title}>Central de Alertas</h1>
@@ -113,6 +114,13 @@ function Notificacoes(){
                         </div>
                     </div>
                 </header>
+
+                {/*main*/ }
+                <main className="main-content">
+                    <div className="alerts-container">
+                    
+                    </div>
+                </main>
                </div>
             </div>
         </div>
