@@ -59,11 +59,11 @@ function Notificacoes(){
     const getTypeIcon = (type)=>{
         switch (type){
             case 'suspicious':
-                return <AlertTriangle className="icon_alert" />;
+                return <AlertTriangle className={styles.icon_alert} />;
             case 'pattern':
-                return <RefreshCw className="icon_pattern" />;
+                return <RefreshCw className={styles.icon_pattern} />;
             case 'account':
-                return <Rocket className="icon-account" />;
+                return <Rocket className={styles.icon_account} />;
             default :
                 return null
         }
@@ -93,62 +93,6 @@ function Notificacoes(){
             </div>
             <div className={styles.main_content}>
                 
-                <div className={styles.container}>
-                    {/*header*/}
-                    <div className={styles.header_section}>
-                        <div className={styles.header_content}>
-                            <h1 className={styles.title}>Central de Alertas</h1>
-                            <div className={styles.container_filter}>
-                                <button className={styles.filter_button}>
-                                    <Filter className={styles.filter_icon} />
-                                    Filtros
-                                    <ChevronDown className={styles.dropdown_icon} />
-                                </button>
-                                <div className={styles.search_bar}>
-                                    <Search className={styles.search_icon} />
-                                    <input
-                                        type="text"
-                                        placeholder="Procurar Alertas..."
-                                        className={styles.search_input}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                     {/*alerts list*/}
-                    <div className={styles.alert_list}>
-                        <div className={styles.alerts_box}>
-                            {mockData.map((alert)=>(
-                                <div
-                                key={alert.id} className={styles.alert_item}>
-                                    <div className={styles.alert_row}>
-                                        <div className={styles.alert_info}>
-                                            <div className={styles.type_icon}>
-                                                {getTypeIcon(alert.type)}
-                                            </div>
-                                            <div className={styles.alert_text}>
-                                                <h1 className={styles.alert_title}>{alert.title}</h1>
-                                                <p className={styles.alert_description}>{alert.description}</p>
-                                                <div className={styles.alert_meta}>
-                                                    <span className={styles.alert_data}>
-                                                        {alert.timestamp}
-                                                    </span>
-                                                    <span className={`${styles.severity_tag} ${getSeverityColor(alert.severity)}`}>
-                                                        {alert.severity === 'baixo' ? 'Baixo': alert.severity === 'medio'?'Médio':'Alto'}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className={styles.alert_actions}>
-                                            <h3>actions</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )
