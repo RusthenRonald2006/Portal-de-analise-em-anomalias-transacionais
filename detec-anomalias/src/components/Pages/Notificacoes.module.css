@@ -47,134 +47,17 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
-
-.header_section{
+/*parte de alertas de notificações*/
+.container_not{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #2E8B57;
+    min-height: 100%;
+}
+header{
+    background-color: white;
     border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 1rem;
 }
-.header_content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header_title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #111827;
-  }
-  
-.container_filter {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-.filter_button{
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.375rem;
-    cursor: pointer;
-    gap: 0.5rem;
-    transition: background 0.2s ease;
-}
-.filter_button:hover {
-    background-color: #f3f4f6;
-  }
-.search_bar{
-    display: flex;
-    align-items: center;
-    border: 1px solid #d1d5db;
-    border-radius: 0.375rem;
-    padding: 0.5rem;
-    background-color: white;
-}
-.search_input{
-    border: none;
-    outline: none;
-    margin-left: 0.5rem;
-    font-size: 0.875rem;
-}
-.alerts_box{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.alert_item{
-    background-color: #fff;
-    padding: 16px;
-    cursor: pointer;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    transition: box-shadow 0.2s;
-}
-.alert_item:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-.alert_row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.alert_info{
-    display: flex;
-    gap: 16px;
-}
-.icon_wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.alert_text .alert_title{
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-}
-.alert_description{
-    margin: 4px 0;
-    color: #4a5568;
-}
-.type_icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.alert_meta{
-    display: flex;
-    gap: 12px;
-    font-size: 14px;
-    color: #718096;
-}
-.alert_data{
-    color: #4a5568;
-}
-.severity_tag{
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.severity_color_green{
-    background-color: #c6f6d5;
-    color: #2f855a;
-}
-.severity_color_yellow{
-    background-color: #fefcbf;
-    color: #b7791f;
-}
-.severity_color_red{
-    background-color: #fed7d7;
-    color: #c53030;
-}
-.icon_alert, .icon_account, .icon_pattern{
-    width: 20px;
-    height: 20px;
-    background-color: #F3F4F6;
-    padding: 0.75rem;
-    border-radius: 0.70rem;
-}
+
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

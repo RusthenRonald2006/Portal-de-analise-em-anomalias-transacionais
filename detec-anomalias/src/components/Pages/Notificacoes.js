@@ -92,7 +92,28 @@ function Notificacoes(){
                 <Sidebar/>
             </div>
             <div className={styles.main_content}>
-                
+               <div className={styles.container_not}>
+                <header className={styles.header}>
+                    <div className={styles.header_content}>
+                        <h1 className={styles.header_title}>Central de Alertas</h1>
+                        <div className={styles.header_actions}>
+                            <button className={styles.filter_button}>
+                                <Filter style={{ width: '16px', height: '16px' }} />
+                                Filtros
+                                <ChevronDown style={{ width: '16px', height: '16px' }} />
+                            </button>
+                            <div className={styles.search_container}>
+                                <Search className={styles.search_icon} style={{ width: '20px', height: '20px' }} />
+                                <input
+                                    type="text"
+                                    placeholder="Buscar alertas..."
+                                    className={styles.searh_input}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </header>
+               </div>
             </div>
         </div>
     )
