@@ -150,6 +150,9 @@ z-index: 10;
     font-size: 14px;
     color: #718096;
 }
+.alert_data{
+    color: #4a5568;
+}
 .severity_tag{
     padding: 2px 8px;
     border-radius: 4px;
