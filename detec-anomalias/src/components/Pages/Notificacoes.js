@@ -72,11 +72,11 @@ function Notificacoes(){
     const getSeverityColor = (severity)=>{
         switch (severity){
             case 'baixo':
-                return 'bg-green text-green'
+                return styles.severity_color_green
             case 'medio':
-                return 'bg-yellow text-yellow'
+                return styles.severity_color_yellow
             case 'alto':
-                return 'bg-red text-red'
+                return styles.severity_color_red
         }
     }
 
