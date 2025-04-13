@@ -107,7 +107,7 @@ function Notificacoes(){
                                 <input
                                     type="text"
                                     placeholder="Buscar alertas..."
-                                    className={styles.searh_input}
+                                    className={styles.search_input}
                                 />
                             </div>
                         </div>
