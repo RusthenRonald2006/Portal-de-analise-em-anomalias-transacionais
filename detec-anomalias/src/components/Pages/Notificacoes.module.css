@@ -50,14 +50,23 @@
 /*parte de alertas de notificações*/
 .container_not{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: #2E8B57;
     min-height: 100%;
 }
 header{
     background-color: white;
     border-bottom: 1px solid #e5e7eb;
 }
+.header_content {
+    max-width: 80rem;
+    background-color: #1a5e3a;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
