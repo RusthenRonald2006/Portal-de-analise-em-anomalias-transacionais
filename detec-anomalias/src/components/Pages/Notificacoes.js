@@ -34,7 +34,7 @@ function Notificacoes(){
             description: 'Padrão de fragmentação detectado nas últimas 2 horas',
             timestamp: '2024-03-15T13:45:00',
             severity: 'medio',
-            status: 'análise'
+            status: 'analise'
         },
         {
             id: '3',
@@ -69,6 +69,16 @@ function Notificacoes(){
         }
     }
 
+    const getSeverityColor = (severity)=>{
+        switch (severity){
+            case 'baixo':
+                return 'bg-green text-green'
+            case 'medio':
+                return 'bg-yellow text-yellow'
+            case 'alto':
+                return 'bg-red text-red'
+        }
+    }
 
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
@@ -124,8 +134,8 @@ function Notificacoes(){
                                                     <span className={styles.alert_data}>
                                                         {alert.timestamp}
                                                     </span>
-                                                    <span>
-                                                        {alert.severity === 'baixo' ? 'Baixo': alert.severity === 'medio'?'Medio':'Alto'}
+                                                    <span className={`${styles.severity_tag} ${getSeverityColor(alert.severity)}`}>
+                                                        {alert.severity === 'baixo' ? 'Baixo': alert.severity === 'medio'?'Médio':'Alto'}
                                                     </span>
                                                 </div>
                                             </div>

@@ -150,9 +150,13 @@ z-index: 10;
     font-size: 14px;
     color: #718096;
 }
-.alert_data{
-    
+.severity_tag{
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: capitalize;
 }
+
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
