@@ -173,6 +173,13 @@ function Notificacoes(){
                         ))}
                     </div>
                 </main>
+
+                {selectAlert &&(
+                    <div className={styles.modal_overlay}>
+
+                    </div>
+                )}
+                
                </div>
             </div>
     )
