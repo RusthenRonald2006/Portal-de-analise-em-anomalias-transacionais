@@ -116,9 +116,20 @@ function Notificacoes(){
                 </header>
 
                 {/*main*/ }
-                <main className="main-content">
-                    <div className="alerts-container">
-                    
+                <main className={styles.main_not}>
+                    <div className={styles.alerts_container}>
+                        {mockData.map((alert)=>(
+                            <div className={styles.alert_item} key={alert.id}>
+                                <div className={styles.alert_content}>
+                                    <div className={styles.alert_left}>
+                                        <div>{getTypeIcon(alert.type)}</div>
+                                    </div>
+                                    <div className={styles.alert_actions}>
+                                        <p>action</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </main>
                </div>
