@@ -141,7 +141,7 @@ function Notificacoes(){
                                             <p>{alert.description}</p>
                                             <div className={styles.alert_info}>
                                                 <div>{alert.timestamp}</div>
-                                                <div></div>
+                                                <span className={getSeverityIcon(alert.severity)}> {alert.severity}</span>
                                             </div>
                                         </div>
                                     </div>
