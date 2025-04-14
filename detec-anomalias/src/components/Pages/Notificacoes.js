@@ -196,7 +196,7 @@ function Notificacoes(){
                                     <div className={styles.info_card}>
                                         <p className={styles.info_p}>Severidade</p>
                                         <p className={` ${styles.info_value} ${getSeverityIcon(selectAlert.severity)}`}>
-                                            {selectAlert.severity}
+                                            {selectAlert.severity === 'baixo'? 'Baixo': selectAlert.severity === 'medio'?'Médio':'Alto'}
                                         </p>
                                     </div>
                                     <div className={styles.info_card}>
