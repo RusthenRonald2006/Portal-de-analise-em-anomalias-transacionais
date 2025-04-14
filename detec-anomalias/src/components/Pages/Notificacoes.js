@@ -152,7 +152,7 @@ function Notificacoes(){
                                         </div>
                                     </div>
                                     <div className={styles.alert_actions}>
-                                        <p>action</p>
+                                        {getStatusIcon(alert.status)}
                                     </div>
                                 </div>
                             </div>
