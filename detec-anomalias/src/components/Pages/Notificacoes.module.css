@@ -187,7 +187,14 @@ header{
  .modal_overlay{
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  } 
+ .modal_content{
+    background-color: white;
+ }
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

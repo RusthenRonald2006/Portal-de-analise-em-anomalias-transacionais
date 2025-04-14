@@ -184,7 +184,9 @@ function Notificacoes(){
                                 onClick={()=>setSelectAlert(null)}><Circle/></button>
                             </div>
                             <div className={styles.modal_body}>
-                                
+                                <div className={styles.alert_header}>
+                                    <div>{getTypeIcon(selectAlert.type)}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
