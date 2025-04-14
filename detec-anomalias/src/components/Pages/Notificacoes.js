@@ -153,6 +153,9 @@ function Notificacoes(){
                                     </div>
                                     <div className={styles.alert_actions}>
                                         {getStatusIcon(alert.status)}
+                                        <button className={styles.action_button}>
+                                            <Eye/>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
