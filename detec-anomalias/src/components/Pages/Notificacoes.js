@@ -181,7 +181,7 @@ function Notificacoes(){
                             <div className={styles.modal_header}>
                                 <h2>Detalhes do Alerta</h2>
                                 <button
-                                onClick={()=>setSelectAlert(null)}><Circle/></button>
+                                onClick={()=>setSelectAlert(null)}><XCircle/></button>
                             </div>
                             <div className={styles.modal_body}>
                                 <div className={styles.alert_header}>
@@ -205,6 +205,15 @@ function Notificacoes(){
                                             {getStatusIcon(selectAlert.status)}
                                         </p>
                                     </div>
+                                </div>
+
+                                <div className={styles.modal_actions}>
+                                    <button className="button button-secondary">
+                                        Ignorar
+                                    </button>
+                                    <button className="button button-primary">
+                                        Marcar como resolvido
+                                    </button>
                                 </div>
                             </div>
                         </div>
