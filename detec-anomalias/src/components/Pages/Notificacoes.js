@@ -140,8 +140,12 @@ function Notificacoes(){
                                             <h3>{alert.title}</h3>
                                             <p>{alert.description}</p>
                                             <div className={styles.alert_info}>
-                                                <div>{alert.timestamp}</div>
-                                                <span className={getSeverityIcon(alert.severity)}> {alert.severity}</span>
+                                                <span className={styles.alert_timestamp}>
+                                                    {alert.timestamp}
+                                                </span>
+                                                <span className={`${getSeverityIcon(alert.severity)} ${styles.severity_tag}`}> 
+                                                    {alert.severity}
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
