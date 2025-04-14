@@ -1,3 +1,4 @@
+
 .app_container{
     display: flex;
     min-height: 100vh;
@@ -14,6 +15,7 @@
     transition: transform 0.2s ease-in-out;
 }
 .main_content{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     flex: 1;
     margin-left: 288px;
     padding: 1.5rem;
@@ -48,10 +50,7 @@
     z-index: 10;
 }
 /*parte de alertas de notificações*/
-.container_not{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    min-height: 100vh;
-}
+
 header{
     background-color: white;
     border-bottom: 1px solid #e5e7eb;
