@@ -158,6 +158,7 @@ header{
     border-radius: 9999px;
     font-weight: 500;
 }
+/*gravidade do alerta*/
 .severity_low{
     background-color: #dcfce7;
     color: #166534;
@@ -169,6 +170,22 @@ header{
 .severity_hight{
     background-color: #fee2e2;
     color: #991b1b;
+}
+/*icones de status do alerta*/
+.new_icon{
+    width: 20px;
+    height: 20px;
+    color: #3b82f6;
+}
+.analyse_icon{
+    width: 20px;
+    height: 20px;
+    color: #eab308;
+}
+.resolved_icon{
+    width: 20px;
+    height: 20px;
+    color: #22c55e;
 }
 .alert_actions{
     display: flex;

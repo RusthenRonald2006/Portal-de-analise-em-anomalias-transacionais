@@ -84,11 +84,11 @@ function Notificacoes(){
     const getStatusIcon = (status)=>{
         switch (status){
             case 'novo':
-                return  <Bell/>
+                return  <Bell className={styles.new_icon}/>
             case 'analise':
-                return <Clock/>
+                return <Clock className={styles.analyse_icon}/>
             case 'resolvido':
-                return <CheckCircle2/>
+                return <CheckCircle2 className={styles.resolved_icon}/>
             default :
             return ''
         }
