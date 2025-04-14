@@ -191,6 +191,11 @@ function Notificacoes(){
                                         <p>{selectAlert.description}</p>
                                     </div>
                                 </div>
+
+                                <div className={styles.alert_info}>
+                                    <div>{selectAlert.severity}</div>
+                                    <div>{selectAlert.status}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
