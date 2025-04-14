@@ -208,10 +208,10 @@ function Notificacoes(){
                                 </div>
 
                                 <div className={styles.modal_actions}>
-                                    <button className="button button-secondary">
+                                    <button className={styles.button_secondary}>
                                         Ignorar
                                     </button>
-                                    <button className="button button-primary">
+                                    <button className={styles. button_primary}>
                                         Marcar como resolvido
                                     </button>
                                 </div>
