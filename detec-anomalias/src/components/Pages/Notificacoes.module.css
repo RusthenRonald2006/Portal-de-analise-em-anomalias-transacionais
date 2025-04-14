@@ -201,6 +201,12 @@ header{
     max-height: 90vh;
     overflow-y: auto;
  }
+ .modal_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+ }
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
