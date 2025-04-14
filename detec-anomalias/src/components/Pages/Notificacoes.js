@@ -183,8 +183,8 @@ function Notificacoes(){
                                 <button
                                 onClick={()=>setSelectAlert(null)}><Circle/></button>
                             </div>
-                            <div>
-
+                            <div className={styles.modal_body}>
+                                
                             </div>
                         </div>
                     </div>

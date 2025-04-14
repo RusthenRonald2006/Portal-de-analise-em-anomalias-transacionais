@@ -184,7 +184,10 @@ header{
 .action_button:hover {
     background-color: #f3f4f6;
   }
-  
+ .modal_overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+ } 
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
