@@ -123,6 +123,9 @@ function Notificacoes(){
                                 <div className={styles.alert_content}>
                                     <div className={styles.alert_left}>
                                         <div>{getTypeIcon(alert.type)}</div>
+                                        <div className={styles.alert_details}>
+                            
+                                        </div>
                                     </div>
                                     <div className={styles.alert_actions}>
                                         <p>action</p>
