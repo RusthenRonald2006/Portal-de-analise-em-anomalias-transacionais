@@ -12,7 +12,8 @@ import {
     CheckCircle2,
     Clock,
     XCircle,
-    Eye
+    Eye,
+    Circle
   } from 'lucide-react';
 import { Menu } from 'lucide-react';
 function Notificacoes(){
@@ -176,7 +177,16 @@ function Notificacoes(){
 
                 {selectAlert &&(
                     <div className={styles.modal_overlay}>
+                        <div className={styles.modal_content}>
+                            <div className={styles.modal_header}>
+                                <h2>Detalhes do Alerta</h2>
+                                <button
+                                onClick={()=>setSelectAlert(null)}><Circle/></button>
+                            </div>
+                            <div>
 
+                            </div>
+                        </div>
                     </div>
                 )}
                 
