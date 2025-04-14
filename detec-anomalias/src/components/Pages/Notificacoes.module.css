@@ -219,7 +219,22 @@ header{
  .alert_info_modal{
     display: grid;
     grid-template-columns:repeat(2,1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
  }
+.info_card{
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.info_p{
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    color: #6b7280;
+}
+.info_value{
+    
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

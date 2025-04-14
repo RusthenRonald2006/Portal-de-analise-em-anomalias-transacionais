@@ -194,12 +194,16 @@ function Notificacoes(){
 
                                 <div className={styles.alert_info_modal}>
                                     <div className={styles.info_card}>
-                                        <p>Severidade</p>
-                                        {selectAlert.severity}
+                                        <p className={styles.info_p}>Severidade</p>
+                                        <p className={` ${styles.info_value} ${getSeverityIcon(selectAlert.severity)}`}>
+                                            {selectAlert.severity}
+                                        </p>
                                     </div>
                                     <div className={styles.info_card}>
-                                        <p>Status</p>
-                                        {selectAlert.status}
+                                        <p className={styles.info_p}>Status</p>
+                                        <p className={styles.info_value}>
+                                            {getStatusIcon(selectAlert.status)}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
