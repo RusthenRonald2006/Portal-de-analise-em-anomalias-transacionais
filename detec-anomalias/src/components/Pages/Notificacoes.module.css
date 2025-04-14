@@ -216,6 +216,10 @@ header{
     gap: 0.75rem;
     margin-bottom: 1.5rem;
  }
+ .alert_info_modal{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+ }
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
