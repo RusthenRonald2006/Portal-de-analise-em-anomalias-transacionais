@@ -80,14 +80,16 @@ function Notificacoes(){
         }
     }
 
-    const getSeverityColor = (severity)=>{
-        switch (severity){
-            case 'baixo':
-                return styles.severity_color_green
-            case 'medio':
-                return styles.severity_color_yellow
-            case 'alto':
-                return styles.severity_color_red
+    const getStatusIcon = (status)=>{
+        switch (status){
+            case 'novo':
+                return  <Bell/>
+            case 'analise':
+                return <Clock/>
+            case 'resolvido':
+                return <CheckCircle2/>
+            default :
+            return ''
         }
     }
 
