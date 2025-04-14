@@ -93,6 +93,12 @@ function Notificacoes(){
         }
     }
 
+    const formatDate = (dateString)=>{
+        return new Date(dateString).toDateString('pt-BR',{
+            
+        })
+    }
+
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
     return(
