@@ -207,6 +207,15 @@ header{
     justify-content: space-between;
     padding: 1.5rem;
  }
+ .modal_body{
+    padding: 1.5rem;
+ }
+ .alert_header{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+ }
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

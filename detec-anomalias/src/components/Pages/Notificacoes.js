@@ -186,10 +186,10 @@ function Notificacoes(){
                             <div className={styles.modal_body}>
                                 <div className={styles.alert_header}>
                                     <div>{getTypeIcon(selectAlert.type)}</div>
-                                </div>
-                                <div>
-                                    <h3>{selectAlert.title}</h3>
-                                    <p>{selectAlert.description}</p>
+                                    <div>
+                                        <h3>{selectAlert.title}</h3>
+                                        <p>{selectAlert.description}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
