@@ -95,7 +95,11 @@ function Notificacoes(){
 
     const formatDate = (dateString)=>{
         return new Date(dateString).toDateString('pt-BR',{
-            
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
         })
     }
 
@@ -148,7 +152,7 @@ function Notificacoes(){
                                             <p>{alert.description}</p>
                                             <div className={styles.alert_info}>
                                                 <span className={styles.alert_timestamp}>
-                                                    {alert.timestamp}
+                                                    {formatDate(alert.timestamp)}
                                                 </span>
                                                 <span className={`${getSeverityIcon(alert.severity)} ${styles.severity_tag}`}> 
                                                     {alert.severity === 'baixo' ? 'Baixo': alert.severity ==='medio' ? 'Médio':'Alto'}
