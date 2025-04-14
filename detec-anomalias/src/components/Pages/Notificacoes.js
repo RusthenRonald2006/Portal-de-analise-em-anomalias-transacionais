@@ -103,6 +103,7 @@ function Notificacoes(){
         })
     }
 
+    const [selectAlert,setSelectAlert]=useState(null)
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
     return(
