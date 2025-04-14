@@ -144,7 +144,7 @@ function Notificacoes(){
                                                     {alert.timestamp}
                                                 </span>
                                                 <span className={`${getSeverityIcon(alert.severity)} ${styles.severity_tag}`}> 
-                                                    {alert.severity}
+                                                    {alert.severity === 'baixo' ? 'Baixo': alert.severity ==='medio' ? 'Médio':'Alto'}
                                                 </span>
                                             </div>
                                         </div>
