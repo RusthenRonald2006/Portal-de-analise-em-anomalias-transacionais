@@ -123,6 +123,17 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+.alert_left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.alert_icon{
+    padding: 0.5rem;
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+}
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;

@@ -69,6 +69,17 @@ function Notificacoes(){
         }
     }
 
+    const getSeverityIcon = (severity)=>{
+        switch (severity){
+            case 'baixo':
+                return styles.severity_low
+            case 'medio':
+                return styles.severity_medium
+            case 'alto':
+                return styles.severity_hight
+        }
+    }
+
     const getSeverityColor = (severity)=>{
         switch (severity){
             case 'baixo':
@@ -122,9 +133,16 @@ function Notificacoes(){
                             <div className={styles.alert_item} key={alert.id}>
                                 <div className={styles.alert_content}>
                                     <div className={styles.alert_left}>
-                                        <div>{getTypeIcon(alert.type)}</div>
+                                        <div className={styles.alert_icon}>
+                                            {getTypeIcon(alert.type)}
+                                        </div>
                                         <div className={styles.alert_details}>
-                            
+                                            <h3>{alert.title}</h3>
+                                            <p>{alert.description}</p>
+                                            <div className={styles.alert_info}>
+                                                <div>{alert.timestamp}</div>
+                                                <div></div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className={styles.alert_actions}>
