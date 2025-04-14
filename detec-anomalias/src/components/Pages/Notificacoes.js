@@ -143,7 +143,7 @@ function Notificacoes(){
                 <main className={styles.main_not}>
                     <div className={styles.alerts_container}>
                         {mockData.map((alert)=>(
-                            <div className={styles.alert_item} key={alert.id} onClick={setSelectAlert(alert)}>
+                            <div className={styles.alert_item} key={alert.id} onClick={()=>setSelectAlert(alert)}>
                                 <div className={styles.alert_content}>
                                     <div className={styles.alert_left}>
                                         <div className={styles.alert_icon}>
