@@ -90,7 +90,7 @@ function Notificacoes(){
             case 'resolvido':
                 return <CheckCircle2 className={styles.resolved_icon}/>
             default :
-            return ''
+                return ''
         }
     }
 
