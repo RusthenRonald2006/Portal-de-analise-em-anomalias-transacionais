@@ -145,7 +145,6 @@ function GestaoTransacoes(){
                                 <th>Valor</th>
                                 <th>Status</th>
                                 <th>Data</th>
-                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -157,13 +156,6 @@ function GestaoTransacoes(){
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
                                         <td className={styles.icons}> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
-                                        <td>
-                                            {transaction.status != "suspeita" &&
-                                            (<button className={styles.suspicious_button} onClick={()=>handleMarkSuspicious(transaction.id)}>
-                                                Marcar como Suspeita
-                                            </button>)
-                                            }
-                                        </td>
                                     </tr>
                                 ))
                             ):(
