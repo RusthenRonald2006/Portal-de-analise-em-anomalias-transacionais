@@ -71,7 +71,13 @@ function GestaoTransacoes(){
             const resposta = await fetch("")//url da API
             const dados = await resposta.json();
 
-            
+            const TransacoesFormatadas = dados.map(t =>({
+                id: t.transacao_id,
+                account:t.conta_id,
+                status: t.status || "análise",
+                date: t.transacao_data,
+            }
+            ))
         }
       }
 
