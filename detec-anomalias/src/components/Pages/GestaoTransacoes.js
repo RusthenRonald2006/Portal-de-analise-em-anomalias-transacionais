@@ -28,15 +28,7 @@ function GestaoTransacoes(){
         console.log("Estado atual dos filtros:", filters);
       }, [filters]);
       
-      // Simulando dados com useEffect, mas no futuro os dados virão da API
-      useEffect(() => {
-        const mockData = [
-          { id: "1", account: "1234-5", amount: 1500.0, status: "normal", date: "2024-03-10" },
-          { id: "2", account: "1234-6", amount: 50000.0, status: "suspeita", date: "2024-03-11" },
-          { id: "3", account: "1234-7", amount: 750.0, status: "análise", date: "2024-03-12" },
-        ];
-        setTransactions(mockData);
-      }, []);
+
 
       //Aplicando filtros dos dados
       //Os filtros são aplicados usando o método .filter() do JavaScript, que percorre o array transactions e retorna apenas os itens que atendem aos critérios especificados.
