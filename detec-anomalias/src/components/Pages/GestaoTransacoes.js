@@ -68,12 +68,13 @@ function GestaoTransacoes(){
 
       const carregarTransacoes = async () => {
         try{
-            const resposta = await fetch("http://localhost:8000/transacoes")//url da API
+            const resposta = await fetch("http://localhost:8000/transacoes")
             const dados = await resposta.json();
 
             const TransacoesFormatadas = dados.map(t =>({
                 id: t.transacao_id,
                 account:t.conta_id,
+                amount:t.transacao_valor,
                 status: t.status || "análise",
                 date: t.transacao_data,
             }))
@@ -154,8 +155,8 @@ function GestaoTransacoes(){
                                 <th>Id</th>
                                 <th>Conta</th>
                                 <th>Valor</th>
-                                <th>Status</th>
                                 <th>Data</th>
+                                <th>Status</th>     
                             </tr>
                         </thead>
                         <tbody>
@@ -165,8 +166,8 @@ function GestaoTransacoes(){
                                         <td>{transaction.id}</td>
                                         <td>{transaction.account}</td>
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
-                                        <td className={styles.icons}> {gestStatusicons(transaction.status)}    {transaction.status}</td>
                                         <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
+                                        <td className={styles.icons}> {gestStatusicons(transaction.status)} {transaction.status}</td>       
                                     </tr>
                                 ))
                             ):(
