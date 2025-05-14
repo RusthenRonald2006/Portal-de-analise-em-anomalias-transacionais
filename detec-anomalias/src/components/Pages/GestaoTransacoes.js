@@ -66,6 +66,11 @@ function GestaoTransacoes(){
             ) //comparamos pra encontrar a transação correta
       }
 
+      const carregarTransacoes = aysnc () =>{
+
+      }
+
+
     return(
         <div className={styles.app_container}>
             <button className={styles.mobile_menu_button} onClick={()=> setSidebarOpen(!sidebarOpen)}>
