@@ -67,7 +67,12 @@ function GestaoTransacoes(){
       }
 
       const carregarTransacoes = aysnc () =>{
+        try{
+            const resposta = await fetch("")//url da API
+            const dados = await resposta.json();
 
+            
+        }
       }
 
 
