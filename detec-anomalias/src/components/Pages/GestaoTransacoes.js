@@ -66,9 +66,9 @@ function GestaoTransacoes(){
             ) //comparamos pra encontrar a transação correta
       }
 
-      const carregarTransacoes = aysnc () =>{
+      const carregarTransacoes = async () => {
         try{
-            const resposta = await fetch("")//url da API
+            const resposta = await fetch("http://localhost:8000/transacoes")//url da API
             const dados = await resposta.json();
 
             const TransacoesFormatadas = dados.map(t =>({
@@ -76,9 +76,11 @@ function GestaoTransacoes(){
                 account:t.conta_id,
                 status: t.status || "análise",
                 date: t.transacao_data,
-            }
-            ))
+            }))
+        } catch(error){
+            console.log("Erro ao carregar Transações:",error);
         }
+
       }
 
 
