@@ -77,6 +77,7 @@ function GestaoTransacoes(){
                 status: t.status || "análise",
                 date: t.transacao_data,
             }))
+            setTransactions(TransacoesFormatadas)
         } catch(error){
             console.log("Erro ao carregar Transações:",error);
         }
