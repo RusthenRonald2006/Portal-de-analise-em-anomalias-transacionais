@@ -98,7 +98,7 @@ function GestaoTransacoes(){
                             <Filter /> Filtros Avançados
                         </button>
                         <div>
-                            <button className={styles.filter_button} >Processar Transações </button>
+                            <button className={styles.filter_button} onClick={processarPendentes}>Processar Transações </button>
                         </div>
                     </div>
                     {showfilter &&(
