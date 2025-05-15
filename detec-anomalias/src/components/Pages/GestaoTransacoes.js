@@ -7,7 +7,9 @@ import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react'
 function GestaoTransacoes(){
         const [showfilter,setShowFilter]=useState(false)
         const [sidebarOpen,setSidebarOpen] = useState(false)
+
         const [transactions, setTransactions] = useState([]);
+
         const [filters,setFilters] = useState({
         account: '',
         startDate: '',
@@ -20,18 +22,12 @@ function GestaoTransacoes(){
 
       const handleFilterChange =(key,value) => {
         setFilters(prev => ({
-            ...prev,  //copia estado anterior
-            [key]:value //  Atualiza a chave específica com o novo valor
+            ...prev, 
+            [key]:value 
         }))
       }
-      useEffect(() => {
-        console.log("Estado atual dos filtros:", filters);
-      }, [filters]);
       
-
-
-      //Aplicando filtros dos dados
-      //Os filtros são aplicados usando o método .filter() do JavaScript, que percorre o array transactions e retorna apenas os itens que atendem aos critérios especificados.
+      //aplocando os filtros
       const filteredTransactions = transactions.filter(transaction => {
         return (
           (!filters.account || transaction.account.includes(filters.account)) &&
@@ -42,6 +38,10 @@ function GestaoTransacoes(){
           (!filters.status || transaction.status === filters.status)
         );
       });
+
+      useEffect(() => {
+        console.log("Estado atual dos filtros:", filters);
+      }, [filters]);
       
        //Função pra retornar os icones de acordo com status da transação 
 
@@ -55,20 +55,6 @@ function GestaoTransacoes(){
                 return <Clock className={styles.status_icon}  color="orange"/>
         }
       }
-
-
-      //fnção que vai atualizar o status da transação
-      const handleMarkSuspicious =(id)=>{
-            setTransactions((prevTransactions)=>
-                prevTransactions.map((transaction)=>
-                    transaction.id === id? {...transaction, status:"suspeita"} : transaction
-                )
-            ) //comparamos pra encontrar a transação correta
-      }
-
-      useEffect(()=>{
-        carregarTransacoes();
-      },[])
 
 
       const carregarTransacoes = async () => {
@@ -89,6 +75,10 @@ function GestaoTransacoes(){
         }
 
       }
+
+      useEffect(()=>{
+        carregarTransacoes();
+      },[])
 
 
     return(
