@@ -68,7 +68,7 @@ function GestaoTransacoes(){
 
       const carregarTransacoes = async () => {
         try{
-            const resposta = await fetch("http://localhost:8000/transacoes")
+            const resposta = await fetch("https://antifraude-api.onrender.com/transacoes")
             const dados = await resposta.json();
 
             const TransacoesFormatadas = dados.map(t =>({
