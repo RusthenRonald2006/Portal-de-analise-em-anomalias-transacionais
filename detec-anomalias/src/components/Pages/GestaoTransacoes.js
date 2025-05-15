@@ -64,7 +64,7 @@ function GestaoTransacoes(){
 
             const TransacoesFormatadas = dados.map(t =>({
                 id: t.transacao_id,
-                account:t.conta_id,
+                account:String(t.conta_id),
                 amount:t.transacao_valor,
                 status: t.status || "análise",
                 date: t.transacao_data,
