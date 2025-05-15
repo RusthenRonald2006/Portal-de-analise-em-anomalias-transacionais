@@ -93,9 +93,14 @@ function GestaoTransacoes(){
             <  div className={styles.main_content}>
                 <h1>Gestão Transações</h1>
                 <div className={styles.filter_section}>
-                    <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
-                        <Filter /> Filtros Avançados
-                    </button>
+                    <div className={styles.container_buttons}>
+                        <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
+                            <Filter /> Filtros Avançados
+                        </button>
+                        <div>
+                            <button className={styles.filter_button} >Processar Transações </button>
+                        </div>
+                    </div>
                     {showfilter &&(
                     <div className={styles.filter_container}>
                         <div className={styles.filter_group}>
