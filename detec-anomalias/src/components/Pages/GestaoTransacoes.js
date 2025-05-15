@@ -66,6 +66,11 @@ function GestaoTransacoes(){
             ) //comparamos pra encontrar a transação correta
       }
 
+      useEffect(()=>{
+        carregarTransacoes();
+      },[])
+
+
       const carregarTransacoes = async () => {
         try{
             const resposta = await fetch("https://antifraude-api.onrender.com/transacoes")
