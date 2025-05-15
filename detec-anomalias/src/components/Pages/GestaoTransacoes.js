@@ -80,6 +80,22 @@ function GestaoTransacoes(){
         carregarTransacoes();
       },[])
 
+      const processarPendentes = async ()=>{
+            try{
+                const resposta =await fetch("https://antifraude-api.onrender.com/transacoes/processar_pendentes",{
+                    method: "POST",
+                });
+
+                const resultado = await resposta.json();
+
+                //recarregando
+                carregarTransacoes();
+                
+            } catch(error){
+                console.log("Erro ao processar transações:",error);
+            }
+      }
+
 
     return(
         <div className={styles.app_container}>
