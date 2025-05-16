@@ -171,7 +171,7 @@ function GestaoTransacoes(){
                                 <th>Id</th>
                                 <th>Conta</th>
                                 <th>Valor</th>
-                                <th>Data</th>
+                                <th>Data/hora</th>
                                 <th>Status</th>     
                             </tr>
                         </thead>
@@ -182,7 +182,7 @@ function GestaoTransacoes(){
                                         <td>{transaction.id}</td>
                                         <td>{transaction.account}</td>
                                         <td>R$ {transaction.amount.toFixed(2)}</td>
-                                        <td>{new Date(transaction.date).toLocaleDateString("pt-BR")}</td>
+                                        <td>{new Date(transaction.date).toLocaleDateString("pt-BR",{hour:"2-digit",minute:"2-digit"})}</td>
                                         <td className={styles.icons}> {gestStatusicons(transaction.status)} {transaction.status}</td>       
                                     </tr>
                                 ))
