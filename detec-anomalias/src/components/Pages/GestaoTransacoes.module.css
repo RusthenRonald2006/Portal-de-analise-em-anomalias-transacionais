@@ -47,6 +47,7 @@ h1 {
   font-size: 0.9rem;
 }
 .table_container{
+    max-height: 500px;
     overflow-x: auto; /*só pra se o conteudo for maior que a div*/
     background: white;
     border-radius: 0.5rem;
