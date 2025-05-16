@@ -30,7 +30,7 @@ function GestaoTransacoes(){
       //aplocando os filtros
       const filteredTransactions = transactions.filter(transaction => {
         return (
-          (!filters.account || transaction.account.includes(filters.account)) &&
+          (!filters.account || transaction.account.includes(filters.account.toLowerCase().trim())) &&
           (!filters.startDate || transaction.date >= filters.startDate) &&
           (!filters.endDate || transaction.date <= filters.endDate) &&
           (!filters.minAmount || transaction.amount >= Number(filters.minAmount)) &&
@@ -64,7 +64,7 @@ function GestaoTransacoes(){
 
             const TransacoesFormatadas = dados.map(t =>({
                 id: t.transacao_id,
-                account:String(t.conta_id),
+                account:String(t.conta_id).toLowerCase().trim(),
                 amount:t.transacao_valor,
                 status: t.status || "análise",
                 date: t.transacao_data,
