@@ -63,9 +63,12 @@ th, td {
     border-bottom: 1px solid #eee;
   }
   th {
+    position: sticky;
+    top: 0;
     background: #f8f8f8;
     font-weight: 600;
     color: #666;
+    z-index: 1;
   }
   
 .sidebar{
