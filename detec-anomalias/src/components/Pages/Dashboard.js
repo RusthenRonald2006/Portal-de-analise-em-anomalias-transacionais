@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./Dashboard.module.css"
+import { useState } from "react";
 import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
-import { Users, DollarSign, ShoppingCart, TrendingUp } from 'lucide-react'
+import { Users, DollarSign, ShoppingCart, TrendingUp,Filter } from 'lucide-react'
 function Dashboard(){
+
+    const [showfilter,setShowFilter] =useState(false)
+
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
         { title: "Transações suspeitas", value: "320 ", icon: faCoins, colorClass: styles.iconGreen },
@@ -16,6 +20,10 @@ function Dashboard(){
     return(
         <div>
            <h1 className={styles.dashboard_title}>Dashboard</h1>
+           <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
+               <Filter/> Filtros Avançados
+           </button>
+           
            <div className={styles.cards_grid}>
                 {cards.map((card,index)=>(
                     <div key={index} className={styles.card}>
