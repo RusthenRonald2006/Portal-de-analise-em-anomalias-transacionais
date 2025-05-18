@@ -19,7 +19,38 @@
 .filter_button:hover {
     background: #e0e0e0;
   }
-  
+.filter_container{
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+.filter_group{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.search_button{
+    display: flex;
+    align-items: center;
+    background-color: #2E8B57; /* verde estilo dashboard */
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+.search_button:hover {
+  background-color: #246b45;
+}
 .cards_grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

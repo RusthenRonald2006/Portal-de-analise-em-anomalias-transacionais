@@ -5,7 +5,7 @@ import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
-import { Users, DollarSign, ShoppingCart, TrendingUp,Filter } from 'lucide-react'
+import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search } from 'lucide-react'
 function Dashboard(){
 
     const [showfilter,setShowFilter] =useState(false)
@@ -27,10 +27,17 @@ function Dashboard(){
            {showfilter && (
             <div className={styles.filter_container}>
                 <div className={styles.filter_group}>
-                    <input type="date"></input>
-                </div>
-                <div className={styles.filter_group}>
-                    <input type="date"></input>
+                    <div className={styles.input}>
+                        <label>Data de Inicio</label>
+                        <input type="date"></input>
+                    </div>
+                    <div className={styles.input}>
+                        <label>Data Final</label>
+                        <input type="date"></input>
+                    </div>
+                    <button className={styles.search_button} >
+                        Buscar
+                    </button>
                 </div>
             </div>
            )}
