@@ -33,8 +33,9 @@
     padding: 2rem;
 }
 .form_container{
+    background-color: #f9f9f9;
     border-radius: 10px;
-    border: 1.5px solid #50C878;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.144);
     width: 100%;
     height: auto;
     padding: 50px;
