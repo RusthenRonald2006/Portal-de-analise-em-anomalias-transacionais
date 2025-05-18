@@ -23,7 +23,17 @@ function Dashboard(){
            <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
                <Filter/> Filtros Avançados
            </button>
-           
+
+           {showfilter && (
+            <div className={styles.filter_container}>
+                <div className={styles.filter_group}>
+                    <input type="date"></input>
+                </div>
+                <div className={styles.filter_group}>
+                    <input type="date"></input>
+                </div>
+            </div>
+           )}
            <div className={styles.cards_grid}>
                 {cards.map((card,index)=>(
                     <div key={index} className={styles.card}>
