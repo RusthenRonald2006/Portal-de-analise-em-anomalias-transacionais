@@ -25,7 +25,7 @@ function Dashboard(){
         }
 
         try{
-            const resposta = await fetch()
+            const resposta = await fetch("")
             const dados = await resposta.json();
 
             setMetricas(dados);
