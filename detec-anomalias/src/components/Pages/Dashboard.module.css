@@ -33,22 +33,24 @@
     margin-bottom: 1rem;
     flex-wrap: wrap;
 }
-  .input{
+.input{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-  .input label{
+}
+.input label{
     font-weight: 500;
-  }
-  input[type="date"]{
+}
+input[type="date"]{
     padding: 0.6rem 1rem;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
     color: #333;
     cursor: pointer;
-  }
-
+}
+input[type="date"]:hover {
+  border-color: #888;
+}
 .search_button{
     display: flex;
     align-items: center;

@@ -9,6 +9,14 @@ import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Searc
 function Dashboard(){
 
     const [showfilter,setShowFilter] =useState(false)
+    const [dataInicio,setDataInicio] =useState("")
+    const [dataFim,setDataFim] =useState("")
+    const [metricas,setMetricas] =useState({
+        total_transacoes:0,
+        transacoes_suspeitas:0,
+        valor_medio_suspeitas:0,
+    });
+
 
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
@@ -16,6 +24,8 @@ function Dashboard(){
         { title: "Total de Contas Investigadas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
       ];
+
+
       
     return(
         <div>
@@ -35,7 +45,7 @@ function Dashboard(){
                         <label>Data Final</label>
                         <input type="date"></input>
                     </div>
-                    <button className={styles.search_button} >
+                    <button className={styles.search_button} onClick={buscarMetricas}>
                         Buscar
                     </button>
                 </div>
