@@ -1,13 +1,13 @@
 import styles from "./Sidebar.module.css"
 import {Link} from "react-router-dom"
-import { Home, Users, Settings, BarChart2, FileText } from 'lucide-react';
+import { Home, Users, BarChart2, FileText , LogOut,Bell} from 'lucide-react';
 function Navbar(){
     const menuItems = [
         { icon: Home, text: 'Dashboard' , path: '/portal' },
         { icon: FileText, text: 'Gestão de Transações',path:'/gestaotransacoes' },
-        { icon: BarChart2, text: 'Gestão de Contas' ,path:'/gestaocontas'},
-        { icon: Settings, text: 'Tela de Notificações' ,path:'/notificacoes'},
-        { icon: Settings, text : 'Logout',path:'/'}
+        { icon: Users, text: 'Gestão de Contas' ,path:'/gestaocontas'},
+        { icon: Bell, text: 'Tela de Notificações' ,path:'/notificacoes'},
+        { icon:  LogOut, text : 'Logout',path:'/'}
       ];
     return(
         <>
