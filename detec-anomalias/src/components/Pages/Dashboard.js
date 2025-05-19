@@ -49,12 +49,6 @@ function Dashboard(){
         <div>
            <h1 className={styles.dashboard_title}>Dashboard</h1>
 
-           <div className={styles.filtros_dashboard}>
-                <button className={styles.filter_button}>
-                    Filtros avançados
-                </button>
-           </div>
-
            <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
                <Filter/> Filtros Avançados
            </button>
