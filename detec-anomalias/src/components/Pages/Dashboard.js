@@ -39,11 +39,14 @@ function Dashboard(){
                 <div className={styles.filter_group}>
                     <div className={styles.input}>
                         <label>Data de Inicio</label>
-                        <input type="date"></input>
+                        <input type="date"
+                        onChange={(e)=>setDataInicio(e.target.value)}
+                        ></input>
                     </div>
                     <div className={styles.input}>
                         <label>Data Final</label>
-                        <input type="date"></input>
+                        <input type="date"
+                        onChange={(e)=>setDataFim(e.target.value)}></input>
                     </div>
                     <button className={styles.search_button} onClick={buscarMetricas}>
                         Buscar
