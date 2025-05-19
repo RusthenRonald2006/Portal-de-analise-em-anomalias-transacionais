@@ -16,6 +16,11 @@ function Dashboard(){
     return(
         <div>
            <h1 className={styles.dashboard_title}>Dashboard</h1>
+           <div className={styles.filtros_dashboard}>
+                <button className={styles.filter_button}>
+                    Filtros avançados
+                </button>
+           </div>
            <div className={styles.cards_grid}>
                 {cards.map((card,index)=>(
                     <div key={index} className={styles.card}>
