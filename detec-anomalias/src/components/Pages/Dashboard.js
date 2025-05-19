@@ -23,12 +23,23 @@ function Dashboard(){
             alert("Preencha as datas")
             return;
         }
+
+        try{
+            const resposta = await fetch()
+            const dados = await resposta.json();
+
+            setMetricas(dados);
+
+        } catch (error){
+            console.error("Erro ao buscar métricas",error);
+            alert("Erro ao carregar dados do dashboard")
+        }
     }
 
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
         { title: "Transações suspeitas", value: "320 ", icon: faCoins, colorClass: styles.iconGreen },
-        { title: "Total de Contas Investigadas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
+        { title: "Valor médio das transações suspeitas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
       ];
 
@@ -105,9 +116,12 @@ function Dashboard(){
 } export default Dashboard
 
 
+/*
+<p>Total: {metricas.total_transacoes}</p>
+<p>Suspeitas: {metricas.transacoes_suspeitas}</p>
+<p>Média: R$ {metricas.valor_medio_suspeitas.toFixed(2)}</p>
 
-
-
+*/
 
 
 
