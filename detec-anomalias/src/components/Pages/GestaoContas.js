@@ -94,11 +94,6 @@ function GestaoContas(){
                                             <p>{contas.numero}</p>
                                         </div>
                                     </div>
-
-                                    <div className={styles.status_button}>
-                                        <button>Em análise</button>
-                                        <button>Segura</button>
-                                    </div>
                                 </div>
                                 
                                 <div className={styles.accounts_details}>

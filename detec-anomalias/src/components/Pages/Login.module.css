@@ -17,7 +17,7 @@
     background-blend-mode: overlay;  /* Ou outros modos como 'multiply', 'screen', 'darken', etc. */
 }
 .logo_banese{
-    width: 150px;
+    width: 130px;
     border-radius: 10px;
 }
 .title_banese{
@@ -33,8 +33,9 @@
     padding: 2rem;
 }
 .form_container{
+    background-color: #f9f9f9;
     border-radius: 10px;
-    border: 1.5px solid #50C878;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.144);
     width: 100%;
     height: auto;
     padding: 50px;
@@ -102,6 +103,8 @@
 }
 .checkbox {
     display: flex;
+    gap: 6px;
+    align-items: center;
 }
 .google_login{
     width: 100%;
