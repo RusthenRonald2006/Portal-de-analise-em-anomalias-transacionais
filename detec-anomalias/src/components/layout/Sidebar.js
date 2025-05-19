@@ -1,6 +1,6 @@
 import styles from "./Sidebar.module.css"
 import {Link} from "react-router-dom"
-import { Home, Users, BarChart2, FileText , LogOut,Bell} from 'lucide-react';
+import { Home, Users, FileText , LogOut,Bell} from 'lucide-react';
 function Navbar(){
     const menuItems = [
         { icon: Home, text: 'Dashboard' , path: '/portal' },
