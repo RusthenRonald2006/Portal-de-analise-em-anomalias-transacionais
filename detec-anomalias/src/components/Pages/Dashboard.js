@@ -6,6 +6,7 @@ import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search } from 'lucide-react'
+import { data } from "react-router-dom";
 function Dashboard(){
 
     const [showfilter,setShowFilter] =useState(false)
@@ -17,6 +18,12 @@ function Dashboard(){
         valor_medio_suspeitas:0,
     });
 
+    const buscarMetricas = async ()=>{
+        if (!dataInicio || !dataFim){
+            alert("Preencha as datas")
+            return;
+        }
+    }
 
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
@@ -41,12 +48,14 @@ function Dashboard(){
                         <label>Data de Inicio</label>
                         <input type="date"
                         onChange={(e)=>setDataInicio(e.target.value)}
+                        value={dataInicio}
                         ></input>
                     </div>
                     <div className={styles.input}>
                         <label>Data Final</label>
                         <input type="date"
-                        onChange={(e)=>setDataFim(e.target.value)}></input>
+                        onChange={(e)=>setDataFim(e.target.value)}
+                        value={dataFim}></input>
                     </div>
                     <button className={styles.search_button} onClick={buscarMetricas}>
                         Buscar
