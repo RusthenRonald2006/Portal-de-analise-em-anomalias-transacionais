@@ -24,8 +24,8 @@ function Login (){
                     </div>
                     <form>
                         <div className={styles.form_group}>
-                            <label htmlFor="e-mail">Email</label>
-                            <input type='email' name="e-mail" placeholder='Digite seu e-mail'></input>
+                            <label htmlFor="mat">Matrícula</label>
+                            <input type='number' placeholder='Digite sua matrícula' name='mat'></input>
                         </div>
                         <div className={styles.form_group}>
                             <label htmlFor="password">Senha</label>
