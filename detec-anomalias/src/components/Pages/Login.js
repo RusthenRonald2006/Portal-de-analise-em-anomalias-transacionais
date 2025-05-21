@@ -59,15 +59,14 @@ function Login (){
                             onChange={(e)=>setSenha(e.target.value)} required></input>
                         </div>
 
-                        {erro && <p style={{color:"red"}}>{erro}</p>}
-
                         <div className={styles.container_btn}>
                             <div className={styles.login_link}>
-                                <button type='button' className={styles.btn}>
+                                <button type='submit' className={styles.btn}>
                                     Login
                                 </button>
                             </div>
                         </div>
+                        {erro && <div className={styles.error_message}><p>{erro}</p></div>}
                         <div className={styles.forgot_password}>
                             <div className={styles.checkbox}>
                                 <input type='checkbox'></input>

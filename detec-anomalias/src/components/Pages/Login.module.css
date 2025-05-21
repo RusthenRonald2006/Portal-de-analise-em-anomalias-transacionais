@@ -96,6 +96,14 @@
 .login_link{
     width: 100%;
 }
+.error_message{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.error_message p{
+    color: red;
+}
 .forgot_password{
     display: flex;
     justify-content: space-between;
