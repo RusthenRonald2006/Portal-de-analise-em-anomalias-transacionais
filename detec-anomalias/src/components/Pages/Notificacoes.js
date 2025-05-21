@@ -1,20 +1,8 @@
 import {useState} from "react"
 import styles from "./Notificacoes.module.css"
 import Sidebar from "../layout/Sidebar"
-import {
-    Bell,
-    AlertTriangle,
-    RefreshCw,
-    Rocket,
-    Filter,
-    Search,
-    ChevronDown,
-    CheckCircle2,
-    Clock,
-    XCircle,
-    Eye,
-    Circle
-  } from 'lucide-react';
+import {Bell,AlertTriangle,RefreshCw,Rocket,Filter,Search,ChevronDown,CheckCircle2,Clock,
+XCircle,Eye,Circle} from 'lucide-react';
 import { Menu } from 'lucide-react';
 function Notificacoes(){
 
@@ -143,7 +131,13 @@ function Notificacoes(){
                 {/*main*/ }
                 <main className={styles.main_not}>
                     <div className={styles.alerts_container}>
-                        {mockData.map((alert)=>(
+
+                        {mockData.length === 0 ?(
+                            <div>
+                                <p>Nenhuma notificação encontrada no momento.</p>
+                            </div>
+                        ):(
+                            mockData.map((alert)=>(
                             <div className={styles.alert_item} key={alert.id} onClick={()=>setSelectAlert(alert)}>
                                 <div className={styles.alert_content}>
                                     <div className={styles.alert_left}>
@@ -171,7 +165,8 @@ function Notificacoes(){
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                        ))
+                        )}
                     </div>
                 </main>
 
