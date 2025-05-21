@@ -51,19 +51,22 @@ function Login (){
                     <form onSubmit={handleLogin}>
                         <div className={styles.form_group}>
                             <label htmlFor="mat">Matrícula</label>
-                            <input type='number' placeholder='Digite sua matrícula' name='mat' value={matricula} onChange={(e)=>setMatricula(e.target.value)}></input>
+                            <input type='number' placeholder='Digite sua matrícula' name='mat' value={matricula} onChange={(e)=>setMatricula(e.target.value)} required></input>
                         </div>
                         <div className={styles.form_group}>
                             <label htmlFor="password">Senha</label>
                             <input type='password' name="password" placeholder="Digite sua senha" value={senha}
-                            onChange={(e)=>setSenha(e.target.value)}></input>
+                            onChange={(e)=>setSenha(e.target.value)} required></input>
                         </div>
+
+                        {erro && <p style={{color:"red"}}>{erro}</p>}
+
                         <div className={styles.container_btn}>
-                            <Link to='/portal' className={styles.login_link}>
+                            <div className={styles.login_link}>
                                 <button type='button' className={styles.btn}>
                                     Login
                                 </button>
-                            </Link>
+                            </div>
                         </div>
                         <div className={styles.forgot_password}>
                             <div className={styles.checkbox}>
