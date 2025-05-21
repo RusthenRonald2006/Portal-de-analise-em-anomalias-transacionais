@@ -25,10 +25,12 @@ function Login (){
             const token =response.data.access_token;
             localStorage.setItem("token",token)
 
+            navigate("/portal");
+        
         } catch (error){
             setErro("Matrícula ou senha inválidos.")
         }
-    }
+    };
 
     return(//container
         <div className={styles.login_container}>
