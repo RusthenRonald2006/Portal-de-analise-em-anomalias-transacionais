@@ -17,7 +17,14 @@ function Login (){
     const handleLogin = async (e)=>{
         e.preventDefault()
         try{
-            const response = await axios.post("https://antifraude-api.onrender.com/login")
+            const response = await axios.post("https://antifraude-api.onrender.com/login",{
+                matricula,
+                senha
+            });
+
+            const token =response.data.access_token;
+            localStorage.setItem("token",token)
+
         } catch (error){
             setErro("Matrícula ou senha inválidos.")
         }
