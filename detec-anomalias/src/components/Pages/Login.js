@@ -12,6 +12,7 @@ function Login (){
     const [matricula,setMatricula]=useState("")
     const [senha,setSenha]=useState("")
     const [erro,setErro]=useState("")
+    const [loading,setLoading]=useState(false)
     const navigate =useNavigate()
 
     const handleLogin = async (e)=>{
