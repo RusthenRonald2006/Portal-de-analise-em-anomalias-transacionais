@@ -7,8 +7,13 @@ import { FaLock } from "react-icons/fa";
 import {Link} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
 import { useState } from 'react';
-import axious from "axious"
+import axios from 'axios'
 function Login (){
+    const [matricula,setMatricula]=useState("")
+    const [senha,setSenha]=useState("")
+    const [erro,setErro]=useState("")
+    const navigate =useNavigate()
+
     return(//container
         <div className={styles.login_container}>
            <div className={`${styles.login_left} `}>
