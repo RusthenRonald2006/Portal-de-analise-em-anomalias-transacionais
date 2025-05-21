@@ -106,6 +106,14 @@ header{
     margin: 2rem auto;
     padding: 0 1rem;
 }
+.empty_alerts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-size: 18px;
+    opacity: 0.8;
+}
 .alerts_container{
     background-color: white;
     border-radius: 0.5rem;

@@ -96,7 +96,7 @@ function Notificacoes(){
                     <div className={styles.alerts_container}>
 
                         {mockData.length === 0 ?(
-                            <div>
+                            <div className={styles.empty_alerts}>
                                 <p>Nenhuma notificação encontrada no momento.</p>
                             </div>
                         ):(
