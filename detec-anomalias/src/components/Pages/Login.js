@@ -48,14 +48,15 @@ function Login (){
                         <h1>Bem-vindo ao</h1>
                         <h2>Portal de Anomalias</h2>
                     </div>
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <div className={styles.form_group}>
                             <label htmlFor="mat">Matrícula</label>
-                            <input type='number' placeholder='Digite sua matrícula' name='mat'></input>
+                            <input type='number' placeholder='Digite sua matrícula' name='mat' value={matricula} onChange={(e)=>setMatricula(e.target.value)}></input>
                         </div>
                         <div className={styles.form_group}>
                             <label htmlFor="password">Senha</label>
-                            <input type='password' name="password" placeholder="Digite sua senha"></input>
+                            <input type='password' name="password" placeholder="Digite sua senha" value={senha}
+                            onChange={(e)=>setSenha(e.target.value)}></input>
                         </div>
                         <div className={styles.container_btn}>
                             <Link to='/portal' className={styles.login_link}>
