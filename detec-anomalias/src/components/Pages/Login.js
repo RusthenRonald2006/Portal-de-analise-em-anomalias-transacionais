@@ -17,6 +17,8 @@ function Login (){
 
     const handleLogin = async (e)=>{
         e.preventDefault()
+        setLoading(true)
+
         try{
             const response = await axios.post("https://antifraude-api.onrender.com/login",{
                 matricula,
@@ -30,6 +32,8 @@ function Login (){
         
         } catch (error){
             setErro("Matrícula ou senha inválidos.")
+        } finally{
+            setLoading(false)
         }
     };
 
