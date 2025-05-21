@@ -14,6 +14,15 @@ function Login (){
     const [erro,setErro]=useState("")
     const navigate =useNavigate()
 
+    const handleLogin = async (e)=>{
+        e.preventDefault()
+        try{
+            const response = await axios.post("https://antifraude-api.onrender.com/login")
+        } catch (error){
+            setErro("Matrícula ou senha inválidos.")
+        }
+    }
+
     return(//container
         <div className={styles.login_container}>
            <div className={`${styles.login_left} `}>
