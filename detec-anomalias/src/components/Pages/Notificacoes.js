@@ -4,6 +4,7 @@ import Sidebar from "../layout/Sidebar"
 import {Bell,AlertTriangle,RefreshCw,Rocket,Filter,Search,ChevronDown,CheckCircle2,Clock,
 XCircle,Eye,Circle} from 'lucide-react';
 import { Menu } from 'lucide-react';
+import "../../services/api"
 function Notificacoes(){
 
     const mockData = []
@@ -57,7 +58,7 @@ function Notificacoes(){
 
     const buscarNot = async ()=>{
         try{
-            
+
         } catch{
 
         }
