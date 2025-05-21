@@ -55,8 +55,17 @@ function Notificacoes(){
         })
     }
 
+    const buscarNot = async ()=>{
+        try{
+            
+        } catch{
+
+        }
+    }
+
     //para guardar alertar clicado pelo usuário
     const [selectAlert,setSelectAlert]=useState(null)
+    const [Notificacoes,setNotificacoes]=useState([])
     const [sidebarOpen,setSidebarOpen] = useState(false)
 
     return(
