@@ -62,10 +62,12 @@ function Notificacoes(){
         try{
             const response = await api.get('/notificacoes')
             setNotificacoes(response.data)
+            console.log(response.data)
         } catch (error){
             console.log("erro ao buscar notificações",error)
         }
     }
+        buscarNotificacoes();
     },[])
     
 
