@@ -159,10 +159,11 @@ function Notificacoes(){
                             </div>
                             <div className={styles.modal_body}>
                                 <div className={styles.alert_header}>
-                                    <div>{getTypeIcon(selectAlert.type)}</div>
+                                    {/*fixo por enquanto*/ }
+                                    <div><AlertTriangle/></div>
                                     <div>
-                                        <h3>{selectAlert.title}</h3>
-                                        <p>{selectAlert.description}</p>
+                                        <h3>{selectAlert.mensagem}</h3>
+                                        <p>ID transação: {selectAlert.transacao_id}</p>
                                     </div>
                                 </div>
 
