@@ -35,7 +35,7 @@ function Notificacoes(){
         switch (status){
             case 'novo':
                 return  <Bell className={styles.new_icon}/>
-            case 'analise':
+            case 'em_analise':
                 return <Clock className={styles.analyse_icon}/>
             case 'resolvido':
                 return <CheckCircle2 className={styles.resolved_icon}/>
@@ -116,21 +116,22 @@ function Notificacoes(){
                             </div>
                         ):(
                             Notificacoes.map((alert)=>(
-                            <div className={styles.alert_item} key={alert.id} onClick={()=>setSelectAlert(alert)}>
+                            <div className={styles.alert_item} key={alert._id} onClick={()=>setSelectAlert(alert)}>
                                 <div className={styles.alert_content}>
                                     <div className={styles.alert_left}>
                                         <div className={styles.alert_icon}>
-                                            {getTypeIcon(alert.type)}
+                                            {/*Fixo por enquanto*/}
+                                            <AlertTriangle/>
                                         </div>
                                         <div className={styles.alert_details}>
-                                            <h3>{alert.title}</h3>
-                                            <p>{alert.description}</p>
+                                            <h3>{alert.mensagem}</h3>
+                                            <p>ID transação: {alert.transacao_id}</p>
                                             <div className={styles.alert_info}>
                                                 <span className={styles.alert_timestamp}>
-                                                    {formatDate(alert.timestamp)}
+                                                    {formatDate(alert.data)}
                                                 </span>
-                                                <span className={`${getSeverityIcon(alert.severity)} ${styles.severity_tag}`}> 
-                                                    {alert.severity === 'baixo' ? 'Baixo': alert.severity ==='medio' ? 'Médio':'Alto'}
+                                                <span className={`${getSeverityIcon(alert.nivel_risco)} ${styles.severity_tag}`}> 
+                                                    {alert.nivel_risco === 'baixo' ? 'Baixo': alert.nivel_risco==='medio' ? 'Médio':'Alto'}
                                                 </span>
                                             </div>
                                         </div>
@@ -168,8 +169,8 @@ function Notificacoes(){
                                 <div className={styles.alert_info_modal}>
                                     <div className={styles.info_card}>
                                         <p className={styles.info_p}>Severidade</p>
-                                        <p className={` ${styles.info_value} ${getSeverityIcon(selectAlert.severity)}`}>
-                                            {selectAlert.severity === 'baixo'? 'Baixo': selectAlert.severity === 'medio'?'Médio':'Alto'}
+                                        <p className={` ${styles.info_value} ${getSeverityIcon(selectAlert.nivel_risco)}`}>
+                                            {selectAlert.nivel_risco === 'baixo'? 'Baixo': selectAlert.nivel_risco === 'medio'?'Médio':'Alto'}
                                         </p>
                                     </div>
                                     <div className={styles.info_card}>
