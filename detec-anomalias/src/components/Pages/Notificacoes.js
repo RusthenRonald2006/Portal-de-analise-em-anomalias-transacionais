@@ -7,8 +7,6 @@ import { Menu } from 'lucide-react';
 import api from "../../services/api"
 function Notificacoes(){
 
-    const mockData = []
-
     const getTypeIcon = (type)=>{
         switch (type){
             case 'suspicious':
@@ -112,12 +110,12 @@ function Notificacoes(){
                 <main className={styles.main_not}>
                     <div className={styles.alerts_container}>
 
-                        {mockData.length === 0 ?(
+                        {Notificacoes.length === 0 ?(
                             <div className={styles.empty_alerts}>
                                 <p>Nenhuma notificação encontrada no momento.</p>
                             </div>
                         ):(
-                            mockData.map((alert)=>(
+                            Notificacoes.map((alert)=>(
                             <div className={styles.alert_item} key={alert.id} onClick={()=>setSelectAlert(alert)}>
                                 <div className={styles.alert_content}>
                                     <div className={styles.alert_left}>
