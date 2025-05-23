@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import styles from "./Notificacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import {Bell,AlertTriangle,RefreshCw,Rocket,Filter,Search,ChevronDown,CheckCircle2,Clock,
@@ -56,7 +56,9 @@ function Notificacoes(){
         })
     }
 
-    const buscarNot = async ()=>{
+
+    useEffect(()=>{
+        const buscarNotificacoes = async ()=>{
         try{
             const response = await api.get('/notificacoes')
             setNotificacoes(response.data)
@@ -64,6 +66,8 @@ function Notificacoes(){
             console.log("erro ao buscar notificações",error)
         }
     }
+    },[])
+    
 
     //para guardar alertar clicado pelo usuário
     const [selectAlert,setSelectAlert]=useState(null)
