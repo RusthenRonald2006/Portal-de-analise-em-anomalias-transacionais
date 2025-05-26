@@ -5,6 +5,7 @@ import {Bell,AlertTriangle,RefreshCw,Rocket,Filter,Search,ChevronDown,CheckCircl
 XCircle,Eye,Circle} from 'lucide-react';
 import { Menu } from 'lucide-react';
 import api from "../../services/api"
+import Loading from "../layout/Loading"
 function Notificacoes(){
 
     const getTypeIcon = (type)=>{
@@ -58,11 +59,14 @@ function Notificacoes(){
     useEffect(()=>{
         const buscarNotificacoes = async ()=>{
         try{
+            setLoading(true)
             const response = await api.get('/notificacoes')
             setNotificacoes(response.data)
             console.log(response.data)
         } catch (error){
             console.log("erro ao buscar notificações",error)
+        } finally{
+            setLoading(false)
         }
     }
         buscarNotificacoes();
@@ -73,6 +77,7 @@ function Notificacoes(){
     const [selectAlert,setSelectAlert]=useState(null)
     const [Notificacoes,setNotificacoes]=useState([])
     const [sidebarOpen,setSidebarOpen] = useState(false)
+    const [loading,setLoading] = useState(true)
 
     return(
         <div className={styles.app_container}>
@@ -108,8 +113,8 @@ function Notificacoes(){
 
                 {/*main*/ }
                 <main className={styles.main_not}>
+                    <div>{loading && <Loading/>}</div>
                     <div className={styles.alerts_container}>
-
                         {Notificacoes.length === 0 ?(
                             <div className={styles.empty_alerts}>
                                 <p>Nenhuma notificação encontrada no momento.</p>
