@@ -113,11 +113,12 @@ function Notificacoes(){
 
                 {/*main*/ }
                 <main className={styles.main_not}>
-                    <div>{loading && <Loading/>}</div>
+                    
                     <div className={styles.alerts_container}>
                         {Notificacoes.length === 0 ?(
                             <div className={styles.empty_alerts}>
                                 <p>Nenhuma notificação encontrada no momento.</p>
+                                <div>{loading && <Loading/>}</div>
                             </div>
                         ):(
                             Notificacoes.map((alert)=>(

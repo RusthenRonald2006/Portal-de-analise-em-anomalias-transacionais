@@ -294,6 +294,11 @@ header{
   .button_primary:hover {
     background-color: #2563eb;
   }
+  .empty_alerts{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 @media (max-width:1024px){
     .mobile_menu_button{
         display: block;
