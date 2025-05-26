@@ -2,11 +2,13 @@ import {useState,useEffect} from "react"
 import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
+import Loading from "../layout/Loading"
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 
 function GestaoTransacoes(){
         const [showfilter,setShowFilter]=useState(false)
         const [sidebarOpen,setSidebarOpen] = useState(false)
+        const [loading,setLoading] = useState(true);
 
         const [transactions, setTransactions] = useState([]);
 
@@ -59,6 +61,7 @@ function GestaoTransacoes(){
 
       const carregarTransacoes = async () => {
         try{
+            setLoading(true);
             const resposta = await fetch("https://antifraude-api.onrender.com/transacoes")
             const dados = await resposta.json();
 
@@ -72,6 +75,8 @@ function GestaoTransacoes(){
             setTransactions(TransacoesFormatadas)
         } catch(error){
             console.log("Erro ao carregar Transações:",error);
+        }finally{
+            setLoading(false);
         }
 
       }
@@ -163,8 +168,9 @@ function GestaoTransacoes(){
                     </div>
                     )}
                 </div>
-                    
+                <div>{loading && <Loading/>}</div>
                 <div className={styles.table_container}>
+                    
                     <table>
                         <thead>
                             <tr>
