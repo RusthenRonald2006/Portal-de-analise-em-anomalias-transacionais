@@ -35,7 +35,7 @@ function Notificacoes(){
         switch (status){
             case 'novo':
                 return  <Bell className={styles.new_icon}/>
-            case 'em_analise':
+            case 'pendente':
                 return <Clock className={styles.analyse_icon}/>
             case 'resolvido':
                 return <CheckCircle2 className={styles.resolved_icon}/>
