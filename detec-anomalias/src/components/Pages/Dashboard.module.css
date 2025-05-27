@@ -167,7 +167,11 @@ input[type="date"]:hover {
     color: #6b7280;
     margin-top: 0.25rem;
 }
-  
+.empty_message{
+    display: flex;
+    padding: 1rem;
+    font-weight: 500;
+}
 @media (max-width: 1024px) {
     .cards_grid {
         grid-template-columns: repeat(2, 1fr);

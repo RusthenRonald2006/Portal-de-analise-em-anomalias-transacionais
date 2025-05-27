@@ -110,7 +110,11 @@ function Dashboard(){
                 <div className={styles.card_notifications}>
                     <h2 className={styles.card_notifications_title}> Atividades Recentes</h2>
                     <div className={styles.activity_list}>
-                        {notificacoesRecntes.map((notificacao,index)=>(
+
+                        {notificacoesRecntes.length === 0 ? (
+                            <div className={styles.empty_message}>Nenhuma notificação recente encontrada</div>
+                        ): (
+                            notificacoesRecntes.map((notificacao,index)=>(
                             <div key={notificacao._id || index} className={styles.activity_item}>
                                 <div className={styles.activity_icon}>
                                     <Bell/>
@@ -122,7 +126,9 @@ function Dashboard(){
                                     })}</p>
                                 </div>
                             </div>
-                        ))}
+                        ))
+                        )}
+                        
                     </div>
                 </div>
                 <div>
