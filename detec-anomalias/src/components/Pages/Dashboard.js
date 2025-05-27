@@ -41,13 +41,14 @@ function Dashboard(){
             try{
                 const resposta = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=3")
                 const dados = await resposta.json();
+                console.log(dados);
                 setNotificacoesRecentes(dados);
             } catch (error){
                 console.error("Erro ao buscar notificações", error);
             }
         }
         buscarUltimasNotificacoes();
-    })
+    },[])
 
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
@@ -109,8 +110,8 @@ function Dashboard(){
                 <div className={styles.card_notifications}>
                     <h2 className={styles.card_notifications_title}> Atividades Recentes</h2>
                     <div className={styles.activity_list}>
-                        {[1,2,3].map((_,index)=>( //1 parâmetro ( 1, 2, 3) não é usado
-                            <div key={index} className={styles.activity_item}>
+                        {notificacoesRecntes.map((notificacao,index)=>(
+                            <div key={notificacao._id} className={styles.activity_item}>
                                 <div className={styles.activity_icon}>
                                     <Users/>
                                 </div>
