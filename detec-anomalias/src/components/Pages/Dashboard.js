@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Dashboard.module.css"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,7 @@ function Dashboard(){
     const [showfilter,setShowFilter] =useState(false)
     const [dataInicio,setDataInicio] =useState("")
     const [dataFim,setDataFim] =useState("")
+    const [notificacoesRecntes,setNotificacoesRecentes] =useState([])
     const [metricas,setMetricas] =useState({
         total_transacoes:0,
         transacoes_suspeitas:0,
@@ -34,7 +35,16 @@ function Dashboard(){
             console.error("Erro ao buscar métricas",error);
             alert("Erro ao carregar dados do dashboard")
         }
-    }
+    }   
+    useEffect(()=>{
+        const buscarUltimasNotificacoes = async ()=>{
+            try{
+                const resposta = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=3")
+            } catch (error){
+                console.error("Erro ao buscar notificações", error);
+            }
+        }
+    })
 
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
@@ -110,7 +120,7 @@ function Dashboard(){
                     </div>
                 </div>
                 <div>
-                    <h3>Gráfico de Volume de Transações(Linha ou Barra)</h3>
+                    
                 </div>
            </div>
         </div>
