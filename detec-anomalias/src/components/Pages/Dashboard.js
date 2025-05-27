@@ -5,7 +5,7 @@ import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
-import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell } from 'lucide-react'
+import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell,AlertTriangle,Clock,CheckCircle } from 'lucide-react'
 import { data } from "react-router-dom";
 function Dashboard(){
 
@@ -49,6 +49,15 @@ function Dashboard(){
         }
         buscarUltimasNotificacoes();
     },[])
+
+    const getIconByRisco = (risco) =>{
+        switch (risco){
+            case "alto": return <AlertTriangle color="red" />;
+            case "médio": return <Clock color="orange" />;
+            case "baixo": return <CheckCircle color="green" />;
+            default: return <Users />;
+        }
+    }
 
     const cards = [
         { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
@@ -117,7 +126,7 @@ function Dashboard(){
                             notificacoesRecntes.map((notificacao,index)=>(
                             <div key={notificacao._id || index} className={styles.activity_item}>
                                 <div className={styles.activity_icon}>
-                                    <Bell/>
+                                    {getIconByRisco(notificacao.nivel_risco)}
                                 </div>
                                 <div className={styles.activity_info}>
                                     <p>{notificacao.mensagem}</p>
