@@ -40,10 +40,13 @@ function Dashboard(){
         const buscarUltimasNotificacoes = async ()=>{
             try{
                 const resposta = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=3")
+                const dados = await resposta.json();
+                setNotificacoesRecentes(dados);
             } catch (error){
                 console.error("Erro ao buscar notificações", error);
             }
         }
+        buscarUltimasNotificacoes();
     })
 
     const cards = [
