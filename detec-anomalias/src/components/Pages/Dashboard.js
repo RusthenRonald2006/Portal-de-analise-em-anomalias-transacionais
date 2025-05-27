@@ -5,7 +5,7 @@ import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
-import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search } from 'lucide-react'
+import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell } from 'lucide-react'
 import { data } from "react-router-dom";
 function Dashboard(){
 
@@ -113,7 +113,7 @@ function Dashboard(){
                         {notificacoesRecntes.map((notificacao,index)=>(
                             <div key={notificacao._id || index} className={styles.activity_item}>
                                 <div className={styles.activity_icon}>
-                                    <Users/>
+                                    <Bell/>
                                 </div>
                                 <div className={styles.activity_info}>
                                     <p>{notificacao.mensagem}</p>
