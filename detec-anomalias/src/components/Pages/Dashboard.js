@@ -5,7 +5,7 @@ import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
-import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell,AlertTriangle,Clock,CheckCircle } from 'lucide-react'
+import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell,AlertTriangle,Clock,CheckCircle,CheckCircle2 } from 'lucide-react'
 import { data } from "react-router-dom";
 function Dashboard(){
 
@@ -56,6 +56,19 @@ function Dashboard(){
             case "médio": return <Clock color="orange" />;
             case "baixo": return <CheckCircle color="green" />;
             default: return <Users />;
+        }
+    }
+
+    const getIconByStatus = (status) => {
+        switch(status){
+            case "novo":
+                return  <Bell className={styles.status_novo}/>
+            case "em_analise":
+                return <Clock className={styles.status_analise}/> 
+            case "resolvido":
+                return <CheckCircle2 className={styles.status_resolvido}/>
+            default:
+                return null;
         }
     }
 
@@ -130,9 +143,12 @@ function Dashboard(){
                                 </div>
                                 <div className={styles.activity_info}>
                                     <p>{notificacao.mensagem}</p>
-                                    <p>{new Date(notificacao.data).toLocaleString("pt-BR", {
-                                    hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit"
-                                    })}</p>
+                                    <div className={styles.container_status}>
+                                        <p>{new Date(notificacao.data).toLocaleString("pt-BR", {
+                                        hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit"
+                                        })} </p>
+                                        <p>{getIconByStatus(notificacao.status)}</p>
+                                    </div>
                                 </div>
                             </div>
                         ))

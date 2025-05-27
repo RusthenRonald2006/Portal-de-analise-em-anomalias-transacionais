@@ -158,16 +158,34 @@ input[type="date"]:hover {
     height: 1.25rem;
     color: #2E8B57;
 }
+.container_status{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    gap: 10px;
+}
 .activity_info p:first-child{
     font-size: 0.9rem;
     font-weight: 500;
     color: #111827;
 }
-.activity_info p:last-child{
+.container_status p:first-child{
     font-size: 0.8rem;
     color: #6b7280;
     margin-top: 0.25rem;
 }
+.status_novo {
+  color: #3b82f6;
+}
+
+.status_analise {
+  color: #eab308;
+}
+
+.status_resolvido {
+  color: #22c55e;
+}
+
 .empty_message{
     display: flex;
     padding: 1rem;
