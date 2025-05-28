@@ -1,18 +1,21 @@
 import React from "react";
 import styles from "./Dashboard.module.css"
 import { useState,useEffect } from "react";
+import { useRef } from "react";
 import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell,AlertTriangle,Clock,CheckCircle,CheckCircle2 } from 'lucide-react'
 import { data } from "react-router-dom";
+import { toast } from "react-toastify";
 function Dashboard(){
 
+    const notificacoesAnteriores = useRef([])
     const [showfilter,setShowFilter] =useState(false)
     const [dataInicio,setDataInicio] =useState("")
     const [dataFim,setDataFim] =useState("")
-    const [notificacoesRecntes,setNotificacoesRecentes] =useState([])
+    const [notificacoesRecentes,setNotificacoesRecentes] =useState([])
     const [metricas,setMetricas] =useState({
         total_transacoes:0,
         transacoes_suspeitas:0,
@@ -36,19 +39,30 @@ function Dashboard(){
             alert("Erro ao carregar dados do dashboard")
         }
     }   
-    useEffect(()=>{
         const buscarUltimasNotificacoes = async ()=>{
             try{
                 const resposta = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=3")
-                const dados = await resposta.json();
-                console.log(dados);
-                setNotificacoesRecentes(dados);
+
+                const novas = await resposta.json();
+                if(notificacoesAnteriores.current.length >0){
+                    if(novas.length > notificacoesAnteriores.current.length){
+                        const nova = novas[0]
+                        toast.info("Transação suspeita identificada")
+                    }
+                }
+                notificacoesAnteriores.current = novas;
+                setNotificacoesRecentes(novas);
             } catch (error){
                 console.error("Erro ao buscar notificações", error);
             }
         }
-        buscarUltimasNotificacoes();
-    },[])
+
+        useEffect(()=>{
+            buscarUltimasNotificacoes();
+            const intervalo = setInterval(buscarUltimasNotificacoes,10000)
+            return () => clearInterval(intervalo);
+        },[])
+        
 
     const getIconByRisco = (risco) =>{
         switch (risco){
@@ -133,10 +147,10 @@ function Dashboard(){
                     <h2 className={styles.card_notifications_title}> Atividades Recentes</h2>
                     <div className={styles.activity_list}>
 
-                        {notificacoesRecntes.length === 0 ? (
+                        {notificacoesRecentes.length === 0 ? (
                             <div className={styles.empty_message}>Nenhuma notificação recente encontrada</div>
                         ): (
-                            notificacoesRecntes.map((notificacao,index)=>(
+                            notificacoesRecentes.map((notificacao,index)=>(
                             <div key={notificacao._id || index} className={styles.activity_item}>
                                 <div className={styles.activity_icon}>
                                     {getIconByRisco(notificacao.nivel_risco)}

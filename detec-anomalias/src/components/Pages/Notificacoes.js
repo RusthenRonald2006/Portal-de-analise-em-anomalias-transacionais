@@ -67,7 +67,7 @@ function Notificacoes(){
             if (notificacoesAnteriores.current.length > 0){
                 if(novas.length > notificacoesAnteriores.current.length){
                     const nova = novas[0]
-                    toast.info("Nova notificação recebida")
+                    toast.info("Transação suspeita identificada")
                 }
             }
             notificacoesAnteriores.current = novas
