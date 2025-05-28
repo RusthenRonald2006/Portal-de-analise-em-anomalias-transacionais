@@ -1,4 +1,5 @@
-import {useEffect, useState} from "react"
+import {useEffect, useState, useRef} from "react"
+import { toast } from "react-toastify";
 import styles from "./Notificacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import {Bell,AlertTriangle,RefreshCw,Rocket,Filter,Search,ChevronDown,CheckCircle2,Clock,
@@ -55,21 +56,33 @@ function Notificacoes(){
         })
     }
 
+    const notificacoesAnteriores = useRef([])
 
-    useEffect(()=>{
-        const buscarNotificacoes = async ()=>{
+    const buscarNotificacoes = async ()=>{
         try{
             setLoading(true)
             const response = await api.get('/notificacoes')
-            setNotificacoes(response.data)
-            console.log(response.data)
+            const novas = response.data
+
+            if (notificacoesAnteriores.current.length > 0){
+                if(novas.length > notificacoesAnteriores.current.length){
+                    const nova = novas[0]
+                    toast.info("Nova notificação recebida")
+                }
+            }
+            notificacoesAnteriores.current = novas
+            setNotificacoes(novas)
         } catch (error){
             console.log("erro ao buscar notificações",error)
         } finally{
             setLoading(false)
         }
     }
+
+    useEffect(()=>{
         buscarNotificacoes();
+        const intervalo = setInterval(buscarNotificacoes, 10000)
+        return () => clearInterval(intervalo)
     },[])
     
 
