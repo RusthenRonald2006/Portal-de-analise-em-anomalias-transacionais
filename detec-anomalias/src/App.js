@@ -1,4 +1,6 @@
 import Login from "./components/Pages/Login";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 import Dashboard from "./components/Pages/Dashboard";
 import GestaoContas from "./components/Pages/GestaoContas";
@@ -15,6 +17,8 @@ function App() {
           <Route path="/gestaotransacoes" element={<GestaoTransacoes/>}/>
           <Route path="/notificacoes" element={<Notificacoes/>}/>
       </Routes>
+
+      <ToastContainer position="top-right" autoclose={5000}/>
     </Router>
   );
 }
