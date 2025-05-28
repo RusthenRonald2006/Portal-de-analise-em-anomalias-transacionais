@@ -6,6 +6,8 @@ XCircle,Eye,Circle} from 'lucide-react';
 import { Menu } from 'lucide-react';
 import api from "../../services/api"
 import Loading from "../layout/Loading"
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 function Notificacoes(){
 
     const getTypeIcon = (type)=>{
@@ -61,7 +63,16 @@ function Notificacoes(){
         try{
             setLoading(true)
             const response = await api.get('/notificacoes')
-            setNotificacoes(response.data)
+            const novas = response.data
+
+            if (notificacoesAnteriores.current.lenght > 0){
+                if (novas.length > notificacoesAnteriores.current.lenght){
+                    const nova = novas[0]
+                    toast.info('Nova notificação recebida.')
+                }
+            }
+            notificacoesAnteriores.current = novas
+            setNotificacoes(novas)
             console.log(response.data)
         } catch (error){
             console.log("erro ao buscar notificações",error)
