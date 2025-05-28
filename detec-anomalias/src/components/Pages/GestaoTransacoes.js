@@ -168,9 +168,8 @@ function GestaoTransacoes(){
                     </div>
                     )}
                 </div>
-                <div>{loading && <Loading/>}</div>
+                <div >{loading && <Loading/>}</div>
                 <div className={styles.table_container}>
-                    
                     <table>
                         <thead>
                             <tr>
