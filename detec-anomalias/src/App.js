@@ -4,7 +4,6 @@ import Dashboard from "./components/Pages/Dashboard";
 import GestaoContas from "./components/Pages/GestaoContas";
 import GestaoTransacoes from "./components/Pages/GestaoTransacoes"; 
 import Notificacoes from "./components/Pages/Notificacoes";
-import { ToastContainer } from "react-toastify";
 import Portal from "./components/Pages/Portal";
 function App() {
   return (
@@ -16,8 +15,6 @@ function App() {
           <Route path="/gestaotransacoes" element={<GestaoTransacoes/>}/>
           <Route path="/notificacoes" element={<Notificacoes/>}/>
       </Routes>
-
-      <ToastContainer position="to-rigth" autoClose={5000} />
     </Router>
   );
 }
