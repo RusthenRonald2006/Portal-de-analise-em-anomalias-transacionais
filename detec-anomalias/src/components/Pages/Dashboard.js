@@ -21,7 +21,7 @@ function Dashboard(){
         total_transacoes:0,
         transacoes_suspeitas:0,
         valor_medio_suspeitas:0,
-    });
+    }); 
 
     const buscarMetricas = async ()=>{
         if (!dataInicio || !dataFim){
@@ -59,7 +59,7 @@ function Dashboard(){
                     const novaMaisRecente = dados[0]
 
                     if (primeiraVerificacao.current) {
-                        notificacoesAnteriores.current = [novaMaisRecente]; 
+                        notificacoesAnteriores.current = [novaMaisRecente];
                         primeiraVerificacao.current = false;
                         return;
                     }
