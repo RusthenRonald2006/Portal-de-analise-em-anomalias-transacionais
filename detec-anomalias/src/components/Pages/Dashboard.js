@@ -11,6 +11,7 @@ import { data } from "react-router-dom";
 import { toast } from "react-toastify";
 function Dashboard(){
 
+    const primeiraVerificacao = useRef(true);
     const notificacoesAnteriores = useRef([])
     const [showfilter,setShowFilter] =useState(false)
     const [dataInicio,setDataInicio] =useState("")
@@ -56,6 +57,12 @@ function Dashboard(){
                     const response = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=1")
                     const dados = await response.json();
                     const novaMaisRecente = dados[0]
+
+                    if (primeiraVerificacao.current) {
+                        notificacoesAnteriores.current = [novaMaisRecente]; 
+                        primeiraVerificacao.current = false;
+                        return;
+                    }
 
                     const idAnterior = notificacoesAnteriores.current[0]?._id;
                     if (novaMaisRecente && idAnterior !== novaMaisRecente._id) {
