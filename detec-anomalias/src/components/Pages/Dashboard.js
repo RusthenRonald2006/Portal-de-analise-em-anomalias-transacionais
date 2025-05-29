@@ -43,15 +43,8 @@ function Dashboard(){
             try{
                 const resposta = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=3")
 
-                const novas = await resposta.json();
-                if(notificacoesAnteriores.current.length >0){
-                    if(novas.length > notificacoesAnteriores.current.length){
-                        const nova = novas[0]
-                        toast.info("Transação suspeita identificada")
-                    }
-                }
-                notificacoesAnteriores.current = novas;
-                setNotificacoesRecentes(novas);
+                const dados = await resposta.json();
+                setNotificacoesRecentes(dados);             
             } catch (error){
                 console.error("Erro ao buscar notificações", error);
             }
