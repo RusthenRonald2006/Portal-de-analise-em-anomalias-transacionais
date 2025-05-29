@@ -56,6 +56,9 @@ function Dashboard(){
             return () => clearInterval(intervalo);
         },[])
         
+        const buscarNovasNotificacoes = async ()=>{
+            
+        }
 
     const getIconByRisco = (risco) =>{
         switch (risco){
