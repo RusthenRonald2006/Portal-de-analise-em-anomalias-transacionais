@@ -38,27 +38,41 @@ function Dashboard(){
             console.error("Erro ao buscar métricas",error);
             alert("Erro ao carregar dados do dashboard")
         }
-    }   
-        const buscarUltimasNotificacoes = async ()=>{
-            try{
-                const resposta = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=3")
-
-                const dados = await resposta.json();
-                setNotificacoesRecentes(dados);             
-            } catch (error){
-                console.error("Erro ao buscar notificações", error);
-            }
-        }
-
+    }
         useEffect(()=>{
-            buscarUltimasNotificacoes();
-            const intervalo = setInterval(buscarUltimasNotificacoes,10000)
-            return () => clearInterval(intervalo);
-        },[])
-        
-        const buscarNovasNotificacoes = async ()=>{
-            
+            const buscarUltimasNotificacoes = async ()=>{
+                try{
+                    const resposta = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=3")
+
+                    const dados = await resposta.json();
+                    setNotificacoesRecentes(dados);             
+                } catch (error){
+                    console.error("Erro ao buscar notificações", error);
+                }
         }
+        
+            const verificarNovaNotificacao = async ()=>{
+                try{
+                    const response = await fetch("https://antifraude-api.onrender.com/notificacoes/ultimas?qtd=1")
+                    const dados = await response.json();
+                    const novaMaisRecente = dados[0]
+
+                    const idAnterior = notificacoesAnteriores.current[0]?._id;
+                    if (novaMaisRecente && idAnterior !== novaMaisRecente._id) {
+                        toast.info("Nova transação suspeita identificada!");
+                        notificacoesAnteriores.current = [novaMaisRecente];
+                    } 
+                 }  catch (error) {
+                        console.error("Erro ao verificar nova notificação", error);
+                }
+            }
+            buscarUltimasNotificacoes();
+            verificarNovaNotificacao();
+            const intervalo = setInterval(verificarNovaNotificacao,10000);
+            return () => clearInterval(intervalo);
+    },[]);
+    
+        
 
     const getIconByRisco = (risco) =>{
         switch (risco){
