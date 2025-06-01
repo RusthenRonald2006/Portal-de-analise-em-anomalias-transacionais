@@ -32,7 +32,7 @@ function Dashboard(){
         try{
             const resposta = await fetch(`https://antifraude-api.onrender.com/dashboard/quantidade_transacoes?periodo_inicio=${dataInicio}&periodo_fim=${dataFim}`)
             const dados = await resposta.json();
-
+            console.log("Dados do dashboard:", dados);
             setMetricas(dados);
 
         } catch (error){
