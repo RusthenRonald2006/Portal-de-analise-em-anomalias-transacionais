@@ -18,7 +18,7 @@ function Dashboard(){
     const [dataFim,setDataFim] =useState("")
     const [notificacoesRecentes,setNotificacoesRecentes] =useState([])
     const [metricas,setMetricas] =useState({
-        total_transacoes:0,
+        quantidade_transacoes:0,
         transacoes_suspeitas:0,
         valor_medio_suspeitas:0,
     }); 
@@ -102,6 +102,15 @@ function Dashboard(){
                 return null;
         }
     }
+
+    const cards = [
+        { title: "Total de Transações (Este mês)", value: metricas.quantidade_transacoes, icon: faUser, colorClass: styles.iconBlue },
+        { title: "Transações suspeitas", value: "320 ", icon: faCoins, colorClass: styles.iconGreen },
+        { title: "Valor médio das transações suspeitas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
+        { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
+      ];
+
+
       
     return(
         <div>
