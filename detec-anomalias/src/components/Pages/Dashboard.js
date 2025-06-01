@@ -102,15 +102,6 @@ function Dashboard(){
                 return null;
         }
     }
-
-    const cards = [
-        { title: "Total de Transações (Este mês)", value: "5.320", icon: faUser, colorClass: styles.iconBlue },
-        { title: "Transações suspeitas", value: "320 ", icon: faCoins, colorClass: styles.iconGreen },
-        { title: "Valor médio das transações suspeitas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
-        { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
-      ];
-
-
       
     return(
         <div>
