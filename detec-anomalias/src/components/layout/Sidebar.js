@@ -17,10 +17,10 @@ function Navbar(){
             <div className={styles.sidebar_header}>
                 <h2 className={styles.sidebar_title}>Portal</h2>
             </div>
-            <div className={styles.user_container}>
+            {/*<div className={styles.user_container}>
                 <img src={user2}></img>
                 <h2>José</h2>
-            </div>
+            </div>*/}
             <nav className={styles.sidebar_nav}>
                 {menuItems.map((item,index)=>(
                     <Link to={item.path} key={index} href="#" className={styles.nav_item}>
