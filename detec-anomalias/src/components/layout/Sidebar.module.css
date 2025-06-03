@@ -40,6 +40,7 @@
 }
 .user_container img{
     border-radius: 50%;
+    height: 150px;
 }
 @media (max-width:1024px){
     .sidebar_title{
