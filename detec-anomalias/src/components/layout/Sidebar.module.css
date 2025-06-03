@@ -32,7 +32,15 @@
     font-size: 0.875rem;
     color: white;
 }
-
+.user_container{
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_container img{
+    border-radius: 50%;
+}
 @media (max-width:1024px){
     .sidebar_title{
         padding-left: 55px;

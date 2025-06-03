@@ -1,6 +1,7 @@
 import styles from "./Sidebar.module.css"
 import {Link} from "react-router-dom"
 import { Home, Users, FileText , LogOut,Bell} from 'lucide-react';
+import alan from "../img/alan.png"
 function Navbar(){
     const menuItems = [
         { icon: Home, text: 'Dashboard' , path: '/portal' },
@@ -13,6 +14,9 @@ function Navbar(){
         <>
             <div className={styles.sidebar_header}>
                 <h2 className={styles.sidebar_title}>Portal</h2>
+            </div>
+            <div className={styles.user_container}>
+                <img src={alan}></img>
             </div>
             <nav className={styles.sidebar_nav}>
                 {menuItems.map((item,index)=>(
