@@ -2,7 +2,6 @@ import {useState,useEffect} from "react"
 import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
-import Loading from "../layout/Loading"
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 
 function GestaoTransacoes(){
@@ -168,7 +167,6 @@ function GestaoTransacoes(){
                     </div>
                     )}
                 </div>
-                <div >{loading && <Loading/>}</div>
                 <div className={styles.table_container}>
                     <table>
                         <thead>

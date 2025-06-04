@@ -6,7 +6,6 @@ import {Bell,AlertTriangle,RefreshCw,Rocket,Filter,Search,ChevronDown,CheckCircl
 XCircle,Eye,Circle} from 'lucide-react';
 import { Menu } from 'lucide-react';
 import api from "../../services/api"
-import Loading from "../layout/Loading"
 function Notificacoes(){
 
     const getTypeIcon = (type)=>{
@@ -131,7 +130,7 @@ function Notificacoes(){
                         {Notificacoes.length === 0 ?(
                             <div className={styles.empty_alerts}>
                                 <p>Nenhuma notificação encontrada no momento.</p>
-                                <div>{loading && <Loading/>}</div>
+
                             </div>
                         ):(
                             Notificacoes.map((alert)=>(

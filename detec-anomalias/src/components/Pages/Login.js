@@ -7,8 +7,6 @@ import { FaLock } from "react-icons/fa";
 import {Link} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
 import { useState } from 'react';
-import Loading from '../layout/Loading';
-import ClipLoader from "react-spinners/ClipLoader";
 import axios from 'axios'
 function Login (){
     const [matricula,setMatricula]=useState("")
@@ -65,7 +63,7 @@ function Login (){
                             <input type='password' name="password" placeholder="Digite sua senha" value={senha}
                             onChange={(e)=>setSenha(e.target.value)} required></input>
                         </div>
-                        {loading && <Loading/>}
+                        
                         <div className={styles.container_btn}>
                             <div className={styles.login_link}>
                                 <button type='submit' className={styles.btn}>
