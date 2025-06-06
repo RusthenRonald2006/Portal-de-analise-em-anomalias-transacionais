@@ -1,5 +1,7 @@
 function Loading (){
     return(
-        <div></div>
+        <div className="flex justify-center my-2">
+            <span className="loading loading-spinner text-success"></span>
+        </div>
     )
 } export default Loading;
