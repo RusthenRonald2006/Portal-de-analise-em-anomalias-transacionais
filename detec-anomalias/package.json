@@ -51,6 +51,9 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.0",
-    "gh-pages": "^6.3.0"
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.1"
   }
 }
