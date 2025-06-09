@@ -1,8 +1,8 @@
 import styles from "../layout/Loading.module.css";
 function Loading (){
     return(
-        <div className={styles.Loading_container}>
-            <div className={styles.loader}></div>
+        <div className={styles.Loader_container}>
+            <div className={styles.Loader}></div>
         </div>
     )
 } export default Loading;
