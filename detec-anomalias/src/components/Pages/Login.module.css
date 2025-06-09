@@ -38,7 +38,7 @@
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.144);
     width: 100%;
     height: auto;
-    padding: 50px;
+    padding: 115px 70px;
     max-width: 520px;
 }
 .form_container h1 {
@@ -114,20 +114,7 @@
     gap: 6px;
     align-items: center;
 }
-.google_login{
-    width: 100%;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-}
-.google_login img{
-    cursor: pointer;
-}
-.google_register{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .container_loading{
     display: flex;
     justify-content: center;
@@ -157,7 +144,7 @@ span{
         width: 100%;
     }
     .form_container{
-        padding: 30px;
+        padding: 40px;
         width: 300px;
         background-color: white;
     }
@@ -185,6 +172,7 @@ span{
     }
     .form_container{
         background-color: white;
+        padding: 60px;
     }
     .login_left{
         display: none;
@@ -203,7 +191,8 @@ span{
     }
     .form_container{
         background-color: white;
-        width: 480px;
+        width: 430px;
+        padding: 60px;
     }
     .login_left{
         display: none;
