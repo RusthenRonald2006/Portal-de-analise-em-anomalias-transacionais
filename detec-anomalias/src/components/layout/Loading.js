@@ -1,7 +1,8 @@
+import styles from "../layout/Loading.module.css";
 function Loading (){
     return(
-        <div className="flex justify-center my-2">
-            <span className="loading loading-spinner text-success"></span>
+        <div className={styles.Loading_container}>
+            <div className={styles.loader}></div>
         </div>
     )
 } export default Loading;
