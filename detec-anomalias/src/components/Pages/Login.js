@@ -81,13 +81,6 @@ function Login (){
                             </div>
                             <span>Forgot password</span>
                         </div>
-                        <div className={styles.google_login}>
-                            <img src={logogoogle}></img>
-                        </div>
-                        <div className={styles.google_register}>
-                            <p>Don’t have an account?</p>
-                            <span>Register</span>
-                        </div>
                     </form>
                 </div>
            </div>
