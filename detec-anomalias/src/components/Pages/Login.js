@@ -19,6 +19,7 @@ function Login (){
     const handleLogin = async (e)=>{
         e.preventDefault()
         setLoading(true)
+        setErro("")
 
         try{
             const response = await axios.post("https://antifraude-api.onrender.com/login",{
