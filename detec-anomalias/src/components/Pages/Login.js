@@ -64,7 +64,7 @@ function Login (){
                             <input type='password' name="password" placeholder="Digite sua senha" value={senha}
                             onChange={(e)=>setSenha(e.target.value)} required></input>
                         </div>
-                        {loading && <Loading/>}
+                        {loading && <div className={styles.container_loading}><Loading/></div>}
                         <div className={styles.container_btn}>
                             <div className={styles.login_link}>
                                 <button type='submit' className={styles.btn}>
