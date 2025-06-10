@@ -47,6 +47,13 @@
     margin-top: 8px;
     color: white;
 }
+.quant_novas_not{
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 30%;
+}
 @media (max-width:1024px){
     .sidebar_title{
         padding-left: 55px;
