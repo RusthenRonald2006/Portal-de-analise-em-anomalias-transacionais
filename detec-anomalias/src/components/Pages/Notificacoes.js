@@ -4,6 +4,7 @@ import styles from "./Notificacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import {Bell,AlertTriangle,RefreshCw,Rocket,Filter,Search,ChevronDown,CheckCircle2,Clock,
 XCircle,Eye,Circle} from 'lucide-react';
+import Loading from "../layout/Loading"
 import { Menu } from 'lucide-react';
 import api from "../../services/api"
 function Notificacoes(){

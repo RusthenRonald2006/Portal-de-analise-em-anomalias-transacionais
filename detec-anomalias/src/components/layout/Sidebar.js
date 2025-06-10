@@ -9,7 +9,7 @@ function Navbar(){
         { icon: Home, text: 'Dashboard' , path: '/portal' },
         { icon: FileText, text: 'Gestão de Transações',path:'/gestaotransacoes' },
         { icon: Users, text: 'Gestão de Contas' ,path:'/gestaocontas'},
-        { icon: Bell, text: 'Tela de Notificações' ,path:'/notificacoes'},
+        { icon: Bell, text: 'Central de Alertas' ,path:'/notificacoes'},
         { icon:  LogOut, text : 'Logout',path:'/'}
       ];
     return(
