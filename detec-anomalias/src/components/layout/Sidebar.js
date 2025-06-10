@@ -15,7 +15,7 @@ function Navbar(){
     return(
         <>
             <div className={styles.sidebar_header}>
-                <h2 className={styles.sidebar_title}>Portal</h2>
+                <h2 className={styles.sidebar_title}>Banese</h2>
             </div>
             {/*<div className={styles.user_container}>
                 <img src={user2}></img>
