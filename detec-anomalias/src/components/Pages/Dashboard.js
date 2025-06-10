@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use } from "react";
 import styles from "./Dashboard.module.css"
 import { useState,useEffect } from "react";
 import { useRef } from "react";
@@ -34,7 +34,9 @@ function Dashboard(){
             const resposta = await fetch(`https://antifraude-api.onrender.com/dashboard/quantidade_transacoes?periodo_inicio=${dataInicio}&periodo_fim=${dataFim}`)
             const dados = await resposta.json();
             console.log("Dados do dashboard:", dados);
-            setMetricas(dados);
+            setMetricas(prev =>(
+                {...prev,quantidade_transacoes:dados.quantidade_transacoes}
+            ));
 
         } catch (error){
             console.error("Erro ao buscar métricas",error);
@@ -53,7 +55,9 @@ function Dashboard(){
             console.error("Erro ao buscar métricas totais",error);
         }
     }
-
+    useEffect(()=>{
+        buscarMetricasTotais()
+    },[]);
         useEffect(()=>{
             const buscarUltimasNotificacoes = async ()=>{
                 try{
