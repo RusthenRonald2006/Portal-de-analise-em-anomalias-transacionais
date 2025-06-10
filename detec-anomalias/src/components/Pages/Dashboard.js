@@ -23,6 +23,7 @@ function Dashboard(){
         valor_medio_suspeitas:0,
     }); 
 
+    //com filtros
     const buscarMetricas = async ()=>{
         if (!dataInicio || !dataFim){
             alert("Preencha as datas")
@@ -40,6 +41,19 @@ function Dashboard(){
             alert("Erro ao carregar dados do dashboard")
         }
     }
+    //sem filtros
+    const buscarMetricasTotais = async ()=>{
+        try{
+            const resposta = await fetch("https://antifraude-api.onrender.com/dashboard/quantidade_transacoes")
+            const dados = await resposta.json()
+            setMetricas(prev =>(
+                {...prev,quantidade_transacoes:dados.quantidade_transacoes}
+            ))
+        } catch(error){
+            console.error("Erro ao buscar métricas totais",error);
+        }
+    }
+
         useEffect(()=>{
             const buscarUltimasNotificacoes = async ()=>{
                 try{
