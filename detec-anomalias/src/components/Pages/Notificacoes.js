@@ -9,19 +9,6 @@ import { Menu } from 'lucide-react';
 import api from "../../services/api"
 function Notificacoes(){
 
-    const getTypeIcon = (type)=>{
-        switch (type){
-            case 'suspicious':
-                return <AlertTriangle className={styles.icon_alert} />;
-            case 'pattern':
-                return <RefreshCw className={styles.icon_pattern} />;
-            case 'account':
-                return <Rocket className={styles.icon_account} />;
-            default :
-                return null
-        }
-    }
-
     const getSeverityIcon = (severity)=>{
         switch (severity){
             case 'baixo':
