@@ -34,7 +34,7 @@ function Notificacoes(){
     }
 
     const formatDate = (dateString)=>{
-        return new Date(dateString).toDateString('pt-BR',{
+        return new Date(dateString).toLocaleString('pt-BR',{
             day: '2-digit',
             month: '2-digit',
             year: 'numeric',
