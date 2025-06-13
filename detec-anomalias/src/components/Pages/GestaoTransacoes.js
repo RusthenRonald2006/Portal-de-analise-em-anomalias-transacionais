@@ -10,7 +10,7 @@ function GestaoTransacoes(){
         const [sidebarOpen,setSidebarOpen] = useState(false)
         const [loading,setLoading] = useState(true);
         const [pagina,setPagina] = useState(1);
-        const [imite,setLiminite] = useState(50)
+        const [limite,setLimite] = useState(50)
 
         const [transactions, setTransactions] = useState([]);
 
@@ -200,6 +200,17 @@ function GestaoTransacoes(){
                             )}
                         </tbody>
                     </table>
+                </div>
+
+                <div className={styles.paginacao}>
+                    <label>
+                        Mostrar:&nbsp;
+                        <select value={limite} onChange={(e)=>{setLimite(Number(e.target.value)); setPagina(1);}}>
+                            <option value={20}>20</option>
+                            <option value={50}>50</option>
+                            <option value={60}>60</option>
+                        </select>&nbsp;linhas por página
+                    </label>
                 </div>
             </div>
         </div>
