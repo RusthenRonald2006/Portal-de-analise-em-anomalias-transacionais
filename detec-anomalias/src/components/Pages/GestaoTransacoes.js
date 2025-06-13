@@ -9,6 +9,8 @@ function GestaoTransacoes(){
         const [showfilter,setShowFilter]=useState(false)
         const [sidebarOpen,setSidebarOpen] = useState(false)
         const [loading,setLoading] = useState(true);
+        const [pagina,setPagina] = useState(1);
+        const [imite,setLiminite] = useState(50)
 
         const [transactions, setTransactions] = useState([]);
 
