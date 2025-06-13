@@ -211,6 +211,11 @@ function GestaoTransacoes(){
                             <option value={60}>60</option>
                         </select>&nbsp;linhas por página
                     </label>
+                    <div className={styles.pag_buttons}>
+                        <button>Anterior</button>
+                        <span style={{color:"black",fontWeight:"normal"}}>Página {pagina}</span>
+                        <button>Próxima</button>
+                    </div>
                 </div>
             </div>
         </div>
