@@ -214,7 +214,7 @@ function GestaoTransacoes(){
                     <div className={styles.pag_buttons}>
                         <button onClick={()=> setPagina(p=>Math.max(p-1,1))} disabled={pagina === 1}>Anterior</button>
                         <span style={{color:"black",fontWeight:"normal"}}>Página {pagina}</span>
-                        <button>Próxima</button>
+                        <button onClick={()=>setPagina(p=>p+1)}>Próxima</button>
                     </div>
                 </div>
             </div>
