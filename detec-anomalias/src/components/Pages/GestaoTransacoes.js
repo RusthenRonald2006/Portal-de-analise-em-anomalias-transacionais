@@ -85,7 +85,7 @@ function GestaoTransacoes(){
 
             const formatadas = json.dados.map(t=>({
                 id: t.transacao_id,
-                account: String(t.conta).toLowerCase().trim(),
+                account: String(t.conta_id).toLowerCase().trim(),
                 amount: t.transacao_valor,
                 status: t.status || "análise",
                 date: t.transacao_data,
