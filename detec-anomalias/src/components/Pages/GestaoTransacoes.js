@@ -29,23 +29,8 @@ function GestaoTransacoes(){
             ...prev, 
             [key]:value 
         }))
-      }
-      
-      //aplocando os filtros
-      const filteredTransactions = transactions.filter(transaction => {
-        return (
-          (!filters.account || transaction.account.includes(filters.account.toLowerCase().trim())) &&
-          (!filters.startDate || transaction.date >= filters.startDate) &&
-          (!filters.endDate || transaction.date <= filters.endDate) &&
-          (!filters.minAmount || transaction.amount >= Number(filters.minAmount)) &&
-          (!filters.maxAmount || transaction.amount <= Number(filters.maxAmount)) &&
-          (!filters.status || transaction.status === filters.status)
-        );
-      });
-
-      useEffect(() => {
-        console.log("Estado atual dos filtros:", filters);
-      }, [filters]);
+        setPagina(1); // Resetar para a primeira página ao aplicar um filtro
+      }     
       
        //Função pra retornar os icones de acordo com status da transação 
 
@@ -64,7 +49,7 @@ function GestaoTransacoes(){
       const carregarTransacoes = async () => {
             setLoading(true);
 
-            const skip = (pagina - 1) * limite;
+            const skip = (pagina - 1) * limite;//quantos devo pular
 
             const params = new URLSearchParams({
                 skip: skip.toString(),
@@ -100,6 +85,7 @@ function GestaoTransacoes(){
     }
       useEffect(()=>{
         carregarTransacoes();
+        console.log("Filtros aplicados:", filters);
       },[pagina, limite , filters])
 
       const processarPendentes = async ()=>{
@@ -198,8 +184,8 @@ function GestaoTransacoes(){
                             </tr>
                         </thead>
                         <tbody>
-                            {filteredTransactions.length >0 ?(
-                                filteredTransactions.map(transaction =>(
+                            {transactions.length >0 ?(
+                                transactions.map(transaction =>(
                                     <tr key={transaction.id}>
                                         <td>{transaction.id}</td>
                                         <td>{transaction.account}</td>
@@ -223,7 +209,7 @@ function GestaoTransacoes(){
                         <select value={limite} onChange={(e)=>{setLimite(Number(e.target.value)); setPagina(1);}}>
                             <option value={20}>20</option>
                             <option value={50}>50</option>
-                            <option value={60}>60</option>
+                            <option value={100}>100</option>
                         </select>&nbsp;linhas por página
                     </label>
                     <div className={styles.pag_buttons}>
