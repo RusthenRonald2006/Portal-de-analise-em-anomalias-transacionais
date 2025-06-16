@@ -62,24 +62,7 @@ function GestaoTransacoes(){
 
 
       const carregarTransacoes = async () => {
-        try{
-            setLoading(true);
-            const resposta = await fetch("https://antifraude-api.onrender.com/transacoes")
-            const dados = await resposta.json();
-
-            const TransacoesFormatadas = dados.map(t =>({
-                id: t.transacao_id,
-                account:String(t.conta_id).toLowerCase().trim(),
-                amount:t.transacao_valor,
-                status: t.status || "análise",
-                date: t.transacao_data,
-            }))
-            setTransactions(TransacoesFormatadas)
-        } catch(error){
-            console.log("Erro ao carregar Transações:",error);
-        }finally{
-            setLoading(false);
-        }
+        
 
       }
 
