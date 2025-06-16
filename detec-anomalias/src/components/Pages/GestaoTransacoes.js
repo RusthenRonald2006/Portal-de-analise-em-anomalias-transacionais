@@ -65,6 +65,10 @@ function GestaoTransacoes(){
         });
 
         try{
+            console.log("Filtros aplicados antes do fetch:", filters);
+
+            console.log(`URL gerada: https://antifraude-api.onrender.com/transacoes?${params.toString()}`);
+            
             const resposta = await fetch(`https://antifraude-api.onrender.com/transacoes?${params}`)
             const json = await resposta.json()
 
