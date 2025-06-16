@@ -80,19 +80,18 @@ function GestaoTransacoes(){
         });
 
         try{
-            const resposta = await fetch("https://antifraude-api.onrender.com/transacoes?${params}")
+            const resposta = await fetch(`https://antifraude-api.onrender.com/transacoes?${params}`)
             const json = await resposta.json()
 
             const formatadas = json.dados.map(t=>({
                 id: t.transacao_id,
                 account: String(t.conta).toLowerCase().trim(),
-                amount:t.transacao_valor,
+                amount: t.transacao_valor,
                 status: t.status || "análise",
                 date: t.transacao_data,
             }))
 
             setTransactions(formatadas);
-
         } catch(error){
             console.error("Erro ao carregar transações:", error);
         } finally{
