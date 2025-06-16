@@ -62,13 +62,46 @@ function GestaoTransacoes(){
 
 
       const carregarTransacoes = async () => {
-        
+            setLoading(true);
 
-      }
+            const skip = (pagina - 1) * limite;
 
+            const params = new URLSearchParams({
+                skip: skip.toString(),
+                limit: limite.toString(),
+                ...(filters.account && { conta: filters.account.toLowerCase().trim() }),
+                ...(filters.status && { status: filters.status }),
+                ...(filters.minAmount && { valor_min: filters.minAmount }),
+                ...(filters.maxAmount && { valor_max: filters.maxAmount }),
+                ...(filters.startDate && filters.endDate && {
+                data_inicio: filters.startDate,
+                data_fim: filters.endDate
+            })
+        });
+
+        try{
+            const resposta = await fetch("https://antifraude-api.onrender.com/transacoes?${params}")
+            const json = await resposta.json()
+
+            const formatadas = json.dados.map(t=>({
+                id: t.transacao_id,
+                account: String(t.conta).toLowerCase().trim(),
+                amount:t.transacao_valor,
+                status: t.status || "análise",
+                date: t.transacao_data,
+            }))
+
+            setTransactions(formatadas);
+
+        } catch(error){
+            console.error("Erro ao carregar transações:", error);
+        } finally{
+            setLoading(false);
+        }
+    }
       useEffect(()=>{
         carregarTransacoes();
-      },[])
+      },[pagina, limite , filters])
 
       const processarPendentes = async ()=>{
             try{
