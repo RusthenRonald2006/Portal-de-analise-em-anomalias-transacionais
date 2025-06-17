@@ -73,11 +73,13 @@ function Notificacoes(){
     },[])
     
 
+
     //para guardar alertar clicado pelo usuário
     const [selectAlert,setSelectAlert]=useState(null)
     const [Notificacoes,setNotificacoes]=useState([])
     const [sidebarOpen,setSidebarOpen] = useState(false)
     const [loading,setLoading] = useState(true)
+    const [showfilter,setShowFilter] = useState(false)
 
     return(
         <div className={styles.app_container}>
@@ -92,13 +94,35 @@ function Notificacoes(){
                 {/*header*/ }
                 <header className={styles.header}>
                     <div className={styles.header_content}>
-                        <h1 className={styles.header_title}>Central de Alertas</h1>
+                        <div>
+                            <h1 className={styles.header_title}>Central de Alertas</h1>
+                            <div>
+                                <button className={styles.filter_button} onClick={()=>setShowFilter(!showfilter)}>
+                                    <Filter/> Filtros Avançados
+                                </button>
+                                {showfilter && (
+                                    <div className={styles.filter_container}>
+                                        <div className={styles.filter_group}>
+                                            <input type="text" placeholder="Conta"></input>
+                                            <input type="date"></input>
+                                            <input type="date"></input>
+                                        </div>
+                                        <div className={styles.filter_group}>
+                                            <select>
+                                                <option value="">Todos os status</option>
+                                                <option value="Novo">Novo</option>
+                                                <option value="Análise">Análise</option>
+                                                <option value="Resolvido">Resolvido</option>
+                                            </select>
+                                        </div>
+                                        <div className={styles.filter_group}>
+
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
                         <div className={styles.header_actions}>
-                            <button className={styles.filter_button}>
-                                <Filter />
-                                Filtros
-                                <ChevronDown />
-                            </button>
                             <div className={styles.search_container}>
                                 <Search className={styles.search_icon} />
                                 <input
@@ -205,3 +229,9 @@ function Notificacoes(){
             </div>
     )
 } export default Notificacoes
+
+/*<button className={styles.filter_button}>
+                                <Filter />
+                                Filtros
+                                <ChevronDown />
+                            </button>*/
