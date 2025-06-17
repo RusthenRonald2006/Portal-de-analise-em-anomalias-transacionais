@@ -12,7 +12,7 @@ import Loading from "../layout/Loading";
 import { toast } from "react-toastify";
 function Dashboard(){
 
-    const [loading,setLoading] = useState(true);
+    const [loading,setLoading] = useState(false);
     const primeiraVerificacao = useRef(true);
     const notificacoesAnteriores = useRef([])
     const [showfilter,setShowFilter] =useState(false)
@@ -33,6 +33,7 @@ function Dashboard(){
         }
 
         try{
+            setLoading(true);
             const resposta = await fetch(`https://antifraude-api.onrender.com/dashboard/quantidade_transacoes?periodo_inicio=${dataInicio}&periodo_fim=${dataFim}`)
             const dados = await resposta.json();
             console.log("Dados do dashboard:", dados);
@@ -43,6 +44,8 @@ function Dashboard(){
         } catch (error){
             console.error("Erro ao buscar métricas",error);
             alert("Erro ao carregar dados do dashboard")
+        }finally{
+            setLoading(false);
         }
     }
     //sem filtros
@@ -157,7 +160,7 @@ function Dashboard(){
                         value={dataFim}></input>
                     </div>
                     <button className={styles.search_button} onClick={buscarMetricas}>
-                        Buscar
+                        {loading ? <Loading /> : "Buscar"}
                     </button>
                 </div>
             </div>
