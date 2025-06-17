@@ -104,10 +104,6 @@ function Notificacoes(){
                                     <div className={styles.filter_container}>
                                         <div className={styles.filter_group}>
                                             <input type="text" placeholder="Conta"></input>
-                                            <input type="date"></input>
-                                            <input type="date"></input>
-                                        </div>
-                                        <div className={styles.filter_group}>
                                             <select>
                                                 <option value="">Todos os status</option>
                                                 <option value="Novo">Novo</option>
@@ -116,7 +112,8 @@ function Notificacoes(){
                                             </select>
                                         </div>
                                         <div className={styles.filter_group}>
-
+                                            <input type="date"></input>
+                                            <input type="date"></input>
                                         </div>
                                     </div>
                                 )}

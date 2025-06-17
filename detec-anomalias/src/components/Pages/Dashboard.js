@@ -8,9 +8,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell,AlertTriangle,Clock,CheckCircle,CheckCircle2 } from 'lucide-react'
 import { data } from "react-router-dom";
+import Loading from "../layout/Loading";
 import { toast } from "react-toastify";
 function Dashboard(){
 
+    const [loading,setLoading] = useState(true);
     const primeiraVerificacao = useRef(true);
     const notificacoesAnteriores = useRef([])
     const [showfilter,setShowFilter] =useState(false)
