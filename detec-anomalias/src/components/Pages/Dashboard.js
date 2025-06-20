@@ -164,8 +164,7 @@ function Dashboard(){
                     </button>
                 </div>
             </div>
-           )}
-
+           )}b  
            <div className={styles.cards_grid}>
                 {cards.map((card,index)=>(
                     <div key={index} className={styles.card}>
