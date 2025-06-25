@@ -38,7 +38,7 @@ function GestaoTransacoes(){
         switch (status){
             case 'normal':
                 return <CheckCircle className={styles.status_icon} color="green" />;
-            case 'suspeita':
+            case 'suspeito':
                 return <AlertTriangle className={styles.status_icon}  color="red"/>
             case 'análise':
                 return <Clock className={styles.status_icon}  color="orange"/>
