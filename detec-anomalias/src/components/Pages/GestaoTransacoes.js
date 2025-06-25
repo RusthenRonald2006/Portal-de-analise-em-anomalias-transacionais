@@ -94,20 +94,20 @@ function GestaoTransacoes(){
         console.log("Filtros aplicados:", filters);
       },[pagina, limite , filters])
 
-      const processarPendentes = async ()=>{
-            try{
-                const resposta =await fetch("https://antifraude-api.onrender.com/transacoes/processar_pendentes",{
-                    method: "POST",
-                });
-
-                const resultado = await resposta.json();
-
-                //recarregando
-                carregarTransacoes();
-                
-            } catch(error){
-                console.log("Erro ao processar transações:",error);
-            }
+      const processarTrancacoes = async () =>{
+        try{
+            const response = await axios.post("",{},{
+                params:{
+                    lote:1000,
+                    pausa:2,
+                    entre_transacoes:0.05
+                }
+            })
+            //toast.success(response.data.msg)
+        }catch(error){
+            console.error("Erro ao processar transações:", error);
+            toast.error("Erro ao processar transações")
+        }
       }
 
 
@@ -128,7 +128,7 @@ function GestaoTransacoes(){
                             <Filter /> Filtros Avançados
                         </button>
                         <div>
-                            <button className={styles.filter_button} onClick={processarPendentes}>Processar Transações </button>
+                            <button className={styles.filter_button} onClick={processarTrancacoes}>Processar Transações </button>
                         </div>
                     </div>
                     {showfilter &&(
