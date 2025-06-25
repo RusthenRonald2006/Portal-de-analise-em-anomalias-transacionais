@@ -160,11 +160,11 @@ function Dashboard(){
                         value={dataFim}></input>
                     </div>
                     <button className={styles.search_button} onClick={buscarMetricas}>
-                        {loading ? <Loading /> : "Buscar"}
+                        {loading ? <Loading/> : "Buscar"}
                     </button>
                 </div>
             </div>
-           )}b  
+           )}
            <div className={styles.cards_grid}>
                 {cards.map((card,index)=>(
                     <div key={index} className={styles.card}>
