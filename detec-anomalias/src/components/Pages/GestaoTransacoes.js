@@ -104,6 +104,7 @@ function GestaoTransacoes(){
                 }
             })
             //toast.success(response.data.msg)
+            carregarTransacoes()//recarregando tabela
         }catch(error){
             console.error("Erro ao processar transações:", error);
             toast.error("Erro ao processar transações")
