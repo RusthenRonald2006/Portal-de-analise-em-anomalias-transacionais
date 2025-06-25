@@ -3,6 +3,8 @@ import styles from "./GestaoTransacoes.module.css"
 import Sidebar from "../layout/Sidebar"
 import { Menu } from 'lucide-react';
 import Loading from "../layout/Loading"
+import {toast} from "react-toastify"
+import axios from "axios"
 import { Search, AlertTriangle, CheckCircle, Clock, Filter } from 'lucide-react';
 
 function GestaoTransacoes(){
