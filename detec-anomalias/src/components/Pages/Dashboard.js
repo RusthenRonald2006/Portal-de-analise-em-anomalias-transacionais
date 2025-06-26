@@ -69,7 +69,7 @@ function Dashboard(){
     const buscarTransacoesSuspeitas = async ()=>{
         try{
             const url = dataInicio && dataFim 
-            ? "https://antifraude-api.onrender.com/dashboard/transacoes_suspeitas?data_inicio=${dataInicio}T00:00:00&data_fim=${dataFim}T23:59:59"
+            ? `https://antifraude-api.onrender.com/dashboard/transacoes_suspeitas?data_inicio=${dataInicio}T00:00:00&data_fim=${dataFim}T23:59:59`
             : "https://antifraude-api.onrender.com/dashboard/transacoes_suspeitas";
 
             const resposta = await fetch(url);
@@ -147,7 +147,7 @@ function Dashboard(){
 
     const cards = [
         { title: "Total de Transações", value: metricas.quantidade_transacoes.toLocaleString("pt-BR"), icon: faUser, colorClass: styles.iconBlue },
-        { title: "Transações suspeitas", value: metricas.transacoes_suspeitas.toLocaleString("pt-BR"), icon: faCoins, colorClass: styles.iconGreen },
+        { title: "Transações suspeitas", value: (metricas.transacoes_suspeitas || 0).toLocaleString("pt-BR"), icon: faCoins, colorClass: styles.iconGreen },
         { title: "Valor médio das transações suspeitas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
       ];
