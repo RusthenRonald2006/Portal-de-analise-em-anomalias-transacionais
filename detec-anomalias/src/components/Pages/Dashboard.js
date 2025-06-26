@@ -40,7 +40,8 @@ function Dashboard(){
             setMetricas(prev =>(
                 {...prev,quantidade_transacoes:dados.quantidade_transacoes}
             ));
-
+            await buscarTransacoesSuspeitas()
+            
         } catch (error){
             console.error("Erro ao buscar métricas",error);
             alert("Erro ao carregar dados do dashboard")
@@ -63,6 +64,23 @@ function Dashboard(){
     useEffect(()=>{
         buscarMetricasTotais()
     },[]);
+
+    const buscarTransacoesSuspeitas = async ()=>{
+        try{
+            const url = dataInicio && dataFim 
+            ? "https://antifraude-api.onrender.com/dashboard/transacoes_suspeitas?data_inicio=${dataInicio}T00:00:00&data_fim=${dataFim}T23:59:59"
+            : "https://antifraude-api.onrender.com/dashboard/transacoes_suspeitas";
+
+            const resposta = await fetch(url);
+            const dados = await resposta.json();
+            setMetricas(prev=>({
+                ...prev,transacoes_suspeitas:dados.total_suspeitas
+            }))
+        } catch(error){
+            console.error("Erro ao buscar transações suspeitas",error);
+        }
+    }
+
         useEffect(()=>{
             const buscarUltimasNotificacoes = async ()=>{
                 try{
