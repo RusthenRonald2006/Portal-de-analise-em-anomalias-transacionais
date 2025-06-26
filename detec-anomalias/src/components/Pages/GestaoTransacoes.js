@@ -98,7 +98,7 @@ function GestaoTransacoes(){
       useEffect(()=>{
         const interval = setInterval(()=>{
             carregarTransacoes();
-        },35000)
+        },65000)
         return ()=> clearInterval(interval)
       },[])
 
