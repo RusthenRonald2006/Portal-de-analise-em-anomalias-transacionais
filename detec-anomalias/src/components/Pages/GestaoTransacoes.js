@@ -94,6 +94,14 @@ function GestaoTransacoes(){
         console.log("Filtros aplicados:", filters);
       },[pagina, limite , filters])
 
+      //pra atualizar tabela com novas transações com status
+      useEffect(()=>{
+        const interval = setInterval(()=>{
+            carregarTransacoes();
+        },15000)
+        return ()=> clearInterval(interval)
+      },[])
+
       const processarTrancacoes = async () =>{
         try{
             console.log("Iniciando processamento de transações...");
