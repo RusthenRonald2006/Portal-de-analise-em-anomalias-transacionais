@@ -41,6 +41,7 @@ function Dashboard(){
                 {...prev,quantidade_transacoes:dados.quantidade_transacoes}
             ));
             await buscarTransacoesSuspeitas()
+            await buscarValorMedio()
 
         } catch (error){
             console.error("Erro ao buscar métricas",error);
@@ -64,6 +65,7 @@ function Dashboard(){
     useEffect(()=>{
         buscarMetricasTotais()
         buscarTransacoesSuspeitas()
+        buscarValorMedio()
     },[]);
 
     const buscarTransacoesSuspeitas = async ()=>{
@@ -81,6 +83,22 @@ function Dashboard(){
             console.error("Erro ao buscar transações suspeitas",error);
         }
     }
+    const buscarValorMedio = async () => {
+        try {
+            const url = dataInicio && dataFim
+                ? `https://antifraude-api.onrender.com/dashboard/valor_medio_suspeitas?data_inicio=${dataInicio}T00:00:00&data_fim=${dataFim}T23:59:59`
+                : "https://antifraude-api.onrender.com/dashboard/valor_medio_suspeitas";
+
+            const resposta = await fetch(url);
+            const dados = await resposta.json();
+            setMetricas(prev => ({
+                ...prev,
+                valor_medio_suspeitas: dados.valor_medio
+            }));
+        } catch (error) {
+            console.error("Erro ao buscar valor médio:", error);
+        }
+    };
 
         useEffect(()=>{
             const buscarUltimasNotificacoes = async ()=>{
@@ -148,7 +166,10 @@ function Dashboard(){
     const cards = [
         { title: "Total de Transações", value: metricas.quantidade_transacoes.toLocaleString("pt-BR"), icon: faUser, colorClass: styles.iconBlue },
         { title: "Transações suspeitas", value: (metricas.transacoes_suspeitas || 0).toLocaleString("pt-BR"), icon: faCoins, colorClass: styles.iconGreen },
-        { title: "Valor médio das transações suspeitas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
+        { title: "Valor médio das transações suspeitas", value: metricas.valor_medio_suspeitas.toLocaleString("pt-BR",{
+            style:"currency",
+            currency:"BRL"
+        }), icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
       ];
 

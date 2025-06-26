@@ -11,11 +11,11 @@ function Notificacoes(){
 
     const getSeverityIcon = (severity)=>{
         switch (severity){
-            case 'baixo':
+            case 'baixa':
                 return styles.severity_low
-            case 'medio':
+            case 'media':
                 return styles.severity_medium
-            case 'alto':
+            case 'alta':
                 return styles.severity_hight
         }
     }
