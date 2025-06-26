@@ -158,7 +158,11 @@ function Notificacoes(){
                                                     {formatDate(alert.data)}
                                                 </span>
                                                 <span className={`${getSeverityIcon(alert.nivel_risco)} ${styles.severity_tag}`}> 
-                                                    {alert.nivel_risco === 'baixo' ? 'Baixo': alert.nivel_risco==='medio' ? 'Médio':'Alto'}
+                                                    {alert.nivel_risco === 'baixa'
+                                                    ? 'Baixo'
+                                                    : alert.nivel_risco === 'media'
+                                                    ? 'Médio'
+                                                    : 'Alto'}
                                                 </span>
                                             </div>
                                         </div>
@@ -198,7 +202,7 @@ function Notificacoes(){
                                     <div className={styles.info_card}>
                                         <p className={styles.info_p}>Severidade</p>
                                         <p className={` ${styles.info_value} ${getSeverityIcon(selectAlert.nivel_risco)}`}>
-                                            {selectAlert.nivel_risco === 'baixo'? 'Baixo': selectAlert.nivel_risco === 'medio'?'Médio':'Alto'}
+                                            {selectAlert.nivel_risco === 'baixa'? 'Baixo': selectAlert.nivel_risco === 'media'?'Médio':'Alto'}
                                         </p>
                                     </div>
                                     <div className={styles.info_card}>
@@ -226,9 +230,3 @@ function Notificacoes(){
             </div>
     )
 } export default Notificacoes
-
-/*<button className={styles.filter_button}>
-                                <Filter />
-                                Filtros
-                                <ChevronDown />
-                            </button>*/
