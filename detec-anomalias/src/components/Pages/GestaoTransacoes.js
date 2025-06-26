@@ -96,6 +96,7 @@ function GestaoTransacoes(){
 
       const processarTrancacoes = async () =>{
         try{
+            console.log("Iniciando processamento de transações...");
             const response = await axios.post("https://antifraude-api.onrender.com/transacoes/processar_pendentes",{},{
                 params:{
                     lote:1000,
@@ -103,7 +104,8 @@ function GestaoTransacoes(){
                     entre_transacoes:0.05
                 }
             })
-            //toast.success(response.data.msg)
+            console.log("Resposta da API",response.data)
+            toast.success(response.data.msg)
             carregarTransacoes()//recarregando tabela
         }catch(error){
             console.error("Erro ao processar transações:", error);
@@ -171,7 +173,7 @@ function GestaoTransacoes(){
                         >
                             <option value="">Todos os Status</option>
                             <option value="normal">Normal</option>
-                            <option value="suspeita">Suspeita</option>
+                            <option value="suspeito">Suspeita</option>
                             <option value="análise">Em Análise</option>
                         </select>
                         </div>
