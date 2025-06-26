@@ -41,7 +41,7 @@ function Dashboard(){
                 {...prev,quantidade_transacoes:dados.quantidade_transacoes}
             ));
             await buscarTransacoesSuspeitas()
-            
+
         } catch (error){
             console.error("Erro ao buscar métricas",error);
             alert("Erro ao carregar dados do dashboard")
@@ -63,6 +63,7 @@ function Dashboard(){
     }
     useEffect(()=>{
         buscarMetricasTotais()
+        buscarTransacoesSuspeitas()
     },[]);
 
     const buscarTransacoesSuspeitas = async ()=>{
@@ -146,7 +147,7 @@ function Dashboard(){
 
     const cards = [
         { title: "Total de Transações", value: metricas.quantidade_transacoes.toLocaleString("pt-BR"), icon: faUser, colorClass: styles.iconBlue },
-        { title: "Transações suspeitas", value: "320 ", icon: faCoins, colorClass: styles.iconGreen },
+        { title: "Transações suspeitas", value: metricas.transacoes_suspeitas.toLocaleString("pt-BR"), icon: faCoins, colorClass: styles.iconGreen },
         { title: "Valor médio das transações suspeitas", value: "38", icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
       ];
