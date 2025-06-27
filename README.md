@@ -48,7 +48,6 @@ ESTRUTURA DO PROJETO:
 ├── 📁 src
 │   ├── 📁 components
 │   │   ├── 📁 img
-│   │   │   ├── alan.png
 │   │   │   ├── banesefundoofc.png
 │   │   │   ├── loading.gif
 │   │   │   ├── loading.svg
@@ -86,7 +85,6 @@ ESTRUTURA DO PROJETO:
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
-└── README.md
 ```
 
  CONCLUSÃO:
