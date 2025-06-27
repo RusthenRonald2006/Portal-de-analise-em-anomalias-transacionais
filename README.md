@@ -38,7 +38,6 @@ npm run dev
 
 ESTRUTURA DO PROJETO:
 -
-PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS/
 📦 PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS
 ├── 📁 node_modules
 ├── 📁 public
@@ -48,6 +47,7 @@ PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS/
 ├── 📁 src
 │   ├── 📁 components
 │   │   ├── 📁 img
+│   │   │   ├── alan.png
 │   │   │   ├── banesefundoofc.png
 │   │   │   ├── loading.gif
 │   │   │   ├── loading.svg
