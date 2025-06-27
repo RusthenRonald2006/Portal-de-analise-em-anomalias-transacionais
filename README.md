@@ -39,14 +39,15 @@ npm run dev
 ESTRUTURA DO PROJETO:
 -
 PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS/
-├── node_modules/
-├── public/
-│   ├── index.html
-│   ├── manifest.json
-│   └── robots.txt
-├── src/
-│   ├── components/
-│   │   ├── img/
+📦 PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS
+├── 📁 node_modules
+├── 📁 public
+│   ├── 📄 index.html
+│   ├── 📄 manifest.json
+│   └── 📄 robots.txt
+├── 📁 src
+│   ├── 📁 components
+│   │   ├── 📁 img
 │   │   │   ├── banesefundoofc.png
 │   │   │   ├── loading.gif
 │   │   │   ├── loading.svg
@@ -55,12 +56,12 @@ PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS/
 │   │   │   ├── logogoogleofc.png
 │   │   │   ├── user.jpg
 │   │   │   └── user2.jpg
-│   │   ├── layout/
+│   │   ├── 📁 layout
 │   │   │   ├── Loading.js
 │   │   │   ├── Loading.module.css
 │   │   │   ├── Sidebar.js
 │   │   │   └── Sidebar.module.css
-│   ├── Pages/
+│   ├── 📁 Pages
 │   │   ├── Dashboard.js
 │   │   ├── Dashboard.module.css
 │   │   ├── GestaoContas.js
@@ -73,18 +74,18 @@ PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS/
 │   │   ├── Notificacoes.module.css
 │   │   ├── Portal.js
 │   │   └── Portal.module.css
-│   ├── services/
+│   ├── 📁 services
 │   │   └── api.js
 │   ├── App.js
 │   ├── index.css
 │   └── index.js
-├── .gitignore
-├── .gitattributes
-├── .npmrc
-├── LICENSE
-├── package.json
-├── package-lock.json
-└── README.md
+├── 📄 .gitignore
+├── 📄 .gitattributes
+├── 📄 .npmrc
+├── 📄 LICENSE
+├── 📄 package.json
+├── 📄 package-lock.json
+└── 📄 README.md
 
  CONCLUSÃO:
  -
