@@ -23,6 +23,7 @@ function Dashboard(){
         quantidade_transacoes:0,
         transacoes_suspeitas:0,
         valor_medio_suspeitas:0,
+        transacoes_nao_analisadas:0,
     }); 
 
     //com filtros
@@ -42,6 +43,7 @@ function Dashboard(){
             ));
             await buscarTransacoesSuspeitas()
             await buscarValorMedio()
+            await buscarTransacoesNaoAanalisadas()
 
         } catch (error){
             console.error("Erro ao buscar métricas",error);
@@ -66,6 +68,7 @@ function Dashboard(){
         buscarMetricasTotais()
         buscarTransacoesSuspeitas()
         buscarValorMedio()
+        buscarTransacoesNaoAanalisadas()
     },[]);
 
     const buscarTransacoesSuspeitas = async ()=>{
@@ -99,6 +102,20 @@ function Dashboard(){
             console.error("Erro ao buscar valor médio:", error);
         }
     };
+
+    const buscarTransacoesNaoAanalisadas = async ()=>{
+        try{
+            const url = dataInicio && dataFim ? `https://antifraude-api.onrender.com/dashboard/transacoes_nao_analisadas?data_inicio=${dataInicio}T00:00:00&data_fim=${dataFim}T23:59:59`: "https://antifraude-api.onrender.com/dashboard/transacoes_nao_analisadas"
+            const resposta = await fetch(url)
+            const dados = await resposta.json()
+
+            setMetricas(prev =>({
+                ...prev,transacoes_nao_analisadas:dados.total_nao_analisadas
+            }))
+        } catch(error){
+            console.error("Erro ao buscar transações não analisadas", error);
+        }
+    }
 
         useEffect(()=>{
             const buscarUltimasNotificacoes = async ()=>{
@@ -171,7 +188,7 @@ function Dashboard(){
             currency:"BRL"
         }), icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
-        { title: "Transações analisadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
+        { title: "Transações não analisadas", value: metricas.transacoes_nao_analisadas.toLocaleString("pt-BR"), icon: faCircleXmark, colorClass: styles.iconRed },
       ];
 
 
