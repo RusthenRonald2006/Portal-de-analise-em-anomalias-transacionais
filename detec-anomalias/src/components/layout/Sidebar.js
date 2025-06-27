@@ -28,9 +28,7 @@ function Navbar(){
         const intervalo = setInterval(buscarNovas, 10000); 
         return () => clearInterval(intervalo); 
       },[])
-
       
-
     return(
         <>
             <div className={styles.sidebar_header}>

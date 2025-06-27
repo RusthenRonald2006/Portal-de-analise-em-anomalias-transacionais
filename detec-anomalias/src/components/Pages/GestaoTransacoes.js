@@ -105,7 +105,7 @@ function GestaoTransacoes(){
       const processarTrancacoes = async () =>{
         try{
             console.log("Iniciando processamento de transações...");
-            toast.info("Processando transações...");
+            toast.info("Processando 1000 transações...");
             const response = await axios.post("https://antifraude-api.onrender.com/transacoes/processar_pendentes",{},{
                 params:{
                     lote:1000,
