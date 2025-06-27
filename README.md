@@ -36,6 +36,55 @@ COMANDO DE INICIALIZAÇÃO:
 npm install
 npm run dev
 
+ESTRUTURA DO PROJETO:
+-
+PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── img/
+│   │   │   ├── banesefundoofc.png
+│   │   │   ├── loading.gif
+│   │   │   ├── loading.svg
+│   │   │   ├── logo_banese.png
+│   │   │   ├── logobaneseofc.png
+│   │   │   ├── logogoogleofc.png
+│   │   │   ├── user.jpg
+│   │   │   └── user2.jpg
+│   │   ├── layout/
+│   │   │   ├── Loading.js
+│   │   │   ├── Loading.module.css
+│   │   │   ├── Sidebar.js
+│   │   │   └── Sidebar.module.css
+│   ├── Pages/
+│   │   ├── Dashboard.js
+│   │   ├── Dashboard.module.css
+│   │   ├── GestaoContas.js
+│   │   ├── GestaoContas.module.css
+│   │   ├── GestaoTransacoes.js
+│   │   ├── GestaoTransacoes.module.css
+│   │   ├── Login.js
+│   │   ├── Login.module.css
+│   │   ├── Notificacoes.js
+│   │   ├── Notificacoes.module.css
+│   │   ├── Portal.js
+│   │   └── Portal.module.css
+│   ├── services/
+│   │   └── api.js
+│   ├── App.js
+│   ├── index.css
+│   └── index.js
+├── .gitignore
+├── .gitattributes
+├── .npmrc
+├── LICENSE
+├── package.json
+├── package-lock.json
+└── README.md
 
  CONCLUSÃO:
  -
