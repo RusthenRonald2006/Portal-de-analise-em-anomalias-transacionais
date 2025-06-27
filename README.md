@@ -41,9 +41,9 @@ ESTRUTURA DO PROJETO:
 📦 PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS
 ├── 📁 node_modules
 ├── 📁 public
-│   ├── 📄 index.html
-│   ├── 📄 manifest.json
-│   └── 📄 robots.txt
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
 ├── 📁 src
 │   ├── 📁 components
 │   │   ├── 📁 img
@@ -79,13 +79,11 @@ ESTRUTURA DO PROJETO:
 │   ├── App.js
 │   ├── index.css
 │   └── index.js
-├── 📄 .gitignore
-├── 📄 .gitattributes
-├── 📄 .npmrc
-├── 📄 LICENSE
-├── 📄 package.json
-├── 📄 package-lock.json
-└── 📄 README.md
+├── .gitignore
+├── .gitattributes
+├── .npmrc
+├── LICENSE
+├── packa
 
  CONCLUSÃO:
  -
