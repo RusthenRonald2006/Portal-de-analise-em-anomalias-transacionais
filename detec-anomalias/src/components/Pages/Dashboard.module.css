@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: #f0f0f0;
+    background: #d4d4d4;
     border: none;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
@@ -17,7 +17,7 @@
     margin-bottom: 15px;
 }
 .filter_button:hover {
-    background: #e0e0e0;
+    background: #bfbfbf;
   }
 .filter_container{
     background: #f8f8f8;
