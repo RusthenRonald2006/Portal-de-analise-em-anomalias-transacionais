@@ -171,6 +171,7 @@ function Dashboard(){
             currency:"BRL"
         }), icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
+        { title: "Transações analisadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
       ];
 
 
