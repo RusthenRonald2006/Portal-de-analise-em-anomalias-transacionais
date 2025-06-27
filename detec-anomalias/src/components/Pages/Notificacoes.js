@@ -215,7 +215,7 @@ function Notificacoes(){
 
                                 <div className={styles.modal_actions}>
                                     <button className={styles.button_secondary}>
-                                        Ignorar
+                                        Falso positivo
                                     </button>
                                     <button className={styles. button_primary}>
                                         Marcar como resolvido
