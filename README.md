@@ -38,6 +38,7 @@ npm run dev
 
 ESTRUTURA DO PROJETO:
 -
+```
 📦 PORTAL-DE-ANALISE-EM-ANOMALIAS-TRANSACIONAIS
 ├── 📁 node_modules
 ├── 📁 public
@@ -83,7 +84,10 @@ ESTRUTURA DO PROJETO:
 ├── .gitattributes
 ├── .npmrc
 ├── LICENSE
-├── packa
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
  CONCLUSÃO:
  -
