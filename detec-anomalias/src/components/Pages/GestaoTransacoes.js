@@ -109,7 +109,6 @@ function GestaoTransacoes(){
             const response = await axios.post("https://antifraude-api.onrender.com/transacoes/processar_pendentes",{},{
                 params:{
                     lote:1000,
-                    pausa:2,
                     entre_transacoes:0.05
                 }
             })
