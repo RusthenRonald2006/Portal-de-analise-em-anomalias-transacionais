@@ -211,7 +211,7 @@ function Dashboard(){
         }), icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
         { title: "Transações não analisadas", value: metricas.transacoes_nao_analisadas.toLocaleString("pt-BR"), icon: faCircleXmark, colorClass: styles.iconRed },
-        { title: "Transações analisadas", value: `${metricas.transacoes_analisadas} (${metricas.percentual_analisadas}%)`, icon: faCircleXmark, colorClass: styles.iconRed },
+        { title: "Transações analisadas", value: `${metricas.transacoes_analisadas} (${metricas.perc_analisadas}%)`, icon: faCircleXmark, colorClass: styles.iconRed },
       ];
 
 
