@@ -24,6 +24,8 @@ function Dashboard(){
         transacoes_suspeitas:0,
         valor_medio_suspeitas:0,
         transacoes_nao_analisadas:0,
+        transacoes_analisadas: 0,
+        percentual_analisadas: 0,
     }); 
 
     //com filtros
@@ -44,6 +46,7 @@ function Dashboard(){
             await buscarTransacoesSuspeitas()
             await buscarValorMedio()
             await buscarTransacoesNaoAanalisadas()
+            await buscarTransacoesAnalisadas()
 
         } catch (error){
             console.error("Erro ao buscar métricas",error);
@@ -69,6 +72,7 @@ function Dashboard(){
         buscarTransacoesSuspeitas()
         buscarValorMedio()
         buscarTransacoesNaoAanalisadas()
+        buscarTransacoesAnalisadas()
     },[]);
 
     const buscarTransacoesSuspeitas = async ()=>{
@@ -114,6 +118,24 @@ function Dashboard(){
             }))
         } catch(error){
             console.error("Erro ao buscar transações não analisadas", error);
+        }
+    }
+
+    const buscarTransacoesAnalisadas = async ()=>{
+        try{
+            const url = dataInicio && dataFim
+            ? `https://antifraude-api.onrender.com/dashboard/transacoes_analisadas?data_inicio=${dataInicio}T00:00:00&data_fim=${dataFim}T23:59:59`
+            : "https://antifraude-api.onrender.com/dashboard/transacoes_analisadas";
+
+            const resposta = await fetch(url);
+            const dados = await resposta.json();
+            setMetricas(prev => ({
+            ...prev,
+            transacoes_analisadas: dados.total_analisadas,
+            percentual_analisadas: dados.percentual
+            }));
+        } catch(error){
+            console.error("Erro ao buscar transações analisadas", error);
         }
     }
 
@@ -189,7 +211,7 @@ function Dashboard(){
         }), icon: faChartSimple, colorClass: styles.iconPurple },
         { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
         { title: "Transações não analisadas", value: metricas.transacoes_nao_analisadas.toLocaleString("pt-BR"), icon: faCircleXmark, colorClass: styles.iconRed },
-        { title: "Transações analisadas", value: metricas.transacoes_nao_analisadas.toLocaleString("pt-BR"), icon: faCircleXmark, colorClass: styles.iconRed },
+        { title: "Transações analisadas", value: `${metricas.transacoes_analisadas} (${metricas.percentual_analisadas}%)`, icon: faCircleXmark, colorClass: styles.iconRed },
       ];
 
 
