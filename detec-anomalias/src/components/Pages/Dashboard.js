@@ -25,7 +25,7 @@ function Dashboard(){
         valor_medio_suspeitas:0,
         transacoes_nao_analisadas:0,
         transacoes_analisadas: 0,
-        percentual_analisadas: 0,
+        perc_analisadas: 0,
     }); 
 
     //com filtros
@@ -132,7 +132,7 @@ function Dashboard(){
             setMetricas(prev => ({
             ...prev,
             transacoes_analisadas: dados.total_analisadas,
-            percentual_analisadas: dados.percentual
+            perc_analisadas: dados.perc_analisadas
             }));
         } catch(error){
             console.error("Erro ao buscar transações analisadas", error);
