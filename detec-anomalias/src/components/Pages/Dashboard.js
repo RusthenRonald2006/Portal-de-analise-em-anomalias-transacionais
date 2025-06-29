@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple,faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell,AlertTriangle,Clock,CheckCircle,CheckCircle2 } from 'lucide-react'
 import { data } from "react-router-dom";
 import Loading from "../layout/Loading";
@@ -212,7 +212,7 @@ function Dashboard(){
     const cards = [
         { title: "Total de Transações", value: metricas.quantidade_transacoes.toLocaleString("pt-BR"), icon: faUser, colorClass: styles.iconBlue },
         { title: "Transações suspeitas", value: `${metricas.transacoes_suspeitas.toLocaleString("pt-BR")} (${metricas.perc_suspeitas}%)`, icon:faChartSimple , colorClass: styles.iconGreen },
-        { title: "Transações analisadas", value: `${metricas.transacoes_analisadas.toLocaleString("pt-BR")} (${metricas.perc_analisadas}%)`, icon: faCircleXmark, colorClass: styles.iconRed },
+        { title: "Transações analisadas", value: `${metricas.transacoes_analisadas.toLocaleString("pt-BR")} (${metricas.perc_analisadas}%)`, icon: faCheckCircle, colorClass: styles.iconRed },
         { title: "Transações não analisadas", value: `${metricas.transacoes_nao_analisadas.toLocaleString("pt-BR")} (${metricas.perc_nao_analisadas}%)`, icon: faCircleXmark, colorClass: styles.iconRed },
         { title: "Valor médio das transações suspeitas", value: metricas.valor_medio_suspeitas.toLocaleString("pt-BR",{
             style:"currency",
