@@ -8,7 +8,6 @@ function Navbar(){
     const menuItems = [
         { icon: Home, text: 'Dashboard' , path: '/portal' },
         { icon: FileText, text: 'Gestão de Transações',path:'/gestaotransacoes' },
-        { icon: Users, text: 'Gestão de Contas' ,path:'/gestaocontas'},
         {icon: Bell,text: 'Central de Alertas',path: '/notificacoes',isAlerta: true
     },
         { icon:  LogOut, text : 'Logout',path:'/'}
