@@ -22,8 +22,12 @@ function Dashboard(){
     const [metricas,setMetricas] =useState({
         quantidade_transacoes:0,
         transacoes_suspeitas:0,
+        perc_suspeitas:0,
         valor_medio_suspeitas:0,
         transacoes_nao_analisadas:0,
+        perc_nao_analisadas:0,
+        transacoes_analisadas: 0,
+        perc_analisadas: 0,
     }); 
 
     //com filtros
@@ -44,6 +48,7 @@ function Dashboard(){
             await buscarTransacoesSuspeitas()
             await buscarValorMedio()
             await buscarTransacoesNaoAanalisadas()
+            await buscarTransacoesAnalisadas()
 
         } catch (error){
             console.error("Erro ao buscar métricas",error);
@@ -69,6 +74,7 @@ function Dashboard(){
         buscarTransacoesSuspeitas()
         buscarValorMedio()
         buscarTransacoesNaoAanalisadas()
+        buscarTransacoesAnalisadas()
     },[]);
 
     const buscarTransacoesSuspeitas = async ()=>{
@@ -80,7 +86,8 @@ function Dashboard(){
             const resposta = await fetch(url);
             const dados = await resposta.json();
             setMetricas(prev=>({
-                ...prev,transacoes_suspeitas:dados.total_suspeitas
+                ...prev,transacoes_suspeitas:dados.total_suspeitas,
+                perc_suspeitas:dados.perc_suspeitas
             }))
         } catch(error){
             console.error("Erro ao buscar transações suspeitas",error);
@@ -110,10 +117,29 @@ function Dashboard(){
             const dados = await resposta.json()
 
             setMetricas(prev =>({
-                ...prev,transacoes_nao_analisadas:dados.total_nao_analisadas
+                ...prev,transacoes_nao_analisadas:dados.total_nao_analisadas,
+                perc_nao_analisadas:dados.perc_nao_analisadas
             }))
         } catch(error){
             console.error("Erro ao buscar transações não analisadas", error);
+        }
+    }
+
+    const buscarTransacoesAnalisadas = async ()=>{
+        try{
+            const url = dataInicio && dataFim
+            ? `https://antifraude-api.onrender.com/dashboard/transacoes_analisadas?data_inicio=${dataInicio}T00:00:00&data_fim=${dataFim}T23:59:59`
+            : "https://antifraude-api.onrender.com/dashboard/transacoes_analisadas";
+
+            const resposta = await fetch(url);
+            const dados = await resposta.json();
+            setMetricas(prev => ({
+            ...prev,
+            transacoes_analisadas: dados.total_analisadas,
+            perc_analisadas: dados.perc_analisadas
+            }));
+        } catch(error){
+            console.error("Erro ao buscar transações analisadas", error);
         }
     }
 
@@ -182,13 +208,13 @@ function Dashboard(){
 
     const cards = [
         { title: "Total de Transações", value: metricas.quantidade_transacoes.toLocaleString("pt-BR"), icon: faUser, colorClass: styles.iconBlue },
-        { title: "Transações suspeitas", value: (metricas.transacoes_suspeitas || 0).toLocaleString("pt-BR"), icon: faCoins, colorClass: styles.iconGreen },
+        { title: "Transações suspeitas", value: `${metricas.transacoes_suspeitas.toLocaleString("pt-BR")} (${metricas.perc_suspeitas}%)`, icon: faCoins, colorClass: styles.iconGreen },
+        { title: "Transações analisadas", value: `${metricas.transacoes_analisadas.toLocaleString("pt-BR")} (${metricas.perc_analisadas}%)`, icon: faCircleXmark, colorClass: styles.iconRed },
+        { title: "Transações não analisadas", value: `${metricas.transacoes_nao_analisadas.toLocaleString("pt-BR")} (${metricas.perc_nao_analisadas}%)`, icon: faCircleXmark, colorClass: styles.iconRed },
         { title: "Valor médio das transações suspeitas", value: metricas.valor_medio_suspeitas.toLocaleString("pt-BR",{
             style:"currency",
             currency:"BRL"
         }), icon: faChartSimple, colorClass: styles.iconPurple },
-        { title: "Fraudes Confirmadas", value: "12", icon: faCircleXmark, colorClass: styles.iconRed },
-        { title: "Transações não analisadas", value: metricas.transacoes_nao_analisadas.toLocaleString("pt-BR"), icon: faCircleXmark, colorClass: styles.iconRed },
       ];
 
 
