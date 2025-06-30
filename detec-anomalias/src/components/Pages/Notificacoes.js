@@ -214,10 +214,13 @@ function Notificacoes(){
                                 </div>
 
                                 <div className={styles.modal_actions}>
-                                    <button className={styles.button_secondary}>
+                                    <button className={styles.button_secondary}
+                                    onClick={()=>{toast.info("Marcado como falso positivo")}}>
                                         Falso positivo
                                     </button>
-                                    <button className={styles. button_primary}>
+                                    <button className={styles. button_primary} onClick={()=>{
+                                        toast.success("Alerta marcado como resolvido!")
+                                    }}>
                                         Marcar como resolvido
                                     </button>
                                 </div>
