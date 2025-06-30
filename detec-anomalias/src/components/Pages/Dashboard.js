@@ -5,11 +5,13 @@ import { useRef } from "react";
 import Navbar from "../layout/Sidebar"
 import logobanese from '../../components/img/logo banese.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple,faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faCoins, faEye, faCircleXmark ,faChartSimple } from "@fortawesome/free-solid-svg-icons";
 import { Users, DollarSign, ShoppingCart, TrendingUp,Filter,search_button, Search,Bell,AlertTriangle,Clock,CheckCircle,CheckCircle2 } from 'lucide-react'
 import { data } from "react-router-dom";
 import Loading from "../layout/Loading";
 import { toast } from "react-toastify";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+
 import { BadgeCheck } from 'lucide-react'
 
 
