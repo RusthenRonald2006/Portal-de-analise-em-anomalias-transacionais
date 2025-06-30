@@ -204,6 +204,21 @@ z-index: 10;
     .mobile_menu_button{
         display: block;
     }
+    .paginacao {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+  }
+
+  .paginacao label,
+  .pag_buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pag_buttons {
+    gap: 8px;
+  }
  }
 
 /* Responsividade dos filtros */
