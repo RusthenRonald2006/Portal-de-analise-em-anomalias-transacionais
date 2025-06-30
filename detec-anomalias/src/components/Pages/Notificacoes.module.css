@@ -332,4 +332,37 @@ header{
     .mobile_menu_button{
         display: block;
     }
+    .alert_content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .alert_left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .alert_actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .search_container {
+    width: 100%;
+  }
+
+  .search_input {
+    width: 100%;
+  }
+
+  .filter_group {
+    flex-direction: column;
+  }
+
+  .modal_actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
  }
